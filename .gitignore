@@ -1,0 +1,4 @@
+.DS*
+.vs*
+style.css.map
+.sass-cache
