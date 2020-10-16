@@ -1,0 +1,52 @@
+// -----------------------------------------//
+// Section default (with bleed)
+// -----------------------------------------//
+section.default{
+    padding: 75px 0;
+
+    &.v-no-padding {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .wrap {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        max-width: 1800px;
+        margin: auto;
+
+        @media screen and (min-width: 767px){
+            padding: 0 50px;
+        }
+
+        @media screen and (min-width: 1200px){
+            padding: 0 100px;
+        }
+    }
+}
+
+// -----------------------------------------//
+// Section Full (No Bleed)
+// -----------------------------------------//
+
+section.full{
+    padding: 75px 0;
+
+    &.v-no-padding {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+// -----------------------------------------//
+// Flex rows
+// -----------------------------------------//
+
+.flex{
+    display: flex;
+
+    .col{
+        flex: 1;
+    }
+}
