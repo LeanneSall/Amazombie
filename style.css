@@ -375,7 +375,8 @@ table {
   font-style: normal;
   color: #ffffff;
   letter-spacing: .05em;
-  font-size: 50px; }
+  font-size: 50px;
+  text-transform: uppercase; }
   @media screen and (min-width: 767px) {
     * h1 {
       font-size: 60px; } }
@@ -403,12 +404,28 @@ table {
   font-style: normal;
   color: #ffffff;
   letter-spacing: .05em;
-  font-size: 25px; }
+  font-size: 25px;
+  text-transform: uppercase; }
   @media screen and (min-width: 767px) {
     * h2 {
       font-size: 35px; } }
   @media screen and (min-width: 1144px) {
     * h2 {
+      font-size: 50px; } }
+
+* h2.regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  letter-spacing: .05em;
+  font-size: 25px;
+  text-transform: uppercase; }
+  @media screen and (min-width: 767px) {
+    * h2.regular {
+      font-size: 35px; } }
+  @media screen and (min-width: 1144px) {
+    * h2.regular {
       font-size: 50px; } }
 
 * h3 {
@@ -417,7 +434,8 @@ table {
   font-style: normal;
   color: #6F6C6C;
   letter-spacing: .05em;
-  font-size: 17px; }
+  font-size: 17px;
+  text-transform: uppercase; }
   @media screen and (min-width: 767px) {
     * h3 {
       font-size: 25px; } }

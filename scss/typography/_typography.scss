@@ -6,6 +6,7 @@
     color: $white;
     letter-spacing: .05em;
     font-size: 50px;
+    text-transform: uppercase;
 
     @media screen and (min-width: 767px){
         font-size: 60px;
@@ -36,6 +37,23 @@
     color: $white;
     letter-spacing: .05em;
     font-size: 25px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 767px){
+        font-size: 35px;
+    }
+
+    @media screen and (min-width: 1144px){
+        font-size: 50px;
+    }
+}
+
+* h2.regular{
+    @include heading-regular;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 25px;
+    text-transform: uppercase;
 
     @media screen and (min-width: 767px){
         font-size: 35px;
@@ -51,6 +69,7 @@
     color: $grey;
     letter-spacing: .05em;
     font-size: 17px;
+    text-transform: uppercase;
 
     @media screen and (min-width: 767px){
         font-size: 25px;
