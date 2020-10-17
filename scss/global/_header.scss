@@ -1,0 +1,74 @@
+header {
+    background: $dark-black;
+    padding: 5px 0;
+}
+
+#logo {
+    max-height: 50px;
+
+    @media screen and (min-width: 767px){
+        max-height: 60px;
+    }
+}
+
+.svg-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#pseudo-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#pseudo-nav {
+    display: flex;
+    max-height: 34px;
+
+    ul {
+        display: flex;
+
+        li {
+            margin-left: 25px;
+            @include body-light;
+            
+        }
+
+        li a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            transition: .2s ease-in-out;
+            line-height: 34px;
+            font-size: 17px;
+
+            &:hover{
+                color: $grey;
+            }
+        }
+    }
+}
+
+#cart-meta {
+    display: flex;
+    margin-left: 25px;
+    text-decoration: none;
+
+    svg {
+        fill: $white;
+    }
+
+    p {
+        margin-left: 10px;
+        color: $white;
+        padding: 5px 10px;
+        border: solid 1px $light-black;
+    }
+}
