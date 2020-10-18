@@ -18,11 +18,11 @@
 
 footer {
     background: $dark-black;
-    padding-top: 45px;
     padding-bottom: 45px;
 }
 
 #pseudo-footer{
+    margin-top: 45px;
     display: grid;
     grid-template-columns: minmax(0, 400px) auto auto 1fr;
     grid-auto-rows: auto;
