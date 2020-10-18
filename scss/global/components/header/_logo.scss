@@ -1,0 +1,28 @@
+#logo .st0{fill:#832D2D;}
+#logo .st1{fill:#3C7755;}
+#logo .st2{fill:#3B5249;}
+#logo .st3{fill:#519872;}
+#logo .st4{fill:#191919;}
+#logo .st5{fill:#FFFFFF;}
+
+
+#logo {
+    max-height: 50px;
+    max-width: 125px;
+    justify-self: start;
+    margin-left: 15px;
+
+    @media screen and (min-width: 500px){
+        max-width: 170px;
+    }
+
+    @media screen and (min-width: 767px){
+        max-height: 60px;
+    }
+}
+
+.logo-container{
+    grid-area: header-top-left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

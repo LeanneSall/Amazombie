@@ -1,0 +1,76 @@
+// -----------------------------------------//
+// Hamburger Container
+// -----------------------------------------//
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    margin-left: 0;
+    display: block;
+    grid-area: header-top-right;
+    justify-self: end;
+    margin-right: 15px;
+    margin-left: unset;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    @media screen and (min-width: 767px){
+        display: none;
+        margin-right: 0;
+    }
+}
+
+// -----------------------------------------//
+// Hamburger
+// -----------------------------------------//
+
+.hamburger {
+    width: 30px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+}
+
+.hamburger:before {
+    top: -7px;
+}
+
+.hamburger:after {
+    top: 7px;
+}
+
+// -----------------------------------------//
+// Hamburger Active
+// -----------------------------------------//
+
+.icon.active .hamburger {
+    box-shadow: 0px 0px 0px grey;
+    background: rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+    top: 0;
+    transform: rotate(135deg);
+}
