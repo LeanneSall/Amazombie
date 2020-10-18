@@ -7,11 +7,23 @@ nav {
     grid-column-start: 1;
     grid-column-end: 4;
     background: $black;
+    transition: all .1s ease-in-out;
+    max-height: 0;
+    transform: scaleY(0);
+    overflow-y: hidden;
+    transform-origin: top;
+
+    &.active{
+        max-height: 100%;
+        transform: scaleY(1);
+    }
 
     @media screen and (min-width: 767px){
         grid-area: header-top-mid;
         justify-self: end;
         background: unset;
+        max-height: 100% !important;
+        transform: scaleY(1) !important;
     }
 }
 
@@ -68,6 +80,9 @@ nav {
                 left: 0;
                 background: $dark-ruby;
                 display: none;
+                -webkit-box-shadow: 0px -2px 10px 0px rgba(255,255,255,0.3);
+                -moz-box-shadow: 0px -2px 10px 0px rgba(255,255,255,0.3);
+                box-shadow: 0px -2px 10px 0px rgba(255,255,255,0.3);
 
                 @media screen and (min-width: 800px){
                     display: block;

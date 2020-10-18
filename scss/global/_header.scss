@@ -22,6 +22,8 @@
 header {
     background: $dark-black;
     background: linear-gradient(201deg, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
+    transition: .2s ease-in-out;
+    
 
 
     .wrap {
@@ -45,6 +47,7 @@ header {
     grid-template-areas:
         "header-top-left header-top-mid header-top-right"
         "header-bottom-left header-bottom-mid header-bottom-right";
+        transition: .2s ease-in-out;
 
     @media screen and (min-width: 400px){
         grid-template-columns: 1fr 140px 60px;
