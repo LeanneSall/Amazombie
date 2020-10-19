@@ -1551,5 +1551,18 @@ body {
       background-color: #474343;
       height: 1px;
       width: 100%; }
+  .box .account {
+    margin-top: 18px;
+    text-align: center;
+    color: #474343; }
+
+@media screen and (min-width: 767px) {
+  .social-container {
+    display: flex;
+    justify-content: space-between; }
+    .social-container .fb {
+      margin-right: 18px; }
+    .social-container .google {
+      margin-left: 18px; } }
 
 /*# sourceMappingURL=style.css.map */

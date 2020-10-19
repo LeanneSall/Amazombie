@@ -105,4 +105,27 @@ body {
             width: 100%;
         }
     }
+
+    .account {
+        margin-top: 18px;
+        text-align: center;
+        color: $dark-grey;
+    }
 }
+
+@media screen and (min-width: 767px) {
+    .social-container {
+        display: flex;
+        justify-content: space-between;
+
+        .fb {
+            margin-right: 18px;
+        }
+
+        .google {
+            margin-left: 18px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {}
