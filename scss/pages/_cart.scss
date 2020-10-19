@@ -1,0 +1,73 @@
+.cart-banner {
+    background-color: $dark-black;
+    padding: 2vh;
+}
+
+// tQ: shopping cart
+.cart-table {
+    padding: 2vh;
+}
+
+.cart-table-header {
+    border-bottom: 2px solid $black;
+}
+
+.cart-table-header th {
+    @include heading-regular;
+    padding: 3vh 1vh 1vh 1vh;
+}
+
+.cart-table-row {
+    height: 200px;
+}
+
+// tQ: sizing tbd
+.cart-row-img {
+    height: 200px
+}
+
+.cart-table td, .cart-table-qty {
+    align-items: center;
+    justify-content: space-around;
+}
+
+a.button.plusminus {
+    padding: 7px 10px;
+}
+
+.cart-cell-ccy {
+    text-align: left;
+}
+
+.cart-cell-prc {
+    text-align: right;
+}
+
+// tQ: order summary
+.order-summary {
+    background-color: $light-black;
+    color: $white;
+}
+
+.order-summary-header {
+    @include heading-regular;
+    padding: 3vh 1vh 1vh 1vh;
+    border-bottom: 2px solid $white;
+}
+
+.order-summary-header hr {
+    color: $grey;
+    border: 3px;
+}
+
+.order-summary-row, .order-summary-table {
+    @include body-regular;
+    padding: 3vh
+}
+
+//.order-summary-row {
+//}
+
+.order-summary-row-cc {
+    justify-content: space-between;
+}
