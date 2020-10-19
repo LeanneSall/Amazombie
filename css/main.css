@@ -908,12 +908,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10% 0; }
+  padding: 50px 0; }
 
 .item-title, .item-showcase-title {
   text-align: center; }
   .item-title h4, .item-showcase-title h4 {
     font-style: italic; }
+
+.item-title h2 {
+  padding: 2% 0; }
+
+.item-title h4 {
+  padding-bottom: 2%; }
+
+.item-showcase-title {
+  padding: 2% 0; }
 
 .item-image {
   display: flex;
@@ -923,24 +932,41 @@ body {
     width: 200px;
     height: 200px; }
 
-.btn-info {
+.btn-custom {
   font-family: 'Roboto', sans-serif;
   background-color: #519872;
-  border: none; }
-  .btn-info:hover {
-    background-color: #3B5249; }
+  color: white;
+  border: none;
+  margin: 4% 0; }
+  .btn-custom:hover {
+    background-color: #3B5249;
+    color: #DCDCDC; }
+  .btn-custom:focus {
+    box-shadow: none; }
 
 #first-item, #last-item {
   background-color: #2B2A2A; }
 
+.item-showcase .card {
+  margin: 2%;
+  text-align: center; }
+
 @media screen and (min-width: 400px) {
-  #items-header h2 {
-    font-size: 24px; }
   .showcase-btn {
     display: flex;
+    justify-content: center;
+    align-items: center; }
+  .item-showcase {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; } }
 
 @media screen and (min-width: 767px) {
-  .btn-info {
-    display: none; } }
+  .btn-custom {
+    display: none; }
+  .item-showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; } }

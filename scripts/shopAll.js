@@ -13,7 +13,6 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 // Toggles cards
 $(".showcase-btn").on("click", function(){
-    // $(".item-showcase").slideToggle();
     var clicked      = this.id;
     var hidden         = $(`#showcase-${clicked}`);
   
