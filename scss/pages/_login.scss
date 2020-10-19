@@ -1,12 +1,13 @@
-body {
-    @include body-regular;
+.wrapper {
+    height: calc(100vh - 88.6px);
 }
 
+
 .form-container {
+    @include body-regular;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     height: 100%;
     width: 100%;
     background-color: $dark-black;
@@ -68,6 +69,7 @@ body {
     }
 
     .social-container {
+
 
         .btn {
             width: 100%;
