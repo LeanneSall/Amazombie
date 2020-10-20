@@ -94,59 +94,74 @@
         <!-- Section Default Boilerplate -->
         <h4 class="wrap cart-banner white">Shopping Cart</h4>
         <div class="wrap flex">
-            <div class="flex col-8">
-                <table class="cart-table col">
-                    <tr class="cart-table-header">
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr class="cart-table-row">
-                        <td class="cart-table-pdt">
-                            <img class="cart-row-img" src="images/cart/crate.png">
-                            <span>Get Those Zombies Off My Lawn (Tier 1)</span>
-                        </td>
-                        <td class="cart-table-qty flex"><!--qty-->
-                                <p class="cart-qty">1</p>
-                                <span>
-                                    <a class="button plusminus">+</a>
-                                    <a class="button plusminus">&#8211;</a>
-                                </span>
-                        </td>
-                        <td class="cart-table-prc">
-                            <span class="cart-cell-ccy">
-                                $
-                            </span>
-                            <span class="cart-cell-price">
-                                69.00
-                            </span>
-                        </td>
-                    </tr>
-
-                    <!--2 more trs-->
-
-                </table>
+            <div class="cart-table col-8">
+                <div class="cart-table-header flex">
+                    <div class="cart-table-cell col-8">Product</div>
+                    <div class="cart-table-cell col-2">Quantity</div>
+                    <div class="cart-table-cell col-2">Price</div>
+                </div>
+                <div class="cart-table-row flex">
+                    <div class="cart-table-cell cart-table-pdt flex col-8">
+                        <img class="cart-row-img" src="images/cart/crate.png">
+                        <div>Get Those Zombies Off My Lawn (Tier 1)</div>
+                    </div>
+                    <div class="cart-table-cell cart-table-qty flex col-2"><!--qty-->
+                            <p class="cart-qty">1</p>
+                            <div>
+                                <a class="button plusminus">+</a>
+                                <a class="button plusminus">&#8211;</a>
+                            </div>
+                    </div>
+                    <div class="cart-table-cell cart-table-prc flex col-2">
+                        <span class="cart-cell-ccy">
+                            $
+                        </span>
+                        <span class="cart-cell-price">
+                            69.00
+                        </span>
+                    </div>
+                </div>
+                <!--2 more trs-->
             </div>
             <div class="order-summary col-4">
                 <div class="order-summary-header"><!--order summary header-->
                     Order Summary
                 </div>
-                <div class="order-summary-row"><!--email address-->
-                    chris.redfield@hotmail.com
+                <div class="order-summary-row row"><!--email address-->
+                    <div class="col-1">
+                        PH
+                    </div>
+                    <div>
+                        chris.redfield@hotmail.com
+                    </div>
                 </div>
-                <div class="order-summary-row"><!--address-->
-                    Mr. Chris redfield<br>
-                    300 Unicorn Way<br>
-                    Raccoon City, UT
+                <div class="order-summary-row row"><!--address-->
+                    <div class="col-1">
+                        PH
+                    </div>
+                    <div>
+                        Mr. Chris redfield<br>
+                        300 Unicorn Way<br>
+                        Raccoon City, UT
+                    </div>
                 </div>
-                <div class="order-summary-row order-summary-row-cc flex"><!--credit card info-->
-                    <span>1234 5678 9361 2346</span><span>12/21</span><span>123</span>
+                <div class="order-summary-row row"><!--credit card info-->
+                    <div class="col-1">
+                        PH
+                    </div>
+                    <div class="order-summary-row-cc flex">
+                        <span>1234 5678 9361 2346</span><span>12/21</span><span>123</span>
+                    </div>
                 </div>
-                <div class="order-summary-row"><!--use shipping address-->
-                    <input type="checkbox">
-                    Use shipping address
+                <div class="order-summary-row row"><!--use shipping address-->
+                    <div class="col-1">
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        Use shipping address
+                    </div>
                 </div>
-                <div class="order-summary-row order-summary-row-ttl"><!--summary table-->
+                <div class="order-summary-row"><!--summary table-->
                     <table>
                         <tr>
                             <td>Subtotal</td>
@@ -156,7 +171,7 @@
                         <tr>
                             <td>Taxes</td>
                             <td class="cart-cell-ccy"></td>
-                            <td class="cart-cell-prc">OVER MY COLD DEAD BODY</td>
+                            <td class="cart-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</td>
                         </tr>
                         <tr>
                             <td>Shipping</td>
