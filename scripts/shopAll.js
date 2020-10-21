@@ -1,23 +1,23 @@
-// // Hides cards as soon as screen width hits 767px
-// function myFunction(x) {
-//     if (x.matches) { // If media query matches
-//       $(".item-showcase").hide();
-//     } else {
-//       $(".item-showcase").show();
-//     }
-//   }
+// Hides cards as soon as screen width hits 767px
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      $(".tier-description").hide();
+    } else {
+      $(".tier-description").show();
+    }
+  }
 
-// var x = window.matchMedia("(max-width: 767px)")
-// myFunction(x) // Call listener function at run time
-// x.addListener(myFunction) // Attach listener function on state changes
+var x = window.matchMedia("(max-width: 767px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 
-// // Toggles cards
-// $(".showcase-btn").on("click", function(){
-//     var clicked      = this.id;
-//     var hidden         = $(`#showcase-${clicked}`);
+// Toggles cards
+$(".more").on("click", function(){
+    var clicked      = this.id;
+    var hidden         = $(`#desc${clicked}`);
   
-//     hidden.slideToggle();
-//   })
+    hidden.slideToggle();
+  })
 
 // JavaScript Document
 $(document).ready(function() {

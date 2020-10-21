@@ -30,7 +30,20 @@ body {
     padding: 50px 0;
 }
 
+
 // Items
+.items {
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.more {
+    margin: 4%;
+}
+
 .item-title, .item-showcase-title {
     text-align: center;
     h4{
@@ -62,6 +75,27 @@ body {
     }
 }
 
+.item-block {
+    background-color:#1e1e26;
+	border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+    padding: 0 4% 2% 4%;
+    margin: 4%;
+    display:flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+    p {
+        padding: 4%;
+        text-align: center;
+    }
+}
+
+.more {
+    display: none;
+}
+
 .buy {
     display: flex;
     flex-direction: column;
@@ -88,8 +122,7 @@ a{
 	width:100%;
 	display:flex;
 	justify-content: center;
-	align-items: center;
-	
+    align-items: center;
 }
 
 .box{
@@ -103,7 +136,7 @@ a{
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
-    margin: 20px 10px;
+    margin: 20px 20px;
 }
 
 .details{
@@ -129,7 +162,7 @@ a{
 .logo{
 	height: 60px;
 }
-.box:hover{
+.box:hover, .item-block:hover {
 	background-color: #17171d;
 	transform-style: preserve-3d;
 	transform: scale(1.02);
@@ -143,17 +176,18 @@ a{
 
 // Price/buy button
 
+.price {
+    margin: 1% 0;
+    font-size: 24px;
+    color: $white;
+}
+
 .buy {
     
-    p {
-        padding: 2%;
-        font-size: 24px;
-        color: $white;
-    }
-
-    a {
-        margin-bottom: 2%;
-    }
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-bottom: 2%;
 }
 
 // Media Queries
@@ -170,14 +204,26 @@ a{
 		font-size: 16px;
 		width: 250px;
 	}
-	
 }
 
-// @media screen and (min-width: 400px) {
-// }
+@media screen and (max-width: 400px) {
 
-// @media screen and (min-width: 767px) {
-// }
+    .box{
+        margin-right: 10px;
+    }
 
-//   @media screen and (min-width: 1144px) {
-// }
+    #items-header-content h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .more {
+        display: block;
+    }
+
+    .item-block {
+        flex-direction: column;
+    }
+}
