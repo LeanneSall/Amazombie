@@ -941,10 +941,14 @@ header {
     font-style: normal;
     text-transform: uppercase;
     color: #ffffff;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     background: #519872;
     border: 0; }
+    @media screen and (min-width: 767px) {
+      #newsletter input[type="submit"] {
+        padding-left: 30px;
+        padding-right: 30px; } }
 
 /*
  * @pqina/flip v1.7.7 - A Beautifully Animated Flip Clock

@@ -16,9 +16,14 @@
         @include body-light;
         text-transform: uppercase;
         color: $white;
-        padding-left: 30px;
-        padding-right: 30px; 
+        padding-left: 15px;
+        padding-right: 15px; 
         background: $light-green;
         border: 0;
+
+        @media screen and (min-width: 767px){
+            padding-left: 30px;
+            padding-right: 30px; 
+        }
     }
 }
