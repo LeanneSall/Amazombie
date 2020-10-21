@@ -1,1 +1,11 @@
-@import './home/carousel'
+@import './home/carousel';
+@import './home/card-spread';
+
+
+#home-section-01 {
+    background: $dark-black;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
