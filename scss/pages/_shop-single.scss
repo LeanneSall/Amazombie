@@ -37,6 +37,9 @@ body {
 //Last Crate Contents
 
 .last-crate {
+  position: relative;
+  height: 400px;
+  width: 100%;
   h3 {
     padding: 20px;
   }
@@ -49,11 +52,48 @@ body {
       height: 300px;
       width: 250px;
       background-color: #1b1a1a;
+      .last-img {
+        border: 5px red solid;
+        height: 200px;
+        width: 200px;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
     }
   }
-  button {
+  .sing-button {
     position: relative;
-    left: 45%;
-    margin: 2%;
+    margin: 50px;
+    left: 46%;
+    top: 20%;
+  }
+}
+
+//Benefits
+
+.benefits {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  h3 {
+    width: 100%;
+  }
+  .bene-card {
+    width: 28%;
+    height: 300px;
+    padding: 30px;
+
+    .bene-text {
+    }
+    .bene-img {
+      float: left;
+      padding-right: 20px;
+    }
+  }
+  .review {
+    padding-top: 0;
+    padding-right: 0;
   }
 }

@@ -2082,6 +2082,12 @@ body {
   top: 15%;
 }
 
+.last-crate {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
 .last-crate h3 {
   padding: 20px;
 }
@@ -2100,9 +2106,50 @@ body {
   background-color: #1b1a1a;
 }
 
-.last-crate button {
+.last-crate .sub-card-content .card-1 .last-img {
+  border: 5px red solid;
+  height: 200px;
+  width: 200px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.last-crate .sing-button {
   position: relative;
-  left: 45%;
-  margin: 2%;
+  margin: 50px;
+  left: 46%;
+  top: 20%;
+}
+
+.benefits {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.benefits h3 {
+  width: 100%;
+}
+
+.benefits .bene-card {
+  width: 28%;
+  height: 300px;
+  padding: 30px;
+}
+
+.benefits .bene-card .bene-img {
+  float: left;
+  padding-right: 20px;
+}
+
+.benefits .review {
+  padding-top: 0;
+  padding-right: 0;
 }
 /*# sourceMappingURL=main.css.map */
