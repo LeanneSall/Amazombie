@@ -1497,7 +1497,11 @@ a.button {
   font-weight: 500;
   font-style: normal;
   border-bottom: 2px solid #191919;
-  padding: 3vh 1vh 1vh 1vh; }
+  padding: 3vh 1vh 1vh 1vh;
+  justify-content: space-between; }
+
+.cart-qty {
+  padding: 1em; }
 
 .cart-table-cell {
   align-items: center;
@@ -1540,9 +1544,15 @@ a.button.plusminus {
 .order-summary-header {
   border-bottom: 2px solid #ffffff; }
 
-.order-summary-header hr {
-  color: #6F6C6C;
-  border: 3px; }
+#icon-pencil-container {
+  background-color: #ffffff;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.3em 0.4em; }
+
+#icon-pencil {
+  display: inline-block;
+  fill: #121212; }
 
 .order-summary-row, .order-summary-table {
   font-family: 'Roboto', sans-serif;
@@ -1553,7 +1563,18 @@ a.button.plusminus {
 .order-summary-row-cc {
   justify-content: space-between; }
 
+.summary-icon {
+  padding-right: 2vh;
+  width: 4vh; }
+
+.cart-cell-prc {
+  text-align: right; }
+
 #cart-cell-tax-amt {
   color: #832d2d; }
+
+.order-submit-button-container {
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -16,6 +16,11 @@
     @include heading-regular;
     border-bottom: 2px solid $black;
     padding: 3vh 1vh 1vh 1vh;
+    justify-content: space-between;
+}
+
+.cart-qty {
+    padding: 1em;
 }
 
 .cart-table-cell {
@@ -73,9 +78,16 @@ a.button.plusminus {
     border-bottom: 2px solid $white;
 }
 
-.order-summary-header hr {
-    color: $grey;
-    border: 3px;
+#icon-pencil-container {
+    background-color: $white;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.3em 0.4em;
+}
+
+#icon-pencil {
+    display: inline-block;
+    fill: $dark-black;
 }
 
 .order-summary-row, .order-summary-table {
@@ -83,17 +95,24 @@ a.button.plusminus {
     padding: 3vh
 }
 
-//.order-summary-row {
-//}
-
 .order-summary-row-cc {
     justify-content: space-between;
 }
 
+.summary-icon {
+    padding-right: 2vh;
+    width: 4vh;
+}
+
 .cart-cell-prc {
-    
+    text-align: right;
 }
 
 #cart-cell-tax-amt {
     color: $dark-ruby;
+}
+
+.order-submit-button-container {
+    justify-content: center;
+    align-items: center;
 }

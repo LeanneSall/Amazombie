@@ -94,7 +94,7 @@
         <!-- Section Default Boilerplate -->
         <h4 class="wrap cart-banner white">Shopping Cart</h4>
         <div class="wrap flex">
-            <div class="cart-table col-8">
+            <div class="cart-table col-xl-8">
                 <div class="cart-table-header flex">
                     <div class="cart-table-cell col-8">Product</div>
                     <div class="cart-table-cell col-2">Quantity</div>
@@ -106,19 +106,11 @@
                         <div>Get Those Zombies Off My Lawn (Tier 1)</div>
                     </div>
                     <div class="cart-table-cell cart-table-qty flex col-2"><!--qty-->
-<<<<<<< HEAD
                         <p class="cart-qty">1</p>
-                        <div>
+                        <div class="flex">
                             <a class="button plusminus">+</a>
                             <a class="button plusminus">&#8211;</a>
                         </div>
-=======
-                            <p class="cart-qty">1</p>
-                            <div>
-                                <a class="button plusminus">+</a>
-                                <a class="button plusminus">&#8211;</a>
-                            </div>
->>>>>>> main
                     </div>
                     <div class="cart-table-cell cart-table-prc flex col-2">
                         <span class="cart-cell-ccy">
@@ -131,38 +123,52 @@
                 </div>
                 <!--2 more trs-->
             </div>
-            <div class="order-summary col-4">
-                <div class="order-summary-header"><!--order summary header-->
-                    Order Summary
+            <div class="order-summary col-xl-4">
+                <div class="order-summary-header flex"><!--order summary header-->
+                    <span>Order Summary</span>
+                    <div id="icon-pencil-container">
+                        <svg id="icon-pencil" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="order-summary-row row"><!--email address-->
-                    <div class="col-1">
-                        PH
+                    <div class="summary-icon">
+                        @
                     </div>
                     <div>
                         chris.redfield@hotmail.com
                     </div>
                 </div>
                 <div class="order-summary-row row"><!--address-->
-                    <div class="col-1">
-                        PH
+                    <div class="summary-icon">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-mailbox" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z"/>
+                            <path fill-rule="evenodd" d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854z"/>
+                            <path d="M5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z"/>
+                        </svg>
                     </div>
-                    <div>
-                        Mr. Chris redfield<br>
-                        300 Unicorn Way<br>
-                        Raccoon City, UT
+                    <div id="order-summary-address">
+                        <div id="address-line-1">Mr. Chris Redfield</div>
+                        <div id="address-line-2">300 Unicorn Way</div>
+                        <div id="address-line-3">Raccoon City, UT</div>
                     </div>
                 </div>
                 <div class="order-summary-row row"><!--credit card info-->
-                    <div class="col-1">
-                        PH
+                    <div class="summary-icon">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card-2-back" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zM1 9h14v2H1V9z"/>
+                        </svg>
                     </div>
-                    <div class="order-summary-row-cc flex">
-                        <span>1234 5678 9361 2346</span><span>12/21</span><span>123</span>
+                    <div class="order-summary-cc">
+                        <div id="cc-line-1">1234 5678 9361 2346</div>
+                        <div id="cc-line-2">12/21</div>
+                        <div id="cc-line-3">123</div>
                     </div>
                 </div>
                 <div class="order-summary-row row"><!--use shipping address-->
-                    <div class="col-1">
+                    <div class="summary-icon">
                         <input type="checkbox">
                     </div>
                     <div>
@@ -170,31 +176,31 @@
                     </div>
                 </div>
                 <div class="order-summary-row"><!--summary table-->
-                    <table>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td class="cart-cell-ccy">$</td>
-                            <td class="cart-cell-prc">1156.35</td>
-                        </tr>
-                        <tr>
-                            <td>Taxes</td>
-                            <td class="cart-cell-ccy"></td>
-                            <td class="cart-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</td>
-                        </tr>
-                        <tr>
-                            <td>Shipping</td>
-                            <td class="cart-cell-ccy">$</td>
-                            <td class="cart-cell-prc">59.00</td>
-                        </tr>
-                        <tr>
-                            <td>Total Price</td>
-                            <td class="cart-cell-ccy">$</td>
-                            <td class="cart-cell-prc">1215.35</td>
-                        </tr>
-                    </table>
-                    <!--bottom & button-->
-                    <!--todo: link to Gokay's page-->
-                    <div>
+                    <div class="row">
+                        <div class="col-3">Subtotal</div>
+                        <div class="col-1 cart-cell-ccy">$</div>
+                        <div class="col cart-cell-prc">1156.35</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Taxes</div>
+                        <div class="col-1 cart-cell-ccy">$</div>
+                        <div class="col cart-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Shipping</div>
+                        <div class="col-1 cart-cell-ccy">$</div>
+                        <div class="col cart-cell-prc">59.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Total Price</div>
+                        <div class="col-1 cart-cell-ccy">$</div>
+                        <div class="col cart-cell-prc">1215.35</div>
+                    </div>
+                </div>
+                <!--bottom & button-->
+                <!--todo: link to Gokay's page-->
+                <div class="order-summary-row order-submit-button-container flex">
+                    <div id="order-submit-button">
                         <a href="#" class="button btn-submit">Submit</a>
                     </div>
                 </div>
