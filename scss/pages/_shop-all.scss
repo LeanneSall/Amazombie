@@ -8,7 +8,7 @@ body {
 #banner-img {
     position: relative;
     text-align: center;
-    color: white;
+    color: $white;
     display: flex;
     justify-content: center;
 }
@@ -86,7 +86,6 @@ a{
 }
 .container{
 	width:100%;
-	// background-color:#a4152c;
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -106,11 +105,7 @@ a{
 	box-sizing: border-box;
     margin: 20px 10px;
 }
-// .model{
-// 	// height: 350px;
-// 	max-height: 100%;
-//     max-width: 100%;
-// }
+
 .details{
 	display: flex;
 	flex-direction: column;
@@ -122,8 +117,8 @@ a{
 	font-weight: bold;
 	color:#6a6a74;
 	text-align: center;
-    // margin-top: 20px;
 }
+
 .item-title {
 	color: $light-green;
 	font-weight: bold;
@@ -144,6 +139,21 @@ a{
 .box:hover .item-title{
 	color: $dark-green;
 	transition: all ease 0.5s;
+}
+
+// Price/buy button
+
+.buy {
+    
+    p {
+        padding: 2%;
+        font-size: 24px;
+        color: $white;
+    }
+
+    a {
+        margin-bottom: 2%;
+    }
 }
 
 // Media Queries

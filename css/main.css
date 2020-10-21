@@ -893,7 +893,7 @@ body {
 #banner-img {
   position: relative;
   text-align: center;
-  color: white;
+  color: #ffffff;
   display: flex;
   justify-content: center; }
 
@@ -1002,6 +1002,14 @@ a {
 .box:hover .item-title {
   color: #3B5249;
   transition: all ease 0.5s; }
+
+.buy p {
+  padding: 2%;
+  font-size: 24px;
+  color: #ffffff; }
+
+.buy a {
+  margin-bottom: 2%; }
 
 /*--responsive for mobile phone--*/
 @media (max-width: 720px) {
