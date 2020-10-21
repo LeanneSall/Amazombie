@@ -2052,21 +2052,57 @@ body {
   background-color: #121212;
 }
 
+.text-wrap {
+  padding: 50px;
+}
+
 .title-section {
   height: 400px;
   width: 100%;
   background: url("/images/shop/darkforest.jpg");
 }
 
-.title-section h2 {
-  position: absolute;
-  padding-top: 5%;
-  padding-left: 10%;
+.head-text {
+  padding-left: 100px;
+  padding-top: 2%;
 }
 
-.title-section h4 {
+.sub-box {
+  height: 500px;
+  width: 100%;
+}
+
+.sub-box .text {
+  padding-top: 3%;
+}
+
+.box-img {
   position: absolute;
-  padding-top: 9%;
-  padding-left: 10%;
+  left: 60%;
+  top: 20%;
+}
+
+.last-crate h3 {
+  padding: 20px;
+}
+
+.last-crate .sub-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.last-crate .sub-card-content .card-1 {
+  height: 300px;
+  width: 250px;
+  background-color: #1b1a1a;
+}
+
+.last-crate button {
+  position: relative;
+  left: 45%;
+  margin: 2%;
 }
 /*# sourceMappingURL=main.css.map */

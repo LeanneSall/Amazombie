@@ -1,18 +1,59 @@
+// WHOLE PAGE
 body {
   background-color: #121212;
 }
+.text-wrap {
+  padding: 50px;
+}
+
+// Title Heading
 .title-section {
   height: 400px;
   width: 100%;
   background: url("/images/shop/darkforest.jpg");
-  h2 {
-    position: absolute;
-    padding-top: 5%;
-    padding-left: 10%;
+}
+
+.head-text {
+  padding-left: 100px;
+  padding-top: 2%;
+}
+
+//Subscription Box A Section
+
+.sub-box {
+  height: 500px;
+  width: 100%;
+  .text {
+    padding-top: 3%;
   }
-  h4 {
-    position: absolute;
-    padding-top: 9%;
-    padding-left: 10%;
+}
+
+.box-img {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+}
+
+//Last Crate Contents
+
+.last-crate {
+  h3 {
+    padding: 20px;
+  }
+
+  .sub-card-content {
+    display: flex;
+    justify-content: space-around;
+
+    .card-1 {
+      height: 300px;
+      width: 250px;
+      background-color: #1b1a1a;
+    }
+  }
+  button {
+    position: relative;
+    left: 45%;
+    margin: 2%;
   }
 }
