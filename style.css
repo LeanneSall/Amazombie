@@ -1474,7 +1474,8 @@ a.button {
   padding: 13px 20px;
   border-radius: 2px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out;
+  display: inline-block; }
   a.button:hover {
     background: #3B5249; }
 
@@ -1483,8 +1484,10 @@ a.button {
 --------------------------------------------------------------*/
 .carousel {
   position: relative;
-  height: 600px;
-  width: 80%;
+  height: 80vh;
+  min-height: 700px;
+  max-height: 1000px;
+  width: 100%;
   margin: 0 auto; }
 
 .carousel__images {
@@ -1518,16 +1521,54 @@ a.button {
     content: "";
     width: 100%;
     height: 100%;
-    background: rgba(18, 18, 18, 0.75);
-    z-index: -1; }
+    background: rgba(18, 18, 18, 0.5);
+    z-index: 1; }
+  .carousel__slide.current-slide img {
+    transform: scale(1);
+    opacity: 1; }
   .carousel__slide img {
     transition: .7s ease-in-out;
     transform: scale(1.2);
     opacity: 0.7;
     z-index: -2; }
-  .carousel__slide.current-slide img {
-    transform: scale(1);
-    opacity: 1; }
+  .carousel__slide .meta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .carousel__slide .meta .meta-container {
+      margin: auto;
+      margin-top: 350px;
+      width: 100%;
+      padding: 0 15px;
+      max-width: 1800px; }
+      @media screen and (min-width: 767px) {
+        .carousel__slide .meta .meta-container {
+          padding: 0 50px;
+          margin-top: 100px; } }
+      @media screen and (min-width: 1200px) {
+        .carousel__slide .meta .meta-container {
+          padding: 0 100px; } }
+    .carousel__slide .meta h2 {
+      font-size: 3em;
+      text-shadow: 0px 0px 4px #121212;
+      margin-bottom: 5px; }
+      @media screen and (min-width: 500px) {
+        .carousel__slide .meta h2 {
+          font-size: 5em; } }
+    .carousel__slide .meta h4 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      margin-bottom: 30px;
+      text-shadow: 0px 0px 4px #121212; }
 
 .carousel__nav {
   display: flex;
@@ -1535,7 +1576,8 @@ a.button {
   bottom: 40px;
   left: 50px;
   justify-content: center;
-  padding: 10px 0; }
+  padding: 10px 0;
+  z-index: 2; }
 
 .carousel__indicator {
   border: 0;
@@ -1554,10 +1596,11 @@ a.button {
   bottom: 50px;
   display: flex;
   justify-content: space-between;
-  right: 50px; }
+  right: 50px;
+  z-index: 2; }
   .carousel__buttons::before {
     content: "";
-    width: 45%;
+    width: 35%;
     height: 1px;
     background: white;
     position: absolute;
