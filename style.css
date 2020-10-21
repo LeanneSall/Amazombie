@@ -1494,6 +1494,7 @@ a.button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 30%;
   vertical-align: bottom; }
 
 .carousel__track-container {
@@ -1512,10 +1513,10 @@ a.button {
 
 .carousel-controls {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1523,6 +1524,7 @@ a.button {
   padding-bottom: 40px; }
   .carousel-controls .carousel-controls-wrap {
     width: 100%;
+    margin: auto;
     padding: 0 15px;
     max-width: 1800px;
     display: flex;
@@ -1556,13 +1558,16 @@ a.button {
     transform: scale(1.2);
     opacity: 0.7;
     z-index: -2; }
+  .carousel__slide.current-slide .meta .meta-container {
+    transform: scale(1) !important;
+    opacity: 1 !important; }
   .carousel__slide .meta {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 5;
     margin-left: 25px;
     display: flex;
     flex-direction: column;
@@ -1572,18 +1577,23 @@ a.button {
       margin-top: 350px;
       width: 100%;
       padding: 0 15px;
-      max-width: 1800px; }
+      max-width: 1800px;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: .7s ease-in-out; }
       @media screen and (min-width: 767px) {
         .carousel__slide .meta .meta-container {
           padding: 0 50px;
-          margin-top: 100px; } }
+          margin-top: 200px; } }
       @media screen and (min-width: 1200px) {
         .carousel__slide .meta .meta-container {
           padding: 0 100px; } }
     .carousel__slide .meta h2 {
       font-size: 3em;
       text-shadow: 0px 0px 4px #121212;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      max-width: 300px;
+      letter-spacing: 0.01em; }
       @media screen and (min-width: 500px) {
         .carousel__slide .meta h2 {
           font-size: 5em; } }
@@ -1592,7 +1602,7 @@ a.button {
       font-weight: 400;
       font-style: normal;
       color: white;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       text-shadow: 0px 0px 4px #121212; }
 
 .carousel__nav {
