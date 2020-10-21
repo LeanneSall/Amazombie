@@ -53,6 +53,7 @@ nav {
             position: relative;
             text-align: right;
             @include body-light;
+            border-right: solid 5px rgba($color: $dark-ruby, $alpha: 0);
 
             @media screen and (min-width: 767px){
                 text-align: center;
