@@ -1590,7 +1590,7 @@ a.button {
           padding: 0 100px; } }
     .carousel__slide .meta h2 {
       font-size: 3em;
-      text-shadow: 0px 0px 4px #121212;
+      text-shadow: 0px 4px 15px #121212;
       margin-bottom: 5px;
       max-width: 300px;
       letter-spacing: 0.01em; }
@@ -1603,7 +1603,7 @@ a.button {
       font-style: normal;
       color: white;
       margin-bottom: 15px;
-      text-shadow: 0px 0px 4px #121212; }
+      text-shadow: 0px 4px 15px #121212; }
 
 .carousel__nav {
   display: flex;
