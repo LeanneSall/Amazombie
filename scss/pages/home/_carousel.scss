@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
 
-.carousel__images {
+.carousel-images {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -15,13 +15,13 @@
     vertical-align: bottom;
 }
 
-.carousel__track-container{
+.carousel-track-container{
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.carousel__track {
+.carousel-track {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -62,7 +62,7 @@
     }
 }
 
-.carousel__slide{
+.carousel-slide{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -151,6 +151,18 @@
             color: white;
             margin-bottom: 15px;
         }
+
+        a {
+            background: $dark-ruby;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: $light-ruby;
+            }
+        }
+
+        
     }
 
 

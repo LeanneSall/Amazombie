@@ -1,3 +1,4 @@
+// ICON + HAMBURGER
 const nav = document.querySelector('nav');
 
 document.getElementById('icon').addEventListener('click', (e) => {
@@ -12,19 +13,24 @@ document.getElementById('icon').addEventListener('click', (e) => {
     }
 });
 
+// INIT COUNTDOWN
 function handleTickInit(tick) {
     Tick.count.down('2020' + '-12-1').onupdate = function(value) {
         tick.value = value;
     };
 }
 
-const track = document.querySelector('.carousel__track');
+// START CAROUSEL
+const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
+// const currentSlide = track.querySelector('.current-slide');
+const carousel = document.querySelector('.carousel');
 
+var isHover = false;
 
 let slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -35,6 +41,37 @@ window.addEventListener('resize', () => {
     setTrackPosition(currentSlide, track);
 
 });
+
+// Auto scrolling 
+var count = 0;
+setInterval(() =>{
+    // Only auto scroll if user is not hovering over carousel
+    if (!isHover){
+    count += 0.5;}
+
+    if (count > 2.5){
+        count = 0;
+        const currentSlide = track.querySelector('.current-slide');
+        let nextSlide = currentSlide.nextElementSibling;
+        
+        if (nextSlide == null)  nextSlide = slides[0];
+        const currentDot = dotsNav.querySelector('.current-slide');
+        let nextDot = currentDot.nextElementSibling;
+        if (nextDot == null) nextDot = dots[0];
+    
+        moveToSlide(track, currentSlide, nextSlide)
+        updateDots(currentDot, nextDot);
+    }
+},500);
+
+// Turn off auto scroll if hovering on carousel
+carousel.addEventListener('mouseover', () => {
+    isHover = true
+});
+
+carousel.addEventListener('mouseleave', () => {
+    isHover = false
+})
 
 const setTrackPosition = (slide, track) => {
     track.style.transform = `translateX(-${slide.style.left})`;
@@ -73,11 +110,9 @@ prevButton.addEventListener('click', e => {
         prevDot = dots[dots.length - 1];
     }
 
-    const prevIndex = slides.findIndex(slide => slide === prevSlide);
-
     moveToSlide(track, currentSlide, prevSlide)
     updateDots(currentDot, prevDot);
-    // hideShowArrows(slides, prevButton, nextButton, prevIndex);
+    count = 0;
 });
 
 //when I click right, move slides to the right
@@ -92,13 +127,9 @@ nextButton.addEventListener('click', e => {
     let nextDot = currentDot.nextElementSibling;
     if (nextDot == null) nextDot = dots[0];
 
-    
-
-    const nextIndex = slides.findIndex(slide => slide === nextSlide);
-
     moveToSlide(track, currentSlide, nextSlide)
     updateDots(currentDot, nextDot);
-    // hideShowArrows(slides, prevButton, nextButton, nextIndex);
+    count = 0;
 });
 
 //when I click the nav indicators, move to that slide 
@@ -115,6 +146,5 @@ dotsNav.addEventListener('click', e => {
 
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
-    hideShowArrows(slides, prevButton, nextButton, targetIndex);
-
+    count = 0;
 });
