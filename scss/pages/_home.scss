@@ -1,0 +1,70 @@
+// -----------------------------------------//
+// Slide/carousel
+// -----------------------------------------//
+@import './home/carousel';
+
+// -----------------------------------------//
+// 3 card spread
+// -----------------------------------------//
+@import './home/card-spread';
+
+// -----------------------------------------//
+// Figure
+// -----------------------------------------//
+@import './home/components/figure';
+
+// -----------------------------------------//
+// testimonials
+// -----------------------------------------//
+@import './home/components/testimonials';
+
+
+#home-section-01 {
+    background: $dark-black;
+    border-top: 5px solid $dark-ruby;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
+
+#home-section-02 {
+    background-image: url('/images/home/figure/figure-bg-img-sm.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+
+    @media screen and (min-width: 767px){
+        overflow: visible;
+    }
+
+    & > .wrap {
+        z-index: 5;
+    }
+
+    &::before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: $dark-black, $alpha: .7)
+    }
+
+    @media screen and (min-width: 767px){
+        background-image: url('/images/home/figure/figure-bg-img-md.png');
+    }
+
+    @media screen and (min-width: 1200px){
+        background-image: url('/images/home/figure/figure-bg-img-lg.png');
+    }
+}
+
+#home-section-03 { 
+    background: $dark-black;
+
+}
