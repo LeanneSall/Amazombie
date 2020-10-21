@@ -1,0 +1,92 @@
+.carousel-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 5;
+    padding-bottom: 40px;
+
+    .carousel-controls-wrap {
+        width: 100%;
+        margin: auto;
+        padding: 0 15px;
+        max-width: 1800px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        @media screen and (min-width: 767px){
+            padding: 0 50px;
+        }
+
+        @media screen and (min-width: 1200px){
+            padding: 0 100px;
+        }
+    }
+}
+
+.carousel__nav{
+    display: flex;
+    bottom: 40px;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.carousel__indicator{
+    border: 0;
+    width: 10px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.35);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide{
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+.carousel__buttons {
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        width: 35%;
+        height: 1px;
+        background: white;
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        background: unset;
+        border: unset;
+        @include body-light;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 5px rgba($color: $dark-black, $alpha: 0.75);
+        transition: .2s ease-in-out;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:hover {
+            color: $light-green;   
+        }
+    }
+}
