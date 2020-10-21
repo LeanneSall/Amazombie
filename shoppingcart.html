@@ -92,27 +92,27 @@
 
     <main>
         <!-- Section Default Boilerplate -->
-        <h4 class="wrap cart-banner white">Shopping Cart</h4>
-        <div class="wrap flex">
-            <div class="cart-table col-xl-8">
+        <h4 class="flex cart-banner white">Shopping Cart</h4>
+        <div class="cart-wrapper">
+            <div class="cart-table col-md-8">
                 <div class="cart-table-header flex">
                     <div class="cart-table-cell col-8">Product</div>
                     <div class="cart-table-cell col-2">Quantity</div>
                     <div class="cart-table-cell col-2">Price</div>
                 </div>
                 <div class="cart-table-row flex">
-                    <div class="cart-table-cell cart-table-pdt flex col-8">
+                    <div class="cart-table-cell cart-table-pdt flex col-sm-8">
                         <img class="cart-row-img" src="images/cart/crate.png">
                         <div>Get Those Zombies Off My Lawn (Tier 1)</div>
                     </div>
-                    <div class="cart-table-cell cart-table-qty flex col-2"><!--qty-->
+                    <div class="cart-table-cell cart-table-qty flex col-sm-2"><!--qty-->
                         <p class="cart-qty">1</p>
                         <div class="flex">
                             <a class="button plusminus">+</a>
                             <a class="button plusminus">&#8211;</a>
                         </div>
                     </div>
-                    <div class="cart-table-cell cart-table-prc flex col-2">
+                    <div class="cart-table-cell cart-table-prc flex col-sm-2">
                         <span class="cart-cell-ccy">
                             $
                         </span>
@@ -123,14 +123,16 @@
                 </div>
                 <!--2 more trs-->
             </div>
-            <div class="order-summary col-xl-4">
+            <div class="order-summary col-md-4">
                 <div class="order-summary-header flex"><!--order summary header-->
                     <span>Order Summary</span>
-                    <div id="icon-pencil-container">
-                        <svg id="icon-pencil" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                        </svg>
-                    </div>
+                    <a href="#">
+                        <div id="icon-pencil-container">
+                            <svg id="icon-pencil" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                            </svg>
+                        </div>
+                    </a>
                 </div>
                 <div class="order-summary-row row"><!--email address-->
                     <div class="summary-icon">
@@ -162,9 +164,9 @@
                         </svg>
                     </div>
                     <div class="order-summary-cc">
-                        <div id="cc-line-1">1234 5678 9361 2346</div>
-                        <div id="cc-line-2">12/21</div>
-                        <div id="cc-line-3">123</div>
+                        <div class="cc-line" id="cc-line-1">1234 5678 9361 2346</div>
+                        <div class="cc-line" id="cc-line-2">12/21</div>
+                        <div class="cc-line" id="cc-line-3">123</div>
                     </div>
                 </div>
                 <div class="order-summary-row row"><!--use shipping address-->
@@ -192,7 +194,7 @@
                         <div class="col cart-cell-prc">59.00</div>
                     </div>
                     <div class="row">
-                        <div class="col-3">Total Price</div>
+                        <div class="col-3">Total</div>
                         <div class="col-1 cart-cell-ccy">$</div>
                         <div class="col cart-cell-prc">1215.35</div>
                     </div>
@@ -204,6 +206,8 @@
                         <a href="#" class="button btn-submit">Submit</a>
                     </div>
                 </div>
+
+                <!--tQ: modal form to edit customer details-->
             </div>
         </div>
     </main>
