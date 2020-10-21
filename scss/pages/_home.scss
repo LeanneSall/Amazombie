@@ -13,6 +13,12 @@
 // -----------------------------------------//
 @import './home/components/figure';
 
+// -----------------------------------------//
+// testimonials
+// -----------------------------------------//
+@import './home/components/testimonials';
+
+
 #home-section-01 {
     background: $dark-black;
     border-top: 5px solid $dark-ruby;
@@ -56,4 +62,9 @@
     @media screen and (min-width: 1200px){
         background-image: url('/images/home/figure/figure-bg-img-lg.png');
     }
+}
+
+#home-section-03 { 
+    background: $dark-black;
+
 }

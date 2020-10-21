@@ -1,0 +1,33 @@
+.testimonials {
+
+    .t-cont{
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .col p:first-of-type{
+            margin: 15px auto;
+        }
+
+        .col p:last-of-type{
+            margin: 15px auto;
+        }
+
+        svg:nth-child(1) {
+            fill: $light-green;
+        }
+
+        
+        .rating svg{
+            fill: goldenrod;
+        }
+    }
+
+    .col{
+        text-align: center;
+        margin: 20px;
+        min-width: 250px;
+        max-width: 275px;
+        flex: unset !important;
+    }
+}
