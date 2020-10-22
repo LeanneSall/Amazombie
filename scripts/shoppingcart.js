@@ -4,6 +4,7 @@ class infofield {
         this.obj = document.getElementById(id);
         this.txt = this.obj.innerHTML;
         this.edit = this.obj.isContentEditable;
+        this.valid = true;
     }
 }
 
@@ -43,9 +44,6 @@ function toggleEditable(fields){
     fields.forEach(element => {
         var field = document.getElementById(element.id);
         if (field.isContentEditable) {
-            // tQ: validate
-            validateInputs(getFields());
-
             field.classList.remove("order-summary-row-editmode");
             field.contentEditable = false;
         } else {
@@ -53,6 +51,8 @@ function toggleEditable(fields){
             field.contentEditable = true;
         }
     });
+    // tQ: validate
+    validateInputs(getFields());
 }
 
 function validateInputs(obj_array) {
@@ -64,25 +64,54 @@ function validateInputs(obj_array) {
         "address line 1: full name", // Mr. Chris Redfield
         "address line 2: street no. and name", // 300 Unicorn Way
         "address line 3: city, province", // Raccoon City, YK
-        "address line 4: postal code", // H0H0H0
+        "address line 4: postal code (format: A1A1A1)", // H0H0H0
         "credit card number", // 1234 5678 9361 2346
         "credit card expiry date: mm/yy", // 12/21
         "credit card CVN" // 123
     ]
 
+    // tQ: check for input lengths
     for (i = 0; i < obj_array.length; ++i) {
         document.getElementById(obj_array[i].id).classList.remove("order-summary-row-invalid");
         if (obj_array[i].txt.trim().length <= 1) {
-            document.getElementById(obj_array[i].id).innerHTML = "Please enter your " + placeholders[i];
-            document.getElementById(obj_array[i].id).classList.add("order-summary-row-invalid");
+            obj_array[i].valid = false;
         }
     }
 
-    if (isOk) {
-
-    } else {
-
+    // tQ: full name must be two words
+    const regexp_fname = new RegExp(/^[a-z,',-]+(\s)[a-z,',-]+$/i);
+    if (!(regexp_fname.test(obj_array[0].txt))) {
+        obj_array[0].valid = false;
     }
+    
+    // tQ: email must be valid
+    const regexp_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!(regexp_email.test(String(obj_array[1].txt).toLowerCase()))) {
+        obj_array[1].valid = false;
+    }
+
+    // tQ: postal code must match pattern
+    const regexp_postal = /[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/;
+    if (!(regexp_postal.test(String(obj_array[5].txt).toLowerCase()))) {
+        obj_array[5].valid = false;
+    }
+
+    // tQ: credit card must match pattern
+    
+
+    for (i = 0; i < obj_array.length; ++i) {
+        if (!(obj_array[i].valid)) {
+            document.getElementById(obj_array[i].id).innerHTML = "Please enter your " + placeholders[i];
+            document.getElementById(obj_array[i].id).classList.add("order-summary-row-invalid");
+            isOk = false;
+        }
+    }
+
+    // if (isOk) {
+
+    // } else {
+
+    // }
 }
 
 // class customer {
