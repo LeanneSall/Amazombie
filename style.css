@@ -1955,4 +1955,25 @@ figure.figure {
   .box a:hover {
     color: #6F6C6C; }
 
+.order-conf-container {
+  background-color: #191919;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.box {
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  padding: 24px;
+  max-width: 700px;
+  align-items: center;
+  margin: auto;
+  color: white; }
+
+.conf-banner {
+  text-align: center; }
+  .conf-banner h2 {
+    padding-top: 30px; }
+
 /*# sourceMappingURL=style.css.map */
