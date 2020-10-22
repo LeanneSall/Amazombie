@@ -1558,11 +1558,16 @@ a.button.plusminus {
 .order-summary-header {
   border-bottom: 2px solid #ffffff; }
 
-#icon-pencil-container {
+.icon-pencil-container {
   background-color: #ffffff;
   border-radius: 60px;
   box-shadow: 0px 0px 2px #888;
   padding: 0.3em 0.4em; }
+  .icon-pencil-container:hover {
+    background-color: #6F6C6C; }
+
+.icon-pencil-container-editmode {
+  background-color: #6F6C6C; }
 
 #icon-pencil {
   display: inline-block;
@@ -1585,6 +1590,12 @@ a.button.plusminus {
   text-align: right; }
 
 #cart-cell-tax-amt {
+  color: #832d2d; }
+
+.order-summary-row-editmode {
+  background-color: #6F6C6C; }
+
+.order-summary-row-invalid {
   color: #832d2d; }
 
 .order-submit-button-container {

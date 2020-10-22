@@ -99,11 +99,19 @@ a.button.plusminus {
     border-bottom: 2px solid $white;
 }
 
-#icon-pencil-container {
+.icon-pencil-container {
     background-color: $white;
     border-radius: 60px;
     box-shadow: 0px 0px 2px #888;
     padding: 0.3em 0.4em;
+
+    &:hover {
+        background-color: $grey;
+    }
+}
+
+.icon-pencil-container-editmode {
+    background-color: $grey;
 }
 
 #icon-pencil {
@@ -130,6 +138,14 @@ a.button.plusminus {
 }
 
 #cart-cell-tax-amt {
+    color: $dark-ruby;
+}
+
+.order-summary-row-editmode {
+    background-color: $grey;
+}
+
+.order-summary-row-invalid {
     color: $dark-ruby;
 }
 
