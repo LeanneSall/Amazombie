@@ -20,3 +20,10 @@ function handleTickInit(tick) {
     };
 }
 
+
+
+document.getElementById("submitform").addEventListener('click', function(){
+    document.querySelector(".form").reset();
+    document.getElementById("thankyou").innerHTML = "Thank you for your review"
+    
+})
