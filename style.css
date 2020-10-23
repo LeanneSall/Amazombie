@@ -1979,7 +1979,8 @@ figure.figure {
   .box hr {
     background-color: #474343; }
   .box #order-submit-button {
-    margin: 20px 0; }
+    margin: 20px 0;
+    margin: auto; }
 
 .conf-banner {
   text-align: center;

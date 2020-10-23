@@ -23,13 +23,13 @@ const totalDiv = document.querySelector('#total')
 
 
 var customerInfo = {
-    name: 'Gokay Abay',
-    address1: '704',
-    address2: '2121 Alma',
-    address3: 'Vancouver',
-    email: 'email@amil.com',
+    name: 'Chris Redfield',
+    address1: '300 Unicorn Way',
+    address2: 'Racoon, YK',
+    address3: 'Neverland',
+    email: 'email@email.com',
     paymentMethod: '123456789239'
-}
+} 
 var inCart = [
     box1 = {
         price: 123
