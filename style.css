@@ -2399,5 +2399,78 @@ body {
 @media only screen and (max-width: 1075px) {
   .benefits .cards {
     height: 90vh; } }
+.attribution-spread {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .attribution-spread li {
+    display: inline-block;
+    padding: 20px 10px; }
+  .attribution-spread a.img-container {
+    display: block;
+    position: relative;
+    height: 275px;
+    width: 275px;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.55); }
+    .attribution-spread a.img-container .meta {
+      position: absolute;
+      opacity: 0;
+      transition: .2s ease-in-out;
+      padding: 10px;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7); }
+      .attribution-spread a.img-container .meta:hover, .attribution-spread a.img-container .meta:focus, .attribution-spread a.img-container .meta:active {
+        opacity: 1; }
+    .attribution-spread a.img-container .meta-head {
+      display: flex;
+      justify-content: flex-end; }
+      .attribution-spread a.img-container .meta-head p {
+        color: #ffffff;
+        margin-right: 5px; }
+      .attribution-spread a.img-container .meta-head svg {
+        fill: #ffffff;
+        max-height: 17px; }
+    .attribution-spread a.img-container .chain {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: white;
+      height: 30px;
+      width: 30px; }
+    .attribution-spread a.img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%; }
+  .attribution-spread h4 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 17px; }
+  .attribution-spread p.source {
+    background: #832d2d;
+    display: inline-block;
+    position: relative;
+    margin: 7px 0;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 3px 30px 3px 7px; }
+    .attribution-spread p.source::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid #121212; }
 
 /*# sourceMappingURL=style.css.map */
