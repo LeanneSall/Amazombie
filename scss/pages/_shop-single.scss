@@ -43,6 +43,10 @@ body {
     h4 {
       color: $light-green;
     }
+    h5 {
+      color: $dark-grey;
+      font-size: 1.5em;
+    }
   }
   h3 {
     color: white;
@@ -80,16 +84,31 @@ body {
     flex-wrap: wrap;
 
     .card-1 {
-      height: 300px;
       width: 250px;
-      background-color: #1b1a1a;
-      margin-top: 5%;
+      height: 350px;
+      background-color: #1e1e26;
+      border-radius: 10px;
+      box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      margin: 20px 20px;
+
       .last-img {
         height: 200px;
         width: 200px;
         margin-left: 10%;
         margin-top: 10%;
       }
+    }
+    .card-1:hover {
+      background-color: #17171d;
+      transform-style: preserve-3d;
+      transform: scale(1.02);
+      transition: all ease 0.3s;
+      border: 1px solid #3b5249;
     }
   }
   .sing-button {
@@ -110,6 +129,7 @@ body {
     position: relative;
     float: left;
     color: white;
+    padding-bottom: 20px;
   }
   h4 {
     color: $light-green;
@@ -225,9 +245,6 @@ body {
 
 //Media Queries for Mobile and Tablet
 
-// @media (max-width: 900px) {
-// }
-
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 440px) {
   .sub-box {
@@ -246,6 +263,7 @@ body {
       display: inline-block;
       left: 0;
       width: 100%;
+      margin-top: 100px;
     }
   }
   .last-crate {
@@ -268,6 +286,21 @@ body {
       width: 100%;
       height: 50vh;
       display: inline-block;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .last-crate-contents {
+    h3 {
+      margin-top: 400px;
+    }
+  }
+  .sub-box {
+    .box-img {
+      width: 500px;
+      height: 500px;
+      margin-top: 0;
     }
   }
 }

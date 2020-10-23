@@ -326,11 +326,12 @@
       <section class="default">
         <div class="wrap">
           <div class="text-wrap">
-            <div class="sub-box">
-              <div class="text">
-                <h3>Subscription Box A</h3>
+            <div class="sub-box" uk-scrollspy= "target: > div; cls: uk-animation-fade; delay: 250">
+              <div class="text" uk-scrollspy-class="uk-animation-slide-bottom">
+                <h3>TIER A</h3><br>
+                <h4>GET THOSE ZOMBIES OFF MY LAWN</h4>
                 <br />
-                <h4>$4999.99 - Free Shipping</h4>
+                <h5>$4999.99 - Free Shipping</h5>
                 <br />
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -340,22 +341,22 @@
                   eius voluptas. Recusandae, molestiae est. Iure ea illum ipsa
                   totam, unde magnam fuga sed beatae.
                 </p>
-                <div class="button-sub-box">
+                <div class="button-sub-box" uk-scrollspy-class="uk-animation-slide-bottom">
                 <a class="button add" href="#">Add to Cart</a>
                 <a class="button shop" href="shopAll.html">See More</a>
               </div>
               </div>
-              <div class="box-img">
+              <div class="box-img" uk-scrollspy-class="uk-animation-slide-bottom">
                 <img src="images/shop/crate.png" alt="crate" />
               </div>
             </div>
             <div class="last-crate">
               <h3>Last Crate Contents</h3>
-              <div class="sub-card-content">
-                <div class="card-1"><div class="last-img"><img src="images/shop/gatling.png"></div></div>
-                <div class="card-1"><div class="last-img"><img src="images/shop/chervy.png"></div></div>
-                <div class="card-1"><div class="last-img"><img src="images/shop/choppa.png"></div></div>
-                <div class="card-1"><div class="last-img"><img src="images/shop/warrior.png"></div></div>
+              <div class="sub-card-content"  uk-scrollspy= "target: > div; cls: uk-animation-fade; delay: 250">
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/gatling.png"></div></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/chervy.png"></div></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/choppa.png"></div></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/warrior.png"></div></div>
               </div>
               <a href="#" class="button sing-button">See more</a>
             </div>
@@ -363,8 +364,8 @@
             
             <div class="benefits">
               <h3>Benefits</h3>
-              <div class="cards">
-              <div class="bene-card">
+              <div class="cards" uk-scrollspy= "target: > div; cls: uk-animation-fade; delay: 250">
+              <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4 class="bene-heading">Survive for Longer</h4>
                 <div class="bene-img">
                   <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -382,7 +383,7 @@
                   </p>
                 </div>
               </div>
-              <div class="bene-card">
+              <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4 class="bene-heading">Survive for Longer</h4>
                 <div class="bene-img">
                   <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -402,7 +403,7 @@
               </div>
          
 
-              <div class="bene-card">
+              <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4 class="bene-heading">Survive for Longer</h4>
                 <div class="bene-img">
                   <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -423,7 +424,7 @@
                 </div>
               </div>
 
-              <div class="bene-card">
+              <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4 class="bene-heading">Survive for Longer</h4>
                 <div class="bene-img">
                   <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -451,13 +452,13 @@
             
 
 
-              <div class="review-forum">
-                <div class="review">
+              <div class="review-forum" uk-scrollspy= "target: > div; cls: uk-animation-fade; delay: 250">
+                <div class="review" uk-scrollspy-class="uk-animation-slide-bottom">
                 <img src="images/shop/kidrockrev.png" alt="kidrock loves amazombie">
                 </div>
                 
               
-              <div class="forum">
+              <div class="forum" uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4>Leave a Review!</h4>
                 <form>
                   
@@ -766,5 +767,7 @@
     <script src="scripts/SinglePage.js"></script> 
     <!-- Countdown -->
     <script src="scripts/flip/flip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>
