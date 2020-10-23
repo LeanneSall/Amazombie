@@ -70,6 +70,11 @@
     letter-spacing: .05em;
     font-size: 17px;
     text-transform: uppercase;
+    line-height: 1.2em;
+
+    &.center {
+        text-align: center;
+    }
 
     @media screen and (min-width: 767px){
         font-size: 25px;
@@ -100,6 +105,23 @@
     color: $grey;
     letter-spacing: .05em;
     font-size: 17px;
+    line-height: 1.2em;
+
+    &.center {
+        text-align: center;
+    }
+
+    &.light {
+        @include heading-light;
+    }
+
+    &.uppercase {
+        text-transform: uppercase;
+    }
+
+    &.highlight {
+        color: $light-green;
+    }
 
     @media screen and (min-width: 767px){
         font-size: 25px;
