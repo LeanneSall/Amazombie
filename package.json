@@ -1,0 +1,23 @@
+{
+  "name": "front-end-project-ctrl-alt-defeat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BCIT-SSD-2020-21/front-end-project-ctrl-alt-defeat.git"
+  },
+  "author": "Nick Charvat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BCIT-SSD-2020-21/front-end-project-ctrl-alt-defeat/issues"
+  },
+  "homepage": "https://github.com/BCIT-SSD-2020-21/front-end-project-ctrl-alt-defeat#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

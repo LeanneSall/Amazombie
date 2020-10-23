@@ -1,0 +1,1 @@
+{"version":3,"sources":["_shop-single.scss"],"names":[],"mappings":"AAAA,KACE,iBAAkB,QAGpB,eACE,WAAY,gCACZ,OAAQ,MACR,MAAO","file":"_shop-single.min.css","sourcesContent":["body {\r\n  background-color: #121212;\r\n}\r\n.title-section {\r\n  background: url(\"images/shop/darkforest.jpg\");\r\n  height: 200px;\r\n  width: 100%;\r\n}\r\n"]}

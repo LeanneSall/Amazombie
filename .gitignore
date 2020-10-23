@@ -2,3 +2,4 @@
 .vs*
 style.css.map
 .sass-cache
+node_modules
