@@ -1,8 +1,6 @@
-// tQ: page-specific mixins go here
-
-.cart-banner {
-    background-color: $dark-black;
-    padding: 1rem;
+// tQ: nav cart colour
+#cart-meta .cart-wrapper .svg-cont svg {
+    fill: $dark-ruby;
 }
 
 // tQ: wrapper
@@ -13,6 +11,11 @@
 }
 
 // tQ: shopping cart
+.cart-banner {
+    background-color: $dark-black;
+    padding: 1rem;
+}
+
 .cart-table {
     @include body-regular;
     padding: 1rem;

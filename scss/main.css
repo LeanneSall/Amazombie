@@ -1500,13 +1500,16 @@ a.button {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-.cart-banner {
-  background-color: #121212;
-  padding: 1rem; }
+#cart-meta .cart-wrapper .svg-cont svg {
+  fill: #832d2d; }
 
 @media (min-width: 768px) {
   .cart-wrapper {
     display: flex; } }
+
+.cart-banner {
+  background-color: #121212;
+  padding: 1rem; }
 
 .cart-table {
   font-family: 'Roboto', sans-serif;
