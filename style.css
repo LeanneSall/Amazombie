@@ -1851,7 +1851,6 @@ figure.figure {
 #home-section-03 {
   background: #121212; }
 
-<<<<<<< HEAD
 .wrapper {
   height: calc(100vh - 88.6px); }
 
@@ -1866,13 +1865,14 @@ figure.figure {
   width: 100%;
   background-color: #121212; }
 
-.box {
-  min-width: 320px;
+.login-box {
+  min-width: 100px;
+  max-width: 450px;
   padding: 24px; }
-  .box .register-container {
+  .login-box .register-container {
     text-align: center;
     padding-bottom: 4em; }
-  .box .input-container .login-input {
+  .login-box .input-container .login-input {
     width: 100%;
     border-radius: 2px;
     height: 44px;
@@ -1881,25 +1881,25 @@ figure.figure {
     background-color: #1B1A1A;
     margin-bottom: 24px;
     color: white; }
-  .box .input-container ::placeholder {
+  .login-box .input-container ::placeholder {
     color: #474343; }
-  .box .input-container .pass-input {
+  .login-box .input-container .pass-input {
     position: relative; }
-  .box .input-container .pass-input i {
+  .login-box .input-container .pass-input i {
     position: absolute;
     right: 4px;
     top: 5px;
     padding: 9px 8px;
     color: #474343;
     transition: 0.3s; }
-  .box .input-container #hide-1 {
+  .login-box .input-container #hide-1 {
     display: none; }
-  .box .input-container .login-input:focus {
+  .login-box .input-container .login-input:focus {
     outline: none;
     border-bottom: 2px solid #519872; }
-  .box .input-container .login-input:focus:invalid {
+  .login-box .input-container .login-input:focus:invalid {
     border-bottom: 2px solid #832d2d; }
-  .box .input-container .btn {
+  .login-box .input-container .btn {
     width: 100%;
     padding: 12px;
     border: none;
@@ -1910,52 +1910,55 @@ figure.figure {
     font-size: 17px;
     line-height: 20px;
     text-decoration: none; }
-  .box .input-container .login-btn {
+  .login-box .input-container .login-btn {
     background-color: #519872;
     color: white;
     cursor: pointer; }
-  .box .input-container .login-btn:hover {
+  .login-box .input-container .login-btn:hover {
     background-color: #3B5249; }
-  .box .social-container .btn {
+  .login-box .social-container .btn {
     margin-bottom: 30px;
     opacity: .8;
     transition: .15s;
     width: 100%; }
-  .box .social-container .btn:hover {
+  .login-box .social-container .btn:hover {
     opacity: 1; }
-  .box .social-container .fb {
+  .login-box .social-container .fb {
     background-color: #3B5998;
     color: white; }
-  .box .social-container .google {
+  .login-box .social-container .google {
     background-color: #dd4b39;
     color: white; }
-  .box .or-line {
+  .login-box .or-line {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 30px 0;
     color: #474343; }
-    .box .or-line .or {
+    .login-box .or-line .or {
       margin: 0 18px; }
-    .box .or-line .line {
+    .login-box .or-line .line {
       background-color: #474343;
       height: 1px;
       width: 100%; }
-  .box .account {
+  .login-box .account {
     margin-top: 18px;
     text-align: center;
     color: #474343; }
-    .box .account a {
+    .login-box .account a {
       font-family: 'Lato', sans-serif;
       font-weight: 400;
       font-style: normal;
       color: #474343;
       text-decoration: none;
       transition: 0.15s; }
-  .box a:hover {
+  .login-box a:hover {
     color: #6F6C6C; }
 
+@media screen and (min-width: 767px) {
+  .login-box {
+    width: 450px; } }
 .order-conf-container {
   background-color: #191919;
   font-family: 'Lato', sans-serif;
@@ -1996,8 +1999,6 @@ figure.figure {
 @media screen and (min-width: 767px) {
   .conf-banner {
     padding: 3em; } }
-=======
->>>>>>> attribute_page
 body {
   background-color: #191919; }
 

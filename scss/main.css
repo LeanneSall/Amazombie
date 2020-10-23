@@ -1940,13 +1940,14 @@ figure.figure {
   width: 100%;
   background-color: #121212; }
 
-.box {
-  min-width: 320px;
+.login-box {
+  min-width: 100px;
+  max-width: 450px;
   padding: 24px; }
-  .box .register-container {
+  .login-box .register-container {
     text-align: center;
     padding-bottom: 4em; }
-  .box .input-container .login-input {
+  .login-box .input-container .login-input {
     width: 100%;
     border-radius: 2px;
     height: 44px;
@@ -1955,25 +1956,25 @@ figure.figure {
     background-color: #1B1A1A;
     margin-bottom: 24px;
     color: white; }
-  .box .input-container ::placeholder {
+  .login-box .input-container ::placeholder {
     color: #474343; }
-  .box .input-container .pass-input {
+  .login-box .input-container .pass-input {
     position: relative; }
-  .box .input-container .pass-input i {
+  .login-box .input-container .pass-input i {
     position: absolute;
     right: 4px;
     top: 5px;
     padding: 9px 8px;
     color: #474343;
     transition: 0.3s; }
-  .box .input-container #hide-1 {
+  .login-box .input-container #hide-1 {
     display: none; }
-  .box .input-container .login-input:focus {
+  .login-box .input-container .login-input:focus {
     outline: none;
     border-bottom: 2px solid #519872; }
-  .box .input-container .login-input:focus:invalid {
+  .login-box .input-container .login-input:focus:invalid {
     border-bottom: 2px solid #832d2d; }
-  .box .input-container .btn {
+  .login-box .input-container .btn {
     width: 100%;
     padding: 12px;
     border: none;
@@ -1984,52 +1985,55 @@ figure.figure {
     font-size: 17px;
     line-height: 20px;
     text-decoration: none; }
-  .box .input-container .login-btn {
+  .login-box .input-container .login-btn {
     background-color: #519872;
     color: white;
     cursor: pointer; }
-  .box .input-container .login-btn:hover {
+  .login-box .input-container .login-btn:hover {
     background-color: #3B5249; }
-  .box .social-container .btn {
+  .login-box .social-container .btn {
     margin-bottom: 30px;
     opacity: .8;
     transition: .15s;
     width: 100%; }
-  .box .social-container .btn:hover {
+  .login-box .social-container .btn:hover {
     opacity: 1; }
-  .box .social-container .fb {
+  .login-box .social-container .fb {
     background-color: #3B5998;
     color: white; }
-  .box .social-container .google {
+  .login-box .social-container .google {
     background-color: #dd4b39;
     color: white; }
-  .box .or-line {
+  .login-box .or-line {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 30px 0;
     color: #474343; }
-    .box .or-line .or {
+    .login-box .or-line .or {
       margin: 0 18px; }
-    .box .or-line .line {
+    .login-box .or-line .line {
       background-color: #474343;
       height: 1px;
       width: 100%; }
-  .box .account {
+  .login-box .account {
     margin-top: 18px;
     text-align: center;
     color: #474343; }
-    .box .account a {
+    .login-box .account a {
       font-family: 'Lato', sans-serif;
       font-weight: 400;
       font-style: normal;
       color: #474343;
       text-decoration: none;
       transition: 0.15s; }
-  .box a:hover {
+  .login-box a:hover {
     color: #6F6C6C; }
 
+@media screen and (min-width: 767px) {
+  .login-box {
+    width: 450px; } }
 .order-conf-container {
   background-color: #191919;
   font-family: 'Lato', sans-serif;
@@ -2275,28 +2279,33 @@ body {
       padding: 100px 0 100px 100px; } }
 
 .sub-box {
-  height: 500px;
-  width: 100%; }
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
   .sub-box .text {
     padding-top: 3%; }
     .sub-box .text h4 {
       color: #519872; }
     .sub-box .text h5 {
-      color: #474343;
+      color: #519872;
       font-size: 1.5em; }
+      .sub-box .text h5 .price-head {
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-style: normal; }
   .sub-box h3 {
     color: white; }
   .sub-box .button-sub-box {
     margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 20px; }
-    .sub-box .button-sub-box .add {
-      margin-right: 20px; }
-
-.box-img {
-  position: absolute;
-  left: 60%;
-  top: 15%; }
+    margin-bottom: 10px; }
+    .sub-box .button-sub-box .shop {
+      margin-left: 10px; }
+  .sub-box .box-img .crate {
+    width: 400px;
+    height: 400px; }
 
 .last-crate {
   height: 25%;
@@ -2323,9 +2332,23 @@ body {
       margin: 20px 20px; }
       .last-crate .sub-card-content .card-1 .last-img {
         height: 200px;
-        width: 200px;
+        width: 153px;
         margin-left: 10%;
         margin-top: 10%; }
+        .last-crate .sub-card-content .card-1 .last-img .vert {
+          padding-left: 35px; }
+      .last-crate .sub-card-content .card-1 .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 210px;
+        padding: 10% 4%; }
+      .last-crate .sub-card-content .card-1 .details p {
+        font-weight: bold;
+        color: #6a6a74;
+        text-align: center; }
+      .last-crate .sub-card-content .card-1 .vert-text {
+        padding-top: 0; }
     .last-crate .sub-card-content .card-1:hover {
       background-color: #17171d;
       transform-style: preserve-3d;
@@ -2351,7 +2374,16 @@ body {
     color: #519872; }
   .benefits .cards {
     display: flex;
-    width: 70%;
+    width: 60%;
+    background-color: #1e1e26;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 20px;
     height: 800px;
     float: left;
     flex-wrap: wrap;
@@ -2368,26 +2400,35 @@ body {
         height: 96px; }
   .benefits .review-forum {
     display: flex;
-    width: 30%;
-    height: 900px;
+    width: 35%;
+    background-color: #1e1e26;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 0 20px 0;
+    height: 800px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     float: right;
-    padding-bottom: 30px;
+    padding: 30px;
     align-items: center; }
     .benefits .review-forum h4 {
       padding-bottom: 10px;
       color: #519872; }
     .benefits .review-forum .review {
       margin-bottom: 0; }
-    .benefits .review-forum #fname {
+    .benefits .review-forum .forum .form #fname {
       width: 150px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       background-color: #c4c4c4;
       border-radius: 4px;
       box-sizing: border-box;
       padding: 10px; }
-    .benefits .review-forum #review {
+    .benefits .review-forum .forum .form #review {
       height: 200px;
       width: 300px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -2395,18 +2436,17 @@ body {
       border-radius: 4px;
       box-sizing: border-box;
       padding: 10px; }
-    .benefits .review-forum .rating {
-      width: 226px;
+    .benefits .review-forum .forum .form .rating {
       margin-bottom: 0;
       font-size: 25px;
       overflow: hidden;
       margin-left: 0; }
-    .benefits .review-forum .rating input {
+    .benefits .review-forum .forum .form .rating input {
       float: right;
       opacity: 0;
       position: absolute; }
-    .benefits .review-forum .rating a,
-    .benefits .review-forum .rating label {
+    .benefits .review-forum .forum .form .rating a,
+    .benefits .review-forum .forum .form .rating label {
       float: right;
       color: #aaa;
       text-decoration: none;
@@ -2414,34 +2454,67 @@ body {
       -moz-transition: color 0.4s;
       -o-transition: color 0.4s;
       transition: color 0.4s; }
-    .benefits .review-forum .rating label:hover ~ label,
-    .benefits .review-forum .rating input:focus ~ label,
-    .benefits .review-forum .rating label:hover,
-    .benefits .review-forum .rating a:hover,
-    .benefits .review-forum .rating a:hover ~ a,
-    .benefits .review-forum .rating a:focus,
-    .benefits .review-forum .rating a:focus ~ a {
+    .benefits .review-forum .forum .form .rating label:hover ~ label,
+    .benefits .review-forum .forum .form .rating input:focus ~ label,
+    .benefits .review-forum .forum .form .rating label:hover,
+    .benefits .review-forum .forum .form .rating a:hover,
+    .benefits .review-forum .forum .form .rating a:hover ~ a,
+    .benefits .review-forum .forum .form .rating a:focus,
+    .benefits .review-forum .forum .form .rating a:focus ~ a {
       color: orange;
       cursor: pointer; }
-    .benefits .review-forum .rating2 {
+    .benefits .review-forum .forum .form .rating2 {
       direction: rtl; }
-    .benefits .review-forum .rating2 a {
+    .benefits .review-forum .forum .form .rating2 a {
       float: none; }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 440px) {
-  .sub-box .add {
-    margin-bottom: 10px; } }
-/* Small Devices, Tablets */
-@media only screen and (max-width: 951px) {
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+  .benefits {
+    display: flex;
+    flex-wrap: wrap; }
+    .benefits .cards {
+      height: 800px;
+      width: 100%; }
+      .benefits .cards .bene-card {
+        width: 50%;
+        padding: 50px; }
+    .benefits .review-forum {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 500px; } }
+@media only screen and (max-width: 1299px) {
   .sub-box {
     width: 100%;
     height: 80vh; }
-    .sub-box .box-img {
-      display: inline-block;
-      left: 0;
+
+  .benefits {
+    display: flex;
+    flex-wrap: wrap; }
+    .benefits .cards {
+      height: 60vh;
+      width: 100%; }
+      .benefits .cards .bene-card {
+        flex-wrap: wrap;
+        padding: 0;
+        width: 300px;
+        height: 300px; }
+    .benefits .forum .form .review-forum {
       width: 100%;
-      margin-top: 100px; }
+      height: 60vh;
+      display: inline-block;
+      text-align: center; }
+      .benefits .forum .form .review-forum .rating {
+        text-align: center; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 961px) {
+  .sub-box {
+    width: 100%;
+    height: 100vh; }
+    .sub-box .box-img {
+      left: 0;
+      width: 500px; }
 
   .last-crate {
     height: 100vh; }
@@ -2452,24 +2525,30 @@ body {
     display: flex;
     flex-wrap: wrap; }
     .benefits .cards {
-      height: 100vh;
-      width: 100%; }
+      height: 115vh;
+      width: 100%;
+      flex-wrap: wrap; }
+      .benefits .cards .bene-card {
+        width: 400px;
+        width: 500px;
+        margin-left: 0; }
     .benefits .review-forum {
       width: 100%;
-      height: 50vh;
-      display: inline-block; } }
-@media only screen and (max-width: 767px) {
-  .last-crate-contents h3 {
-    margin-top: 400px; }
+      height: 60vh;
+      display: inline-block;
+      text-align: center; }
+      .benefits .review-forum .rating {
+        text-align: center; } }
+@media only screen and (max-width: 640px) {
+  .sub-box .add {
+    margin-bottom: 10px; }
 
-  .sub-box .box-img {
-    width: 500px;
-    height: 500px;
-    margin-top: 0; } }
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1075px) {
-  .benefits .cards {
-    height: 90vh; } }
+  .benefits .cards .bene-card {
+    padding: 20px; }
+    .benefits .cards .bene-card p {
+      width: 200px; }
+  .benefits .review-forum .forum .form #review {
+    width: 200px; } }
 .attribution-spread {
   display: flex;
   justify-content: center;
