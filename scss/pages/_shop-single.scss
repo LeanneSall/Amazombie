@@ -37,21 +37,23 @@ body {
 //Last Crate Contents
 
 .last-crate {
-  position: relative;
-  height: 400px;
+  height: 25%;
   width: 100%;
+  display: inline-block;
   h3 {
     padding: 20px;
   }
 
   .sub-card-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .card-1 {
       height: 300px;
       width: 250px;
       background-color: #1b1a1a;
+      margin-top: 5%;
       .last-img {
         border: 5px red solid;
         height: 200px;
@@ -62,38 +64,140 @@ body {
     }
   }
   .sing-button {
-    position: relative;
-    margin: 50px;
-    left: 46%;
-    top: 20%;
+    display: inline-block;
+    margin-left: 45%;
+    margin-top: 50px;
   }
 }
 
 //Benefits
 
 .benefits {
-  margin-top: 150px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
+  margin-top: 50px;
+  width: 100%;
+  display: inline-block;
   h3 {
     width: 100%;
+    position: relative;
+    float: left;
   }
-  .bene-card {
-    width: 28%;
-    height: 300px;
-    padding: 30px;
 
-    .bene-text {
-    }
-    .bene-img {
-      float: left;
-      padding-right: 20px;
+  .cards {
+    display: flex;
+    width: 70%;
+    border: 5px blue solid;
+    height: 800px;
+    float: left;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .bene-card {
+      width: 300px;
+      height: 300px;
+      padding: 30px;
+
+      .bene-img {
+        float: left;
+        padding-right: 20px;
+      }
     }
   }
-  .review {
-    padding-top: 0;
-    padding-right: 0;
+
+  .review-forum {
+    display: flex;
+    width: 30%;
+    border: 5px red solid;
+    height: 800px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    float: right;
+
+    .rate {
+      float: left;
+      height: 46px;
+      padding: 0 10px;
+    }
+    .rate:not(:checked) > input {
+      position: absolute;
+      top: -9999px;
+    }
+    .rate:not(:checked) > label {
+      float: right;
+      width: 1em;
+      overflow: hidden;
+      white-space: nowrap;
+      cursor: pointer;
+      font-size: 30px;
+      color: #ccc;
+    }
+    .rate:not(:checked) > label:before {
+      content: "★ ";
+    }
+    .rate > input:checked ~ label {
+      color: #ffc700;
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+      color: #deb217;
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+    }
   }
 }
+
+//Media Queries for Mobile and Tablet
+
+// @media (max-width: 900px) {
+// }
+
+// /* Extra Small Devices, Phones */
+// @media only screen and (min-width: 480px) {
+// }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 951px) {
+  .sub-box {
+    width: 100%;
+    height: 80vh;
+    .box-img {
+      display: inline-block;
+      left: 0;
+      width: 100%;
+    }
+  }
+  .last-crate {
+    height: 100vh;
+    border: red 5px solid;
+    .card-1 {
+      margin: 2%;
+    }
+  }
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    .cards {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .review-forum {
+      width: 100%;
+      height: 50vh;
+      display: inline-block;
+    }
+  }
+}
+
+// /* Medium Devices, Desktops */
+// @media only screen and (min-width: 992px) {
+// }
+
+// /* Large Devices, Wide Screens */
+// @media only screen and (min-width: 1200px) {
+// }

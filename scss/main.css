@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -2083,9 +2084,9 @@ body {
 }
 
 .last-crate {
-  position: relative;
-  height: 400px;
+  height: 25%;
   width: 100%;
+  display: inline-block;
 }
 
 .last-crate h3 {
@@ -2096,14 +2097,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .last-crate .sub-card-content .card-1 {
   height: 300px;
   width: 250px;
   background-color: #1b1a1a;
+  margin-top: 5%;
 }
 
 .last-crate .sub-card-content .card-1 .last-img {
@@ -2115,41 +2120,139 @@ body {
 }
 
 .last-crate .sing-button {
-  position: relative;
-  margin: 50px;
-  left: 46%;
-  top: 20%;
+  display: inline-block;
+  margin-left: 45%;
+  margin-top: 50px;
 }
 
 .benefits {
-  margin-top: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
+  display: inline-block;
 }
 
 .benefits h3 {
   width: 100%;
+  position: relative;
+  float: left;
 }
 
-.benefits .bene-card {
-  width: 28%;
+.benefits .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  border: 5px blue solid;
+  height: 800px;
+  float: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.benefits .cards .bene-card {
+  width: 300px;
   height: 300px;
   padding: 30px;
 }
 
-.benefits .bene-card .bene-img {
+.benefits .cards .bene-card .bene-img {
   float: left;
   padding-right: 20px;
 }
 
-.benefits .review {
-  padding-top: 0;
-  padding-right: 0;
+.benefits .review-forum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  border: 5px red solid;
+  height: 800px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  float: right;
+}
+
+.benefits .review-forum .rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.benefits .review-forum .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.benefits .review-forum .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.benefits .review-forum .rate:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.benefits .review-forum .rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.benefits .review-forum .rate:not(:checked) > label:hover,
+.benefits .review-forum .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.benefits .review-forum .rate > input:checked + label:hover,
+.benefits .review-forum .rate > input:checked + label:hover ~ label,
+.benefits .review-forum .rate > input:checked ~ label:hover,
+.benefits .review-forum .rate > input:checked ~ label:hover ~ label,
+.benefits .review-forum .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 951px) {
+  .sub-box {
+    width: 100%;
+    height: 80vh;
+  }
+  .sub-box .box-img {
+    display: inline-block;
+    left: 0;
+    width: 100%;
+  }
+  .last-crate {
+    height: 100vh;
+    border: red 5px solid;
+  }
+  .last-crate .card-1 {
+    margin: 2%;
+  }
+  .benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits .cards {
+    height: 100vh;
+    width: 100%;
+  }
+  .benefits .review-forum {
+    width: 100%;
+    height: 50vh;
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=main.css.map */
