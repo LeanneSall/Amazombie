@@ -126,7 +126,7 @@
             <div class="order-summary col-md-4">
                 <div class="order-summary-header flex"><!--order summary header-->
                     <span>Order Summary</span>
-                    <div class="icon-pencil-container button" onclick="toggleEditable(getInputs())">
+                    <div class="icon-pencil-container button" onclick="toggleEditable(getInputs().slice(0,9))">
                         <svg id="icon-pencil" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                         </svg>
@@ -183,7 +183,8 @@
                         <input id="useshipping" type="checkbox" checked="checked" onclick="toggleCCaddress()">
                     </div>
                     <div class="summary-form" id="order-summary-address-cc">
-                        <div>Use shipping address:</div>
+                        <div id="useShippingAddress-cc">Use shipping address:</div>
+                        <div id="useThisAddress-cc useThisAddress-cc-hidden">Use this address instead:</div>
                         <div class="summary-form" id="address-line-cc-1">Mr. Chris Redfield</div>
                         <div class="summary-form" id="address-line-cc-2">300 Unicorn Way</div>
                         <div class="summary-form" id="address-line-cc-3">Raccoon City, YK</div>
@@ -193,23 +194,23 @@
                 <div class="order-summary-row"><!--summary table-->
                     <div class="row">
                         <div class="col-3">Subtotal</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col cart-cell-prc">1156.35</div>
+                        <div class="col-1 order-summary-cell-ccy">$</div>
+                        <div class="col order-summary-cell-prc">1156.35</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Taxes</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col cart-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</div>
+                        <div class="col-1 order-summary-cell-ccy">$</div>
+                        <div class="col order-summary-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Shipping</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col cart-cell-prc">59.00</div>
+                        <div class="col-1 order-summary-cell-ccy">$</div>
+                        <div class="col order-summary-cell-prc">59.00</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Total</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col cart-cell-prc">1215.35</div>
+                        <div class="col-1 order-summary-cell-ccy">$</div>
+                        <div class="col order-summary-cell-prc">1215.35</div>
                     </div>
                 </div>
                 <!--bottom & button-->

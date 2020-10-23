@@ -97,12 +97,21 @@ function toggleCCaddress() {
     "address-line-cc-4"  // H0H0H0
     ];
 
-    for (i = 0; i < fromArray.length; ++i) {
-        if (cbox.checked) {
+    if (cbox.checked) {
+        document.getElementsByClassName("useShippingAddress-cc")[0].classList.remove("useShippingAddress-cc-invalid")
+        document.getElementsByClassName("useThisAddress-cc")[0].classList.add(".useThisAddress-cc-hidden")
+        for (i = 0; i < fromArray.length; ++i) {
             document.getElementById(toArray[i]).innerHtml = new infofield(fromArray[i]).txt;
-        } else {
-            toggleEditable(new infofield(toArray[i]));
+        } 
+    } else {
+        document.getElementsByClassName("useShippingAddress-cc")[0].classList.add("useShippingAddress-cc-invalid")
+        document.getElementsByClassName("useThisAddress-cc")[0].classList.remove(".useThisAddress-cc-hidden")
+        passToEditable = []; 
+        for (i = 0; i < toArray.length; ++i) {
+            passToEditable.push(new infofield(toArray[i]));
         }
+
+        toggleEditable(passToEditable);
     }
 }
 
@@ -153,8 +162,8 @@ function validateInputs(obj_array) {
     const regexp_postal = /[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/;
     var postal = [5,12];
     for (i = 0; i < postal.length; ++i) {
-        if (!(regexp_postal.test(String(obj_array[i].txt)))) {
-            obj_array[i].valid = false;
+        if (!(regexp_postal.test(String(obj_array[postal[i]].txt)))) {
+            obj_array[postal[i]].valid = false;
         }
     }
 

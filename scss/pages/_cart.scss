@@ -17,6 +17,7 @@
     @include body-regular;
     padding: 1rem;
     flex-wrap: wrap;
+    background-color: $white;
 }
 
 .cart-table-header {
@@ -142,6 +143,19 @@ a.button.plusminus {
     justify-content: space-between;
 }
 
+.useShippingAddress-cc-invalid {
+    text-decoration: line-through;
+}
+
+.useThisAddress-cc {
+    display: block;
+    padding-top: 0.5rem;
+}
+
+.useThisAddress-cc-hidden {
+    display: none;
+}
+
 .summary-icon {
     padding-left: 2px;
     width: 2rem;
@@ -150,7 +164,6 @@ a.button.plusminus {
         padding-bottom: 0.3rem;
     }
 }
-
 
 .summary-form {
     border-bottom: 1px solid $light-black;
@@ -161,11 +174,11 @@ a.button.plusminus {
     }
 }
 
-.cart-cell-prc {
+.order-summary-cell-prc {
     text-align: right;
 }
 
-#cart-cell-tax-amt {
+#order-summary-cell-tax-amt {
     color: $dark-ruby;
 }
 
