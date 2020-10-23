@@ -37,7 +37,12 @@ function getInputs() {
     "address-line-4", // H0H0H0
     "cc-line-1", // 1234 5678 9361 2346
     "cc-line-2", // 12/21
-    "cc-line-3" // 123
+    "cc-line-3", // 123
+
+    "address-line-cc-1",
+    "address-line-cc-2",
+    "address-line-cc-3",
+    "address-line-cc-4"
     ];
 
     var obj_array = [];
@@ -55,7 +60,8 @@ function toggleEditable(fields){
 
     if (pencilIcon.classList.contains("icon-pencil-container-editmode")) {
         pencilIcon.classList.remove("icon-pencil-container-editmode");
-        // tQ: validate
+
+        // tQ: validate all fields by default for pencil and checkbox editing mode
         validateInputs(getInputs());
     } else {
         pencilIcon.classList.add("icon-pencil-container-editmode");
@@ -74,6 +80,32 @@ function toggleEditable(fields){
     });
 }
 
+function toggleCCaddress() {
+    var cbox = document.getElementById("useshipping");
+
+    var fromArray = [
+    "address-line-1", // Mr. Chris Redfield
+    "address-line-2", // 300 Unicorn Way
+    "address-line-3", // Raccoon City, YK
+    "address-line-4" // H0H0H0
+    ];
+
+    var toArray = [
+    "address-line-cc-1",  // Mr. Chris Redfield
+    "address-line-cc-2",  // 300 Unicorn Way
+    "address-line-cc-3",  // Raccoon City, YK
+    "address-line-cc-4"  // H0H0H0
+    ];
+
+    for (i = 0; i < fromArray.length; ++i) {
+        if (cbox.checked) {
+            document.getElementById(toArray[i]).innerHtml = new infofield(fromArray[i]).txt;
+        } else {
+            toggleEditable(new infofield(toArray[i]));
+        }
+    }
+}
+
 function validateInputs(obj_array) {
 
     document.getElementById("order-submit-button").classList.remove("disabled", "order-submit-button-disabled");
@@ -89,6 +121,11 @@ function validateInputs(obj_array) {
         "postal code (format: A1A1A1)", // H0H0H0
         "credit card number", // 1234 5678 9361 2346
         "credit card expiry date: mm/yy", // 12/21
+        "3-digit credit card CCV", // 123
+        
+        "address: full name", // Mr. Chris Redfield
+        "address: street no. and name", // 300 Unicorn Way
+        "address: city, province", // Raccoon City, YK
         "3-digit credit card CCV" // 123
     ]
 
@@ -114,8 +151,11 @@ function validateInputs(obj_array) {
 
     // tQ: postal code must match pattern
     const regexp_postal = /[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/;
-    if (!(regexp_postal.test(String(obj_array[5].txt)))) {
-        obj_array[5].valid = false;
+    var postal = [5,12];
+    for (i = 0; i < postal.length; ++i) {
+        if (!(regexp_postal.test(String(obj_array[i].txt)))) {
+            obj_array[i].valid = false;
+        }
     }
 
     // tQ: credit card number must match pattern

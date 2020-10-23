@@ -1572,6 +1572,7 @@ a.button.plusminus {
   box-shadow: 0px 0px 2px #888;
   padding: 0.3em 0.4em; }
   .icon-pencil-container:hover {
+    cursor: pointer;
     background-color: #6F6C6C; }
 
 .icon-pencil-container-editmode {
@@ -1593,13 +1594,13 @@ a.button.plusminus {
 .summary-icon {
   padding-left: 2px;
   width: 2rem; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     .summary-icon {
       padding-bottom: 0.3rem; } }
 
 .summary-form {
   border-bottom: 1px solid #1B1A1A; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     .summary-form {
       padding-top: 0.3rem;
       width: 100%; } }

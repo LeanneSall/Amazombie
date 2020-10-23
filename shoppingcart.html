@@ -180,10 +180,14 @@
                 </div>
                 <div class="order-summary-row row"><!--use shipping address-->
                     <div class="summary-icon">
-                        <input id="useshipping" type="checkbox">
+                        <input id="useshipping" type="checkbox" checked="checked" onclick="toggleCCaddress()">
                     </div>
-                    <div>
-                        Use shipping address
+                    <div class="summary-form" id="order-summary-address-cc">
+                        <div>Use shipping address:</div>
+                        <div class="summary-form" id="address-line-cc-1">Mr. Chris Redfield</div>
+                        <div class="summary-form" id="address-line-cc-2">300 Unicorn Way</div>
+                        <div class="summary-form" id="address-line-cc-3">Raccoon City, YK</div>
+                        <div class="summary-form" id="address-line-cc-4">H0H0H0</div>
                     </div>
                 </div>
                 <div class="order-summary-row"><!--summary table-->
