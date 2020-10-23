@@ -1967,7 +1967,7 @@ figure.figure {
   .order-conf-container p {
     color: white; }
 
-.box {
+.order-summary-box {
   display: flex;
   justify-content: center;
   min-width: 320px;
@@ -1976,15 +1976,18 @@ figure.figure {
   align-items: center;
   margin: auto;
   color: white; }
-  .box .order-subtitle {
+  .order-summary-box .order-subtitle {
     padding-bottom: 10px; }
-  .box .order-summary {
+  .order-summary-box .order-summary {
     margin-bottom: 20px; }
-  .box hr {
+  .order-summary-box hr {
     background-color: #474343; }
-  .box #order-submit-button {
+  .order-summary-box #order-submit-button {
     margin: 20px 0;
     margin: auto; }
+  .order-summary-box .fab {
+    margin-left: 10px;
+    font-size: 20px; }
 
 .conf-banner {
   text-align: center;

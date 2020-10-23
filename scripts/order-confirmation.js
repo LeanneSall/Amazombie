@@ -1,5 +1,6 @@
 
 // Get the divs
+const orderNoDiv = document.querySelector('#order-no')
 const nameDiv = document.querySelector('#customer-name')
 const orderDateDiv = document.querySelector('#order-date')
 const address1Div = document.querySelector('#address-line-1')
@@ -61,13 +62,14 @@ const displayOrder = () => {
     var strShip = '$' + (20).toString()
     var strTotal = '$' + (subtotal + (subtotal * 0.12) + 20).toString()
     
+    orderNoDiv.innerHTML = generateRandomNo()
     nameDiv.innerHTML = customerInfoJson.name
     orderDateDiv.innerHTML = getCurrentDate()
     address1Div.innerHTML = customerInfoJson.address1
     address2Div.innerHTML = customerInfoJson.address2
     address3Div.innerHTML = customerInfoJson.address3
     emailDiv.innerHTML = customerInfoJson.email
-    paymentMethodDiv.innerHTML = customerInfoJson.paymentMethod
+    paymentMethodDiv.innerHTML = maskCardNo(customerInfoJson.paymentMethod) + '<i class="fab fa-cc-visa"></i>'
     subtotalDiv.innerHTML = strSubtotal
     taxesDiv.innerHTML = strTaxes
     shippingDiv.innerHTML = strShip
@@ -78,4 +80,13 @@ const displayOrder = () => {
 function getCurrentDate() {
     let date = new Date()
     return date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear()
+}
+
+function maskCardNo(cardNo){
+    var masked = '************' + cardNo.substr(-4)
+    return masked
+}
+
+function generateRandomNo() {
+    return Math.floor(10000000 + Math.random() * 9000000)
 }

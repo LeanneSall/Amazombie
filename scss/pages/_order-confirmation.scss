@@ -8,7 +8,7 @@
 }
 
 
-.box {
+.order-summary-box {
     display: flex;
     justify-content: center;
     min-width: 320px;
@@ -33,6 +33,11 @@
     #order-submit-button {
         margin: 20px 0;
         margin: auto;
+    }
+
+    .fab {
+        margin-left: 10px;
+        font-size: 20px;
     }
 
 }
