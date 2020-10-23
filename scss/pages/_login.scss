@@ -13,8 +13,9 @@
     background-color: $dark-black;
 }
 
-.box {
-    min-width: 320px;
+.login-box {
+    min-width: 100px;
+    max-width: 450px;
     padding: 24px;
 
 
@@ -162,18 +163,9 @@
 }
 
 @media screen and (min-width: 767px) {
-    // .social-container {
-    //     display: flex;
-    //     justify-content: space-between;
-
-    //     .fb {
-    //         margin-right: 18px;
-    //     }
-
-    //     .google {
-    //         margin-left: 18px;
-    //     }
-    // }
+    .login-box {
+        width: 450px;
+    }
 }
 
 @media screen and (min-width: 1200px) {}
