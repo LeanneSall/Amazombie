@@ -60,12 +60,9 @@ function toggleEditable(fields){
 
     if (pencilIcon.classList.contains("icon-pencil-container-editmode")) {
         pencilIcon.classList.remove("icon-pencil-container-editmode");
-
-        // tQ: validate all fields by default for pencil and checkbox editing mode
-        validateInputs(getInputs());
     } else {
         pencilIcon.classList.add("icon-pencil-container-editmode");
-        greyOutButton();
+        //greyOutButton();
     }
 
     fields.forEach(element => {
@@ -99,20 +96,21 @@ function toggleCCaddress() {
 
     if (cbox.checked) {
         document.getElementsByClassName("useShippingAddress-cc")[0].classList.remove("useShippingAddress-cc-invalid")
-        document.getElementsByClassName("useThisAddress-cc")[0].classList.add(".useThisAddress-cc-hidden")
+        document.getElementById("useThisAddress-cc").classList.add("useThisAddress-cc-hidden")
         for (i = 0; i < fromArray.length; ++i) {
-            document.getElementById(toArray[i]).innerHtml = new infofield(fromArray[i]).txt;
+            document.getElementById(toArray[i]).innerHTML = new infofield(fromArray[i]).txt;
         } 
     } else {
         document.getElementsByClassName("useShippingAddress-cc")[0].classList.add("useShippingAddress-cc-invalid")
-        document.getElementsByClassName("useThisAddress-cc")[0].classList.remove(".useThisAddress-cc-hidden")
-        passToEditable = []; 
-        for (i = 0; i < toArray.length; ++i) {
-            passToEditable.push(new infofield(toArray[i]));
-        }
-
-        toggleEditable(passToEditable);
+        document.getElementById("useThisAddress-cc").classList.remove("useThisAddress-cc-hidden")
     }
+
+    passToEditable = []; 
+    for (i = 0; i < toArray.length; ++i) {
+        passToEditable.push(new infofield(toArray[i]));
+    }
+
+    toggleEditable(passToEditable);
 }
 
 function validateInputs(obj_array) {
@@ -135,7 +133,7 @@ function validateInputs(obj_array) {
         "address: full name", // Mr. Chris Redfield
         "address: street no. and name", // 300 Unicorn Way
         "address: city, province", // Raccoon City, YK
-        "3-digit credit card CCV" // 123
+        "postal code (format: A1A1A1)" // 123
     ]
 
     // tQ: check for input lengths
@@ -180,7 +178,7 @@ function validateInputs(obj_array) {
         var month = parseInt(String(obj_array[7].txt).substring(0,2));
         var year = parseInt(String(obj_array[7].txt).substring(3));
         var compdate = new Date((2000 + year), month, 0);
-        console.log(compdate)
+        
         if (month >= 1 && month <= 12 && compdate >= new Date()) {
             obj_array[7].valid = true;
         }
@@ -206,5 +204,16 @@ function validateInputs(obj_array) {
 }
 
 function greyOutButton() {
-    document.getElementById("order-submit-button").classList.add("disabled", "order-submit-button-disabled");
+    var submitButton = document.getElementById("order-submit-button");
+    submitButton.classList.add("disabled", "order-submit-button-disabled");
 }
+
+// tQ: default behaviour
+var allInputFields = document.getElementsByClassName("summary-form");
+var checkThis = function() { validateInputs(getInputs()) };
+
+for (i = 0; i < allInputFields.length; ++i) {
+    allInputFields[i].addEventListener("blur", checkThis, false);
+}
+
+document.getElementById("useshipping").checked = true;

@@ -28,7 +28,7 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!-- Main Stylesheet -->
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <!--<link href="style.css" rel="stylesheet" type="text/css">-->
   <link href="/scss/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -180,11 +180,11 @@
                 </div>
                 <div class="order-summary-row row"><!--use shipping address-->
                     <div class="summary-icon">
-                        <input id="useshipping" type="checkbox" checked="checked" onclick="toggleCCaddress()">
+                        <input id="useshipping" type="checkbox" onclick="toggleCCaddress()">
                     </div>
                     <div class="summary-form" id="order-summary-address-cc">
-                        <div id="useShippingAddress-cc">Use shipping address:</div>
-                        <div id="useThisAddress-cc useThisAddress-cc-hidden">Use this address instead:</div>
+                        <div class="useShippingAddress-cc">Use shipping address for billing:</div>
+                        <div id="useThisAddress-cc" class="useThisAddress-cc-hidden">Your billing address:</div>
                         <div class="summary-form" id="address-line-cc-1">Mr. Chris Redfield</div>
                         <div class="summary-form" id="address-line-cc-2">300 Unicorn Way</div>
                         <div class="summary-form" id="address-line-cc-3">Raccoon City, YK</div>
@@ -200,7 +200,7 @@
                     <div class="row">
                         <div class="col-3">Taxes</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc" id="cart-cell-tax-amt">OVER MY COLD UNDEAD BODY</div>
+                        <div class="col order-summary-cell-prc" id="order-summary-cell-tax-amt">OVER MY COLD UNDEAD BODY</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Shipping</div>
@@ -216,7 +216,7 @@
                 <!--bottom & button-->
                 <!--todo: link to Gokay's page-->
                 <div class="order-summary-row order-submit-button-container flex">
-                        <a href="#" id="order-submit-button" class="button btn-submit">Submit</a>
+                        <a href="http://www.yahoo.com" id="order-submit-button" class="button btn-submit">Submit</a>
                 </div>
 
                 <!--tQ: modal form to edit customer details-->

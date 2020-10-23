@@ -147,13 +147,13 @@ a.button.plusminus {
     text-decoration: line-through;
 }
 
-.useThisAddress-cc {
+#useThisAddress-cc {
     display: block;
     padding-top: 0.5rem;
 }
 
 .useThisAddress-cc-hidden {
-    display: none;
+    display: none !important;
 }
 
 .summary-icon {
@@ -198,4 +198,5 @@ a.button.plusminus {
 .order-submit-button-disabled {
     background: $grey !important;
     color: $light-black !important;
+    pointer-events: none;
 }

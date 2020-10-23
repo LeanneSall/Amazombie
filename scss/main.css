@@ -1614,12 +1614,12 @@ a.button.plusminus {
 .useShippingAddress-cc-invalid {
   text-decoration: line-through; }
 
-.useThisAddress-cc {
+#useThisAddress-cc {
   display: block;
   padding-top: 0.5rem; }
 
 .useThisAddress-cc-hidden {
-  display: none; }
+  display: none !important; }
 
 .summary-icon {
   padding-left: 2px;
@@ -1653,7 +1653,8 @@ a.button.plusminus {
 
 .order-submit-button-disabled {
   background: #6F6C6C !important;
-  color: #1B1A1A !important; }
+  color: #1B1A1A !important;
+  pointer-events: none; }
 
 .carousel {
   position: relative;
