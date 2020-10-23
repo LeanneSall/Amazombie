@@ -1,6 +1,10 @@
 .order-conf-container {
     background-color: $black;
     @include body-light;
+
+    p {
+        color: white;
+    }
 }
 
 
@@ -13,12 +17,44 @@
     align-items: center;
     margin: auto;
     color: white;
+
+    .order-subtitle {
+        padding-bottom: 10px;
+    }
+
+    .order-summary {
+        margin-bottom: 20px;
+    }
+
+    hr {
+        background-color: $dark-grey;
+    }
+
+    #order-submit-button {
+        margin: 20px 0;
+    }
+
 }
 
 .conf-banner {
     text-align: center;
+    padding: 2em;
 
     h2 {
-        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    h4 {
+        padding-bottom: 30px;
+    }
+
+    p {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .conf-banner {
+        padding: 3em;
     }
 }

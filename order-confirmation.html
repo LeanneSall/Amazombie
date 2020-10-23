@@ -93,63 +93,61 @@
     <main class="order-conf-container">
         <!-- Section Default Boilerplate -->
         <div class="conf-banner flex-column">
-            <h2 class="wrap cart-banner black">Thank you for your order!</h2>
-            <p>You are all set for the apocalypse!</p>
+            <h2 class="wrap cart-banner black">Thank you for your order</h2>
+            <h4>You are all set for the apocalypse!</h4>
             <a class="button" href="">Track you order</a> 
         </div>
         <div class="wrap box">
            <hr>
-            <div class="order-summary col-xl-4">
+            <div class="order-summary col">
+                <div>                        
+                       <h4 class="order-subtitle">Order Details</h4>                 
+                    </div>
                 <div class="row">
                     <div class="order-summary-header col">
-                        <div>Order Number</div><!--order summary header-->
-                        <div>Order Date</div> 
-                        <div>Customer </div>
+                        <p>Order Number</p><!--order summary header-->
+                        <p>Order Date</p> 
+                        <p>Customer </p>
                     </div >
                 <!-- pass data here -->
                     <div class="order-summary-header col">
-                        <div id="order-no">39487245</div><!--order summary header-->
-                        <div id="order-date"></div> 
-                        <div id="customer-name"></div>
+                        <p id="order-no">39487245</p><!--order summary header-->
+                        <p id="order-date"></p> 
+                        <p id="customer-name"></p>
                     </div >
                 </div>
                 <hr>
-
-                <div class="order-summary-row"><!--address-->
+                <div class="order-summary"><!--address-->
                     <div>                        
-                       <h4>Delivery Address</h4>                 
+                       <h4 class="order-subtitle"> Delivery Address</h4>                 
                     </div>
-                    <div id="order-summary-address">
-                        <div id="address-line-1"></div>
-                        <div id="address-line-2"></div>
-                        <div id="address-line-3"></div>
-                        <div id="customer-email"></div>
+                    <div id="order-address">
+                        <p id="address-line-1"></p>
+                        <p id="address-line-2"></p>
+                        <p id="address-line-3"></p>
+                        <p id="customer-email"></p>
                     </div>
                 </div>
                 <hr>
-                <div class="order-summary-row"><!--credit card info-->
-                    <h6>Payment Method</h6>
+                <div class="order-summary"><!--credit card info-->
+                    <div>                        
+                       <h4 class="order-subtitle">Payment Method</h4>                 
+                    </div>
                     <div id="payment-method"></div>                        
                 </div>
                 <hr>
-                <div class="order-summary-row row"><!--summary table-->
-                    <div class="col">
-                        <div class="col-3">Subtotal</div>
-                        <div class="col-3">Taxes</div>
-                        <div class="col-3">Shipping</div>
-                        <div class="col-3">Total Price</div>
+                <div class="order-summary row"><!--summary table-->
+                    <div class="col-6">
+                        <p>Subtotal</p>
+                        <p>Taxes</p>
+                        <p>Shipping</p>
+                        <p>Total</p>
                     </div>
-                    <div class="col">
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                        <div class="col-1 cart-cell-ccy">$</div>
-                    </div>
-                    <div class="col">
-                        <div id="subtotal" class="col cart-cell-prc"></div>
-                        <div id="taxes" class="col cart-cell-prc"></div>
-                        <div id="shipping" class="col cart-cell-prc"></div>
-                        <div id="total" class="col cart-cell-prc"></div>
+                    <div class="col-6">
+                        <p id="subtotal"></p>
+                        <p id="taxes"></p>
+                        <p id="shipping"></p>
+                        <p id="total"></p>
                     </div>
                 </div>
                 <!--bottom & button-->

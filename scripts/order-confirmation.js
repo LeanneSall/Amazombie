@@ -67,10 +67,10 @@ const updateStorage = () => {
         subtotal += item.price
     });
     
-    var strSubtotal = subtotal.toString()
-    var strTaxes = ((subtotal * 0.12).toFixed(2)).toString()
-    var strShip = (20).toString()
-    var strTotal = (subtotal + (subtotal * 0.12) + 20).toString()
+    var strSubtotal = '$' + subtotal.toString()
+    var strTaxes = '$' + ((subtotal * 0.12).toFixed(2)).toString()
+    var strShip = '$' + (20).toString()
+    var strTotal = '$' + (subtotal + (subtotal * 0.12) + 20).toString()
     
     nameDiv.innerHTML = customerInfoJson.name
     orderDateDiv.innerHTML = getCurrentDate()

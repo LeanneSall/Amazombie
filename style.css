@@ -1960,6 +1960,8 @@ figure.figure {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal; }
+  .order-conf-container p {
+    color: white; }
 
 .box {
   display: flex;
@@ -1970,10 +1972,27 @@ figure.figure {
   align-items: center;
   margin: auto;
   color: white; }
+  .box .order-subtitle {
+    padding-bottom: 10px; }
+  .box .order-summary {
+    margin-bottom: 20px; }
+  .box hr {
+    background-color: #474343; }
+  .box #order-submit-button {
+    margin: 20px 0; }
 
 .conf-banner {
-  text-align: center; }
+  text-align: center;
+  padding: 2em; }
   .conf-banner h2 {
-    padding-top: 30px; }
+    padding-bottom: 30px; }
+  .conf-banner h4 {
+    padding-bottom: 30px; }
+  .conf-banner p {
+    align-self: center; }
+
+@media screen and (min-width: 767px) {
+  .conf-banner {
+    padding: 3em; } }
 
 /*# sourceMappingURL=style.css.map */
