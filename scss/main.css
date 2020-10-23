@@ -2990,8 +2990,16 @@ body {
 }
 
 .sub-box {
-  height: 500px;
+  height: 600px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sub-box .text {
@@ -3003,8 +3011,15 @@ body {
 }
 
 .sub-box .text h5 {
-  color: #474343;
+  color: #519872;
   font-size: 1.5em;
+}
+
+.sub-box .text h5 .price-head {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .sub-box h3 {
@@ -3014,29 +3029,15 @@ body {
 .sub-box .button-sub-box {
   margin-top: 50px;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
 
-.sub-box .button-sub-box .add {
-  margin-right: 20px;
+.sub-box .button-sub-box .shop {
+  margin-left: 10px;
 }
 
-.sub-box .box-img {
-  position: absolute;
-  left: 60%;
-  top: 15%;
-}
-
-@media screen and (max-width: 1000px) {
-  .sub-box .box-img .crate {
-    margin-top: 100px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .sub-box .box-img .crate {
-    margin-top: 0px;
-  }
+.sub-box .box-img .crate {
+  width: 400px;
+  height: 400px;
 }
 
 .last-crate {
@@ -3248,9 +3249,9 @@ body {
   margin-bottom: 0;
 }
 
-.benefits .review-forum #fname {
+.benefits .review-forum .forum .form #fname {
   width: 150px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #c4c4c4;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
@@ -3258,10 +3259,10 @@ body {
   padding: 10px;
 }
 
-.benefits .review-forum #review {
+.benefits .review-forum .forum .form #review {
   height: 200px;
   width: 300px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #c4c4c4;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
@@ -3269,21 +3270,21 @@ body {
   padding: 10px;
 }
 
-.benefits .review-forum .rating {
+.benefits .review-forum .forum .form .rating {
   margin-bottom: 0;
   font-size: 25px;
   overflow: hidden;
   margin-left: 0;
 }
 
-.benefits .review-forum .rating input {
+.benefits .review-forum .forum .form .rating input {
   float: right;
   opacity: 0;
   position: absolute;
 }
 
-.benefits .review-forum .rating a,
-.benefits .review-forum .rating label {
+.benefits .review-forum .forum .form .rating a,
+.benefits .review-forum .forum .form .rating label {
   float: right;
   color: #aaa;
   text-decoration: none;
@@ -3291,22 +3292,22 @@ body {
   transition: color 0.4s;
 }
 
-.benefits .review-forum .rating label:hover ~ label,
-.benefits .review-forum .rating input:focus ~ label,
-.benefits .review-forum .rating label:hover,
-.benefits .review-forum .rating a:hover,
-.benefits .review-forum .rating a:hover ~ a,
-.benefits .review-forum .rating a:focus,
-.benefits .review-forum .rating a:focus ~ a {
+.benefits .review-forum .forum .form .rating label:hover ~ label,
+.benefits .review-forum .forum .form .rating input:focus ~ label,
+.benefits .review-forum .forum .form .rating label:hover,
+.benefits .review-forum .forum .form .rating a:hover,
+.benefits .review-forum .forum .form .rating a:hover ~ a,
+.benefits .review-forum .forum .form .rating a:focus,
+.benefits .review-forum .forum .form .rating a:focus ~ a {
   color: orange;
   cursor: pointer;
 }
 
-.benefits .review-forum .rating2 {
+.benefits .review-forum .forum .form .rating2 {
   direction: rtl;
 }
 
-.benefits .review-forum .rating2 a {
+.benefits .review-forum .forum .form .rating2 a {
   float: none;
 }
 
@@ -3337,6 +3338,10 @@ body {
 }
 
 @media only screen and (max-width: 1299px) {
+  .sub-box {
+    width: 100%;
+    height: 80vh;
+  }
   .benefits {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3355,13 +3360,13 @@ body {
     width: 300px;
     height: 300px;
   }
-  .benefits .review-forum {
+  .benefits .forum .form .review-forum {
     width: 100%;
     height: 60vh;
     display: inline-block;
     text-align: center;
   }
-  .benefits .review-forum .rating {
+  .benefits .forum .form .review-forum .rating {
     text-align: center;
   }
 }
@@ -3370,7 +3375,7 @@ body {
 @media only screen and (max-width: 961px) {
   .sub-box {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
   }
   .sub-box .box-img {
     left: 0;
@@ -3396,7 +3401,9 @@ body {
         flex-wrap: wrap;
   }
   .benefits .cards .bene-card {
-    padding: 20px;
+    width: 400px;
+    width: 500px;
+    margin-left: 0;
   }
   .benefits .review-forum {
     width: 100%;
@@ -3409,12 +3416,18 @@ body {
   }
 }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 640px) {
   .sub-box .add {
     margin-bottom: 10px;
   }
   .benefits .cards .bene-card {
-    width: 300px;
+    padding: 20px;
+  }
+  .benefits .cards .bene-card p {
+    width: 200px;
+  }
+  .benefits .review-forum .forum .form #review {
+    width: 200px;
   }
 }
 /*# sourceMappingURL=main.css.map */
