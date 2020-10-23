@@ -1,14 +1,5 @@
 
-
-// -----------------------------------------//
-// ADD ITEMS TO local storage 
-// -----------------------------------------//
-// function populateStorage() {
-//   localStorage.setItem('bgcolor', 'red');
-//   localStorage.setItem('font', 'Helvetica');
-//   localStorage.setItem('image', 'myCat.png');
-// }
-
+// Get the divs
 const nameDiv = document.querySelector('#customer-name')
 const orderDateDiv = document.querySelector('#order-date')
 const address1Div = document.querySelector('#address-line-1')
@@ -21,7 +12,7 @@ const taxesDiv = document.querySelector('#taxes')
 const shippingDiv = document.querySelector('#shipping')
 const totalDiv = document.querySelector('#total')
 
-
+// Some dummy data. to be erased
 var customerInfo = {
     name: 'Chris Redfield',
     address1: '300 Unicorn Way',
@@ -42,10 +33,8 @@ var inCart = [
     },
 ]
 
-// -----------------------------------------//
-// UPDATE STORAGE
-// -----------------------------------------//
-const updateStorage = () => {
+
+const displayOrder = () => {
     // #1. Update localstorage with the CURRENT instance of our cart array
     // also need to JSON.stringify because localstorage only works with JSON
     
