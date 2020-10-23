@@ -2,7 +2,7 @@
 
 .cart-banner {
     background-color: $dark-black;
-    padding: 2vh;
+    padding: 1rem;
 }
 
 // tQ: wrapper
@@ -15,7 +15,7 @@
 // tQ: shopping cart
 .cart-table {
     @include body-regular;
-    padding: 2vh;
+    padding: 1rem;
     flex-wrap: wrap;
 }
 
@@ -28,7 +28,7 @@
 .cart-table-header, .order-summary-header {
     @include heading-regular;
     border-bottom: 2px solid $black;
-    padding: 3vh 1vh 1vh 1vh;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     justify-content: space-between;
 }
 
@@ -68,7 +68,13 @@
     }
 }
 
-.cart-table td, .cart-table-qty {
+// .cart-table-pdt {
+//     @media screen and (max-width: 500px){
+//         font-size: ;
+//     }
+// }
+
+.cart-table-qty {
     justify-content: space-around;
 }
 
@@ -92,7 +98,7 @@ a.button.plusminus {
 .order-summary {
     background-color: $light-black;
     color: $white;
-    padding: 2vh;
+    padding: 1rem;
 }
 
 .order-summary-header {
@@ -121,7 +127,7 @@ a.button.plusminus {
 
 .order-summary-row, .order-summary-table {
     @include body-regular;
-    padding: 3vh
+    padding: 1rem;
 }
 
 .order-summary-row-cc {
@@ -129,8 +135,22 @@ a.button.plusminus {
 }
 
 .summary-icon {
-    padding-right: 2vh;
-    width: 4vh;
+    padding-left: 2px;
+    width: 2rem;
+
+    @media screen and (max-width: 500px){
+        padding-bottom: 0.3rem;
+    }
+}
+
+
+.summary-form {
+    border-bottom: 1px solid $light-black;
+
+    @media screen and (max-width: 500px){
+        padding-top: 0.3rem;
+        width: 100%;
+    }
 }
 
 .cart-cell-prc {
@@ -152,4 +172,9 @@ a.button.plusminus {
 .order-submit-button-container {
     justify-content: center;
     align-items: center;
+}
+
+.order-submit-button-disabled {
+    background: $grey !important;
+    color: $light-black !important;
 }

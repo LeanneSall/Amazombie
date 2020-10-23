@@ -1,14 +1,33 @@
+// tQ: for populating page based on previous page, and to pass on to Gokay
+// class product {
+//     id
+//     quantity
+//     price
+// }
+
+// tQ: for form validation
 class infofield {
     constructor(id) {
         this.id = id;
         this.obj = document.getElementById(id);
-        this.txt = this.obj.innerHTML;
+        this.txt = this.obj.innerHTML.trim().replace( /(<([^>]+)>)/ig, '');
         this.edit = this.obj.isContentEditable;
         this.valid = true;
     }
 }
 
-function getFields() {
+// tQ: t'is for Gokay
+// class customer() {
+//     firstName,
+//     lastName,
+//     addressLine1,
+//     addressLine2,
+//     addressLine3,
+//     creditCardNo,
+//     totalAmt
+// }
+
+function getInputs() {
     var fields = [
     "full-name",
     "email-address" ,     
@@ -36,9 +55,11 @@ function toggleEditable(fields){
 
     if (pencilIcon.classList.contains("icon-pencil-container-editmode")) {
         pencilIcon.classList.remove("icon-pencil-container-editmode");
-
+        // tQ: validate
+        validateInputs(getInputs());
     } else {
         pencilIcon.classList.add("icon-pencil-container-editmode");
+        greyOutButton();
     }
 
     fields.forEach(element => {
@@ -51,36 +72,37 @@ function toggleEditable(fields){
             field.contentEditable = true;
         }
     });
-    // tQ: validate
-    validateInputs(getFields());
 }
 
 function validateInputs(obj_array) {
+
+    document.getElementById("order-submit-button").classList.remove("disabled", "order-submit-button-disabled");
+
     var isOk = true;
 
     var placeholders = [
         "full name",
         "email address" ,     
-        "address line 1: full name", // Mr. Chris Redfield
-        "address line 2: street no. and name", // 300 Unicorn Way
-        "address line 3: city, province", // Raccoon City, YK
-        "address line 4: postal code (format: A1A1A1)", // H0H0H0
+        "address: full name", // Mr. Chris Redfield
+        "address: street no. and name", // 300 Unicorn Way
+        "address: city, province", // Raccoon City, YK
+        "postal code (format: A1A1A1)", // H0H0H0
         "credit card number", // 1234 5678 9361 2346
         "credit card expiry date: mm/yy", // 12/21
-        "credit card CVN" // 123
+        "3-digit credit card CCV" // 123
     ]
 
     // tQ: check for input lengths
     for (i = 0; i < obj_array.length; ++i) {
         document.getElementById(obj_array[i].id).classList.remove("order-summary-row-invalid");
-        if (obj_array[i].txt.trim().length <= 1) {
+        if (obj_array[i].txt.length <= 1 || obj_array[i].txt=="Please enter your " + placeholders[i]) {
             obj_array[i].valid = false;
         }
     }
 
     // tQ: full name must be two words
-    const regexp_fname = new RegExp(/^[a-z,',-]+(\s)[a-z,',-]+$/i);
-    if (!(regexp_fname.test(obj_array[0].txt))) {
+    const regexp_fname = new RegExp(/^[a-z,',-]+(\s)[a-z,',-]+$/);
+    if (!(regexp_fname.test(obj_array[0].txt.toLowerCase()))) {
         obj_array[0].valid = false;
     }
     
@@ -92,13 +114,35 @@ function validateInputs(obj_array) {
 
     // tQ: postal code must match pattern
     const regexp_postal = /[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/;
-    if (!(regexp_postal.test(String(obj_array[5].txt).toLowerCase()))) {
+    if (!(regexp_postal.test(String(obj_array[5].txt)))) {
         obj_array[5].valid = false;
     }
 
-    // tQ: credit card must match pattern
-    
+    // tQ: credit card number must match pattern
+    const regexp_cc1 = /^[0-9]{16}$/;
+    var testThis = String(obj_array[6].txt).replaceAll(" ","");
+    if (!(regexp_cc1.test(String(obj_array[6].txt).replaceAll(" ","")))) {
+        obj_array[6].valid = false;
+    }
+    // tQ: credit card exp date must be valid
+    const regexp_cc2 = /^[0-9]{2}\/[0-9]{2}$/;
+    obj_array[7].valid = false;
+    if (regexp_cc2.test(String(obj_array[7].txt).replaceAll(" ",""))) {
+        var month = parseInt(String(obj_array[7].txt).substring(0,2));
+        var year = parseInt(String(obj_array[7].txt).substring(3));
+        var compdate = new Date((2000 + year), month, 0);
+        console.log(compdate)
+        if (month >= 1 && month <= 12 && compdate >= new Date()) {
+            obj_array[7].valid = true;
+        }
+    }
+    // tQ: credit card ccv must match pattern
+    const regexp_cc3 = /^[0-9]{3}$/;
+    if (!(regexp_cc3.test(String(obj_array[8].txt).replaceAll(" ","")))) {
+        obj_array[8].valid = false;
+    }
 
+    // tQ: append classes
     for (i = 0; i < obj_array.length; ++i) {
         if (!(obj_array[i].valid)) {
             document.getElementById(obj_array[i].id).innerHTML = "Please enter your " + placeholders[i];
@@ -107,19 +151,11 @@ function validateInputs(obj_array) {
         }
     }
 
-    // if (isOk) {
-
-    // } else {
-
-    // }
+    if (!(isOk)) {
+        greyOutButton();
+    }
 }
 
-// class customer {
-//     firstName,
-//     lastName,
-//     addressLine1,
-//     addressLine2,
-//     addressLine3,
-//     creditCardNo,
-//     totalAmt
-// }
+function greyOutButton() {
+    document.getElementById("order-submit-button").classList.add("disabled", "order-submit-button-disabled");
+}
