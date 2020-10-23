@@ -14,8 +14,20 @@ body {
 }
 
 .head-text {
-  padding-left: 100px;
-  padding-top: 2%;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  padding-top: 15px;
+  max-width: 1800px;
+  margin: auto;
+
+  @media screen and (min-width: 767px) {
+    padding: 50px 0 50px 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 100px 0 100px 100px;
+  }
 }
 
 //Subscription Box A Section
