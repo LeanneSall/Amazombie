@@ -347,18 +347,22 @@
               </div>
               </div>
               <div class="box-img" uk-scrollspy-class="uk-animation-slide-bottom">
-                <img src="images/shop/crate.png" alt="crate" />
+                <img class="crate"src="images/shop/crate.png" alt="crate" />
               </div>
             </div>
             <div class="last-crate">
               <h3>Last Crate Contents</h3>
               <div class="sub-card-content"  uk-scrollspy= "target: > div; cls: uk-animation-fade; delay: 250">
-                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/gatling.png"></div></div>
-                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/chervy.png"></div></div>
-                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/choppa.png"></div></div>
-                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/warrior.png"></div></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/gatling.png"></div>
+              <p class="details" >What more could you want then firepower. This gatlinggun will shoot all the zombies(or humans) that your heart desires. </p></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img src="images/shop/chervy.png"></div>
+                <p class="details" >What more could you want then firepower. This gatlinggun will shoot all the zombies(or humans) that your heart desires. </p></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img class="vert"src="images/shop/jager.png"></div>
+                <p class="details vert-text" >What more could you want then firepower. This gatlinggun will shoot all the zombies(or humans) that your heart desires. </p></div>
+                <div class="card-1"><div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom"><img class="vert"src="images/shop/warrior.png"></div>
+                <p class="details vert-text" >What more could you want then firepower. This gatlinggun will shoot all the zombies(or humans) that your heart desires. </p></div>
               </div>
-              <a href="#" class="button sing-button">See more</a>
+              <a href="shopAll.html" class="button sing-button">See more</a>
             </div>
             
             
@@ -458,9 +462,9 @@
                 </div>
                 
               
-              <div class="forum" uk-scrollspy-class="uk-animation-slide-bottom">
+              <div class="forum"  uk-scrollspy-class="uk-animation-slide-bottom">
                 <h4>Leave a Review!</h4>
-                <form>
+                <form class="form">
                   
                   <input type="text" id="fname" name="fname" placeholder="Your Name"/><br><br>
                   
@@ -475,8 +479,8 @@
                     
                   </div>
                   
-                  <a class="button submit" href="#">Submit</a>
-                  
+                  <a class="button submit" id="submitform" >Submit</a><br><br>
+                  <div ><p id="thankyou"></p></div>
                 </form>
                 
               </div>

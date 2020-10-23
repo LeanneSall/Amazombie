@@ -3021,10 +3021,22 @@ body {
   margin-right: 20px;
 }
 
-.box-img {
+.sub-box .box-img {
   position: absolute;
   left: 60%;
   top: 15%;
+}
+
+@media screen and (max-width: 1000px) {
+  .sub-box .box-img .crate {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sub-box .box-img .crate {
+    margin-top: 0px;
+  }
 }
 
 .last-crate {
@@ -3076,9 +3088,38 @@ body {
 
 .last-crate .sub-card-content .card-1 .last-img {
   height: 200px;
-  width: 200px;
+  width: 153px;
   margin-left: 10%;
   margin-top: 10%;
+}
+
+.last-crate .sub-card-content .card-1 .last-img .vert {
+  padding-left: 35px;
+}
+
+.last-crate .sub-card-content .card-1 .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 210px;
+  padding: 10% 4%;
+}
+
+.last-crate .sub-card-content .card-1 .details p {
+  font-weight: bold;
+  color: #6a6a74;
+  text-align: center;
+}
+
+.last-crate .sub-card-content .card-1 .vert-text {
+  padding-top: 0;
 }
 
 .last-crate .sub-card-content .card-1:hover {
@@ -3120,7 +3161,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  width: 60%;
+  background-color: #1e1e26;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 20px 20px;
   height: 800px;
   float: left;
   -ms-flex-wrap: wrap;
@@ -3150,18 +3209,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
-  height: 900px;
+  width: 35%;
+  background-color: #1e1e26;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 20px 0 20px 0;
+  height: 800px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   float: right;
-  padding-bottom: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 30px;
+  align-items: center;
 }
 
 .benefits .review-forum h4 {
@@ -3195,7 +3270,6 @@ body {
 }
 
 .benefits .review-forum .rating {
-  width: 226px;
   margin-bottom: 0;
   font-size: 25px;
   overflow: hidden;
@@ -3237,23 +3311,70 @@ body {
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 440px) {
-  .sub-box .add {
-    margin-bottom: 10px;
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+  .benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits .cards {
+    height: 800px;
+    width: 100%;
+  }
+  .benefits .cards .bene-card {
+    width: 50%;
+    padding: 50px;
+  }
+  .benefits .review-forum {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits .cards {
+    height: 60vh;
+    width: 100%;
+  }
+  .benefits .cards .bene-card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .benefits .review-forum {
+    width: 100%;
+    height: 60vh;
+    display: inline-block;
+    text-align: center;
+  }
+  .benefits .review-forum .rating {
+    text-align: center;
   }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 951px) {
+@media only screen and (max-width: 961px) {
   .sub-box {
     width: 100%;
     height: 80vh;
   }
   .sub-box .box-img {
-    display: inline-block;
     left: 0;
-    width: 100%;
-    margin-top: 100px;
+    width: 500px;
   }
   .last-crate {
     height: 100vh;
@@ -3269,31 +3390,31 @@ body {
         flex-wrap: wrap;
   }
   .benefits .cards {
-    height: 100vh;
+    height: 115vh;
     width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits .cards .bene-card {
+    padding: 20px;
   }
   .benefits .review-forum {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: inline-block;
+    text-align: center;
+  }
+  .benefits .review-forum .rating {
+    text-align: center;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .last-crate-contents h3 {
-    margin-top: 400px;
+@media only screen and (min-width: 300px) {
+  .sub-box .add {
+    margin-bottom: 10px;
   }
-  .sub-box .box-img {
-    width: 500px;
-    height: 500px;
-    margin-top: 0;
-  }
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1075px) {
-  .benefits .cards {
-    height: 90vh;
+  .benefits .cards .bene-card {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */
