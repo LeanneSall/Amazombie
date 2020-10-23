@@ -25,10 +25,17 @@
   }
 }
 
-.cart-table-header, .order-summary-header {
+.cart-table-header {
     @include heading-regular;
     border-bottom: 2px solid $black;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    justify-content: space-between;
+}
+
+.order-summary-header { 
+    @include heading-regular;
+    border-bottom: 2px solid $black;
+    padding: 1rem 0.5rem 0.35rem 0.5rem;
     justify-content: space-between;
 }
 

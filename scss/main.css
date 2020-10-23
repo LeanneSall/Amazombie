@@ -1500,12 +1500,20 @@ a.button {
   .cart-table-header {
     display: none; } }
 
-.cart-table-header, .order-summary-header {
+.cart-table-header {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-style: normal;
   border-bottom: 2px solid #191919;
-  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  justify-content: space-between; }
+
+.order-summary-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 2px solid #191919;
+  padding: 1rem 0.5rem 0.35rem 0.5rem;
   justify-content: space-between; }
 
 .cart-qty {
