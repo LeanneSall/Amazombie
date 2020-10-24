@@ -2135,7 +2135,7 @@ figure.figure {
 .order-summary-box {
   justify-content: center;
   min-width: 320px;
-  padding: 24px;
+  padding: 1em;
   max-width: 700px;
   align-items: center;
   margin: auto;
@@ -2153,12 +2153,17 @@ figure.figure {
     margin-left: 10px;
     font-size: 20px; }
 
-#purchased-items .flex {
+#purchased-items .display-items {
   align-items: center;
-  margin-bottom: 20px; }
-  #purchased-items .flex .col-sm-8 {
-    padding-left: 0; }
-  #purchased-items .flex .col-sm-2 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #bebebe; }
+  #purchased-items .display-items p {
+    color: black; }
+  #purchased-items .display-items .col-sm-8 {
+    padding-left: 0;
+    align-items: center; }
+  #purchased-items .display-items .col-sm-2 {
     text-align: right; }
 
 .conf-banner {

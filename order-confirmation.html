@@ -49,10 +49,10 @@
               <div id="pseudo-nav">
                 <div>
                   <ul>
-                      <li class="current"><a href="#">Home</a></li>
-                      <li><a href="#">Shop</a></li>
-                      <li><a href="#">Login</a></li>
-                      <li><a href="#">Signup</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="shopAll.html">Shop</a></li>
+                      <li><a href="login.html">Login</a></li>
+                      <li><a href="register.html">Signup</a></li>
                   </ul>
                 </div>
               </div> <!--end #pseudo-nav-->
@@ -66,12 +66,12 @@
               <div class='hamburger'></div>
             </a>
 
-            <a href="#" id="cart-meta">
+            <a href="shopAll.html" id="cart-meta">
               <div class="cart-wrapper">
                 <div class="svg-cont">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 23.73l-3-2.122v-14.2l3 1.359v14.963zm2-14.855v15.125l13-1.954v-15.046l-13 1.875zm5.963-7.875c-2.097 0-3.958 2.005-3.962 4.266l-.001 1.683c0 .305.273.54.575.494.244-.037.425-.247.425-.494v-1.681c.003-1.71 1.416-3.268 2.963-3.268.537 0 1.016.195 1.384.564.422.423.654 1.035.653 1.727v1.747c0 .305.273.54.575.494.243-.037.423-.246.423-.492l.002-1.749c.002-1.904-1.32-3.291-3.037-3.291zm-6.39 5.995c.245-.037.427-.247.427-.495v-2.232c.002-1.71 1.416-3.268 2.963-3.268l.162.015c.366-.283.765-.513 1.188-.683-.405-.207-.858-.332-1.35-.332-2.096 0-3.958 2.005-3.962 4.266v2.235c0 .306.272.538.572.494z"/></svg>
                 </div> <!--end svg-cont -->
-                <p>$69.00</p>
+                <p>$0</p>
               </div> <!--end cart-wrapper -->
             </a> 
           </div> <!-- end #pseudo-header -->
@@ -92,13 +92,14 @@
       </section>
     </header>
 
+    <!-- Banner -->
     <main class="order-conf-container">
-        <!-- Section Default Boilerplate -->
         <div class="conf-banner flex-column">
             <h2 class="wrap">Thank you for your order</h2>
             <h4>You are all set for the apocalypse!</h4>
             <a class="button" href="">Track you order</a> 
         </div>
+        <!-- Order Details -->
         <div class="wrap order-summary-box">
            <hr>
             <div class="order-details col">
@@ -131,14 +132,14 @@
                     </div>
                 </div>
                 <hr>
-                <div class="order-details"><!--credit card info-->
+                <div class="order-details">
                     <div>                        
                        <h4 class="order-subtitle">Payment Method</h4>                 
                     </div>
                     <div id="payment-method"></div>                        
                 </div>
                 <hr>
-                <div class="order-details row"><!--summary table-->
+                <div class="order-details row">
                     <div class="col-6">
                         <p>Subtotal</p>
                         <p>Taxes</p>
@@ -152,49 +153,16 @@
                         <p id="total"></p>
                     </div>
                 </div>
-                <!--bottom & button-->
-                <!--todo: link to Gokay's page-->
-                <div class="order-summary-row order-submit-button-container flex">
-                    <div id="order-submit-button">
-                        <a href="#" onclick="displayOrder()" class="button btn-submit">Continue Shopping</a>
-                    </div>
-                </div>
             </div>
         </div>
-                <div id="purchased-items" class="wrap order-summary-box">
-                    
-                    <!-- <div class="flex col-sm-12">
-                        <div class="flex col-sm-8">
-                            <img class="cart-row-img" src="images/cart/crate.png">
-                            <div class="">
-                                Get Those Zombies Off My Lawn (Tier 1)    
-                            </div>
-                        </div>
-                        <div class="flex col-sm-2">
-                            <p class="cart-qty">1</p>
-                        </div>
-                        <div class="col-sm-2">
-                            
-                                $69.00
-                        </div>
+
+        <!-- Display the cart items here -->
+        <div id="purchased-items" class="wrap order-summary-box" style="background-color: white;">
+        </div>
+                <div class="order-summary-row order-submit-button-container flex">
+                    <div id="order-submit-button">
+                        <a href="shopAll.html" class="button btn-submit">Continue Shopping</a>
                     </div>
-                    
-                    <div class="flex col-sm-12">
-                        <div class="flex col-sm-8">
-                            <img class="cart-row-img" src="images/cart/crate.png">
-                            <div class="">
-                                Get Those Zombies Off My Lawn (Tier 1)    
-                            </div>
-                        </div>
-                        <div class="flex col-sm-2">
-                            <p class="cart-qty">1</p>
-                        </div>
-                        <div class="col-sm-2">
-                            
-                                $69.00
-                        </div>
-                        
-                    </div> -->
                 </div>
         
     </main>

@@ -11,7 +11,7 @@
 .order-summary-box {
     justify-content: center;
     min-width: 320px;
-    padding: 24px;
+    padding: 1em;
     max-width: 700px;
     align-items: center;
     margin: auto;
@@ -43,12 +43,20 @@
 }
 
 #purchased-items {
-    .flex {
+    .display-items {
         align-items: center;
-        margin-bottom: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid #bebebe;
+
+        p {
+            color: black;
+        }
 
         .col-sm-8 {
             padding-left: 0;
+            align-items: center;
+
         }
 
         .col-sm-2 {
