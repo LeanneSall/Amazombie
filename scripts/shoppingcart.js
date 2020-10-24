@@ -256,9 +256,19 @@ function saveUserData() {
     window.localStorage.setItem('customer', JSON.stringify(cust));
 }
 
+function zombiesAreComing() {
+    document.getElementById.innerHTML = "Your cart is emtpy, partner. Better gear up for the apocalypse."
+}
+
 // tQ: default behaviour
 //     checkbox should be checked
 document.getElementById("useshipping").checked = true;
 document.getElementById("useshipping").disabled = true;
 // document.getElementById("useshipping").checked = true;
 
+// tQ: display message when cart is empty
+window.addEventListener('storage', () => {
+    // When local storage changes, dump the list to
+    // the console.
+    console.log(JSON.parse(window.localStorage.getItem('sampleList')));    
+  });
