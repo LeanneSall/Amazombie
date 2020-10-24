@@ -214,3 +214,13 @@ a.button.plusminus {
 .summary-form-cc-grey {
     color: $grey;
 }
+
+#fairWarning {
+    padding-top: 3rem;
+    color: $dark-ruby;
+    @include heading-regular;
+
+    &.hidden {
+        display: none;
+    }
+}

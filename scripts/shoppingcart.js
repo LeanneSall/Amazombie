@@ -257,7 +257,8 @@ function saveUserData() {
 }
 
 function zombiesAreComing() {
-    document.getElementById.innerHTML = "Your cart is emtpy, partner. Better gear up for the apocalypse."
+    document.getElementById("fairWarning").classList.remove("hidden");
+    lockButton();
 }
 
 // tQ: default behaviour
@@ -267,8 +268,8 @@ document.getElementById("useshipping").disabled = true;
 // document.getElementById("useshipping").checked = true;
 
 // tQ: display message when cart is empty
-window.addEventListener('storage', () => {
-    // When local storage changes, dump the list to
-    // the console.
-    console.log(JSON.parse(window.localStorage.getItem('sampleList')));    
-  });
+window.addEventListener('load', function() {
+    if (document.getElementsByClassName("cart-row-img").length==0) {
+        zombiesAreComing();
+    }
+});

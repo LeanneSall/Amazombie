@@ -1665,6 +1665,15 @@ a.button.plusminus {
 .summary-form-cc-grey {
   color: #6F6C6C; }
 
+#fairWarning {
+  padding-top: 3rem;
+  color: #832d2d;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+  #fairWarning.hidden {
+    display: none; }
+
 .carousel {
   position: relative;
   height: 80vh;

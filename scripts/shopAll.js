@@ -230,6 +230,11 @@ function deleteButtons() {
             delete cartItems[productName];
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 
+            // tQ: display message when qty is 0
+            if (localStorage.getItem('cartNumbers')==0) {
+              zombiesAreComing();
+            }
+
             displayCart();
             onLoadCartPrice();
         });
