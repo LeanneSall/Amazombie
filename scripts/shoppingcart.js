@@ -17,15 +17,21 @@ class infofield {
 }
 
 // tQ: t'is for Gokay
-// class customer() {
-//     firstName,
-//     lastName,
-//     addressLine1,
-//     addressLine2,
-//     addressLine3,
-//     creditCardNo,
-//     totalAmt
-// }
+class customer {
+    constructor() {
+    let inputs = getInputs();
+
+    var fullName = inputs.get("full-name").txt;
+    this.firstName = fullName.split(" ")[0];
+    this.lastName = fullName.split(" ")[1];
+
+    this.addressLine1 = inputs.get("address-line-1").txt;
+    this.addressLine2 = inputs.get("address-line-2").txt;
+    this.addressLine3 = inputs.get("address-line-3").txt;
+    this.creditCardNo = inputs.get("cc-line-1").txt;
+    this.totalAmt = parseFloat(document.getElementById("total-amt").innerHTML);
+    }
+}
 
 function getInputs() {
     var fields = [
@@ -244,14 +250,12 @@ function lockButton() {
     submitButton.classList.add("disabled", "order-submit-button-disabled");
 }
 
+function saveUserData() {
+    var cust = new customer();
+    window.localStorage.setItem('customer', JSON.stringify(cust));
+}
+
 // tQ: default behaviour
-// var allInputFields = document.getElementsByClassName("summary-form");
-// var checkThis = function() { validateInputs(getInputs()) };
-
-// for (i = 0; i < allInputFields.length; ++i) {
-//     allInputFields[i].addEventListener("blur", checkThis, false);
-// }
-
-// tQ: checkbox should be checked
+//     checkbox should be checked
 document.getElementById("useshipping").checked = true;
 document.getElementById("useshipping").disabled = true;
