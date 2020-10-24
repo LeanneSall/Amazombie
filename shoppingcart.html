@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart | Amazombie</title>
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
@@ -48,7 +51,7 @@
                 <div>
                   <ul>
                       <li><a href="#">Home</a></li>
-                      <li><a href="#">Shop</a></li>
+                      <li><a href="shopAll.html">Shop</a></li>
                       <li><a href="#">Login</a></li>
                       <li><a href="#">Signup</a></li>
                   </ul>
@@ -69,7 +72,7 @@
                 <div class="svg-cont">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 23.73l-3-2.122v-14.2l3 1.359v14.963zm2-14.855v15.125l13-1.954v-15.046l-13 1.875zm5.963-7.875c-2.097 0-3.958 2.005-3.962 4.266l-.001 1.683c0 .305.273.54.575.494.244-.037.425-.247.425-.494v-1.681c.003-1.71 1.416-3.268 2.963-3.268.537 0 1.016.195 1.384.564.422.423.654 1.035.653 1.727v1.747c0 .305.273.54.575.494.243-.037.423-.246.423-.492l.002-1.749c.002-1.904-1.32-3.291-3.037-3.291zm-6.39 5.995c.245-.037.427-.247.427-.495v-2.232c.002-1.71 1.416-3.268 2.963-3.268l.162.015c.366-.283.765-.513 1.188-.683-.405-.207-.858-.332-1.35-.332-2.096 0-3.958 2.005-3.962 4.266v2.235c0 .306.272.538.572.494z"/></svg>
                 </div> <!--end svg-cont -->
-                <p>$69.00</p>
+                <p>$0</p>
               </div> <!--end cart-wrapper -->
             </a> 
           </div> <!-- end #pseudo-header -->
@@ -94,36 +97,16 @@
         <!-- Section Default Boilerplate -->
         <h4 class="flex cart-banner white">Shopping Cart</h4>
         <div class="cart-wrapper">
-            <!--*** tQ: @Nick when populating page, HTML should be added to cart-table div below-->
+
             <div class="cart-table col-md-8">
                 <div class="cart-table-header flex">
                     <div class="cart-table-cell col-8">Product</div>
                     <div class="cart-table-cell col-2">Quantity</div>
                     <div class="cart-table-cell col-2">Price</div>
                 </div>
-                <!--*** tQ: PRODUCT ROW TEMPLATE FOR NICK -->
-                <div class="cart-table-row flex">
-                    <div class="cart-table-cell cart-table-pdt flex col-sm-8">
-                        <img class="cart-row-img" src="images/cart/crate.png">
-                        <div class="cart-row-pdtname">Get Those Zombies Off My Lawn (Tier 1)</div>
-                    </div>
-                    <div class="cart-table-cell cart-table-qty flex col-sm-2"><!--qty-->
-                        <p class="cart-qty">1</p>
-                        <div class="flex">
-                            <a class="button plusminus" onclick="increaseQty(this)">+</a>
-                            <a class="button plusminus" onclick="decreaseQty(this)">&#8211;</a>
-                        </div>
-                    </div>
-                    <div class="cart-table-cell cart-table-prc flex col-sm-2">
-                        <span class="cart-cell-ccy">
-                            $
-                        </span>
-                        <span class="cart-cell-price">
-                            69.00
-                        </span>
-                    </div>
+                <div id="products" class="cart-table-row row">
+                    
                 </div>
-                <!--*** -->
             </div>
             <div class="order-summary col-md-4">
                 <div class="order-summary-header flex"><!--order summary header-->
@@ -197,7 +180,7 @@
                     <div class="row">
                         <div class="col-3">Subtotal</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">1156.35</div>
+                        <div id="subtotal" class="col order-summary-cell-prc">0</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Taxes</div>
@@ -207,12 +190,12 @@
                     <div class="row">
                         <div class="col-3">Shipping</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">59.00</div>
+                        <div id="shipping" class="col order-summary-cell-prc">0</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Total</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">1215.35</div>
+                        <div id="total" class="col order-summary-cell-prc">0</div>
                     </div>
                 </div>
                 <!--bottom & button-->
