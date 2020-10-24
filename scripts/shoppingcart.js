@@ -75,73 +75,72 @@ function getInputs() {
 function toggleSummaryFields(fields){
 
     var pencilIcon = document.getElementsByClassName("icon-pencil-container")[0];
+    
+    if (pencilIcon.classList.contains("icon-pencil-container-editmode")) {
+        pencilIcon.classList.remove("icon-pencil-container-editmode");
+        document.getElementById("useshipping").disabled = true;
+        toggleCCaddress()
+        validateInputs(fields);
+        // if (document.getElementById("useshipping")) {
+        //     var fromArray = [
+        //     "address-line-1", // Mr. Chris Redfield
+        //     "address-line-2", // 300 Unicorn Way
+        //     "address-line-3", // Raccoon City, YK
+        //     "address-line-4" // H0H0H0
+        //     ];
 
-    if (!(pencilIcon.classList.contains("icon-pencil-container-locked"))) {
-
-        if (pencilIcon.classList.contains("icon-pencil-container-editmode")) {
-            pencilIcon.classList.remove("icon-pencil-container-editmode");
-            document.getElementById("useshipping").disabled = true;
-            validateInputs();
-            if (document.getElementById("useshipping")) {
-                var fromArray = [
-                "address-line-1", // Mr. Chris Redfield
-                "address-line-2", // 300 Unicorn Way
-                "address-line-3", // Raccoon City, YK
-                "address-line-4" // H0H0H0
-                ];
-
-                var toArray = [
-                "address-line-cc-1",  // Mr. Chris Redfield
-                "address-line-cc-2",  // 300 Unicorn Way
-                "address-line-cc-3",  // Raccoon City, YK
-                "address-line-cc-4"  // H0H0H0
-                ];
-                transferAddress(fromArray, toArray);
-            }
-        } else {
-            pencilIcon.classList.add("icon-pencil-container-editmode");
-            document.getElementById("useshipping").disabled = false;
-            greyOutButton();
-        }
-
-        toggleEditable(fields);
+        //     var toArray = [
+        //     "address-line-cc-1",  // Mr. Chris Redfield
+        //     "address-line-cc-2",  // 300 Unicorn Way
+        //     "address-line-cc-3",  // Raccoon City, YK
+        //     "address-line-cc-4"  // H0H0H0
+        //     ];
+        //     transferAddress(fromArray, toArray);
+        // }
+    } else {
+        pencilIcon.classList.add("icon-pencil-container-editmode");
+        document.getElementById("useshipping").disabled = false;
+        lockButton();
     }
+
+    toggleEditable(fields);
 }
 
-// function toggleCCaddress() {
-//     var cbox = document.getElementById("useshipping");
+function toggleCCaddress() {
+    var cbox = document.getElementById("useshipping");
 
-//     var fromArray = [
-//     "address-line-1", // Mr. Chris Redfield
-//     "address-line-2", // 300 Unicorn Way
-//     "address-line-3", // Raccoon City, YK
-//     "address-line-4" // H0H0H0
-//     ];
+    if (cbox.checked) {
+        var fromArray = [
+        "address-line-1", // Mr. Chris Redfield
+        "address-line-2", // 300 Unicorn Way
+        "address-line-3", // Raccoon City, YK
+        "address-line-4" // H0H0H0
+        ];
+    
+        var toArray = [
+        "address-line-cc-1",  // Mr. Chris Redfield
+        "address-line-cc-2",  // 300 Unicorn Way
+        "address-line-cc-3",  // Raccoon City, YK
+        "address-line-cc-4"  // H0H0H0
+        ];
 
-//     var toArray = [
-//     "address-line-cc-1",  // Mr. Chris Redfield
-//     "address-line-cc-2",  // 300 Unicorn Way
-//     "address-line-cc-3",  // Raccoon City, YK
-//     "address-line-cc-4"  // H0H0H0
-//     ];
+        document.getElementsByClassName("useShippingAddress-cc")[0].classList.remove("useShippingAddress-cc-invalid")
+        //document.getElementById("useThisAddress-cc").classList.add("useThisAddress-cc-hidden")
+        transferAddress(fromArray, toArray);
+    }
+    // } else {
+    //     document.getElementsByClassName("useShippingAddress-cc")[0].classList.add("useShippingAddress-cc-invalid")
+    //     document.getElementById("useThisAddress-cc").classList.remove("useThisAddress-cc-hidden")
+    //     document.getElementsByClassName("icon-pencil-container")[0].classList.add("disabled", "icon-pencil-container-locked");
+    // }
 
-//     if (cbox.checked) {
-//         document.getElementsByClassName("useShippingAddress-cc")[0].classList.remove("useShippingAddress-cc-invalid")
-//         document.getElementById("useThisAddress-cc").classList.add("useThisAddress-cc-hidden")
-//         transferAddress(fromArray, toArray);
-//     } else {
-//         document.getElementsByClassName("useShippingAddress-cc")[0].classList.add("useShippingAddress-cc-invalid")
-//         document.getElementById("useThisAddress-cc").classList.remove("useThisAddress-cc-hidden")
-//         document.getElementsByClassName("icon-pencil-container")[0].classList.add("disabled", "icon-pencil-container-locked");
-//     }
+    // let passToEditable = new Map(); 
+    // for (i = 0; i < toArray.length; ++i) {
+    //     passToEditable.set(toArray[i]);
+    // }
 
-//     let passToEditable = new Map(); 
-//     for (i = 0; i < toArray.length; ++i) {
-//         passToEditable.set(toArray[i]);
-//     }
-
-//     toggleEditable(passToEditable);
-// }
+    // toggleEditable(passToEditable);
+}
 
 function toggleEditable(fields) {
     for (let [key, value] of fields) {
@@ -165,7 +164,7 @@ function transferAddress(from, to) {
 
 function validateInputs(obj_map) {
 
-    document.getElementById("order-submit-button").classList.remove("disabled", "order-submit-button-disabled");
+    unlockButton();
 
     var isOk = true;
 
@@ -232,11 +231,15 @@ function validateInputs(obj_map) {
     }
 
     if (!(isOk)) {
-        greyOutButton();
+        lockButton();
     }
 }
 
-function greyOutButton() {
+function unlockButton() {
+    document.getElementById("order-submit-button").classList.remove("disabled", "order-submit-button-disabled");
+}
+
+function lockButton() {
     var submitButton = document.getElementById("order-submit-button");
     submitButton.classList.add("disabled", "order-submit-button-disabled");
 }
