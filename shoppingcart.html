@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart | Amazombie</title>
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
@@ -177,7 +180,7 @@
                     <div class="row">
                         <div class="col-3">Subtotal</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">1156.35</div>
+                        <div id="subtotal" class="col order-summary-cell-prc">0</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Taxes</div>
@@ -187,12 +190,12 @@
                     <div class="row">
                         <div class="col-3">Shipping</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">59.00</div>
+                        <div id="shipping" class="col order-summary-cell-prc">0</div>
                     </div>
                     <div class="row">
                         <div class="col-3">Total</div>
                         <div class="col-1 order-summary-cell-ccy">$</div>
-                        <div class="col order-summary-cell-prc">1215.35</div>
+                        <div id="total" class="col order-summary-cell-prc">0</div>
                     </div>
                 </div>
                 <!--bottom & button-->
