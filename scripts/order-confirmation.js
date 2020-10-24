@@ -1,3 +1,4 @@
+//const { disconnect } = require("process")
 
 // Get the divs
 const orderNoDiv = document.querySelector('#order-no')
@@ -13,6 +14,8 @@ const taxesDiv = document.querySelector('#taxes')
 const shippingDiv = document.querySelector('#shipping')
 const totalDiv = document.querySelector('#total')
 
+const itemsDiv = document.querySelector('#purchased-items')
+
 // Some dummy data. to be erased
 var customerInfo = {
     name: 'Chris Redfield',
@@ -24,18 +27,24 @@ var customerInfo = {
 } 
 var inCart = [
     box1 = {
-        price: 123
+        image: 'images/cart/crate.png',
+        description: 'Get Those Zombies Off My Lawn (Tier 1)',
+        quantity: 2,
+        price: 69,
     },
     box2 = {
-        price: 123
+        image: 'images/cart/crate.png',
+        description: 'Get Those Zombies Off My Lawn (Tier 1)',
+        quantity: 2,
+        price: 69,
     },
-    box3 = {
-        price: 123
-    },
+    // box3 = {
+    //     price: 123
+    // },
 ]
 
 
-const displayOrder = () => {
+function displayOrder() {
     // #1. Update localstorage with the CURRENT instance of our cart array
     // also need to JSON.stringify because localstorage only works with JSON
     
@@ -75,6 +84,8 @@ const displayOrder = () => {
     shippingDiv.innerHTML = strShip
     totalDiv.innerHTML = strTotal
 
+    itemsDiv = displayItems(actuallyInCart)
+
 }
 
 function getCurrentDate() {
@@ -89,4 +100,25 @@ function maskCardNo(cardNo){
 
 function generateRandomNo() {
     return Math.floor(10000000 + Math.random() * 9000000)
+}
+
+function displayItems(object) {
+    object.forEach(item => {
+        var node = document.createElement('div')
+        node.setAttribute('class', 'flex col-sm-12')
+        node.innerHTML = `<div class="flex col-sm-8">
+                            <img class="cart-row-img" src="${item.image}">
+                            <div class="">
+                                <p>${item.description}</p>    
+                            </div>
+                        </div>
+                        <div class="col-sm-2"><!--qty-->
+                            <p class="cart-qty">${item.quantity}</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>$${item.price}</p>                            
+                        </div>`
+        
+        itemsDiv.appendChild(node);
+    })
 }

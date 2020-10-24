@@ -2127,7 +2127,6 @@ figure.figure {
     color: white; }
 
 .order-summary-box {
-  display: flex;
   justify-content: center;
   min-width: 320px;
   padding: 24px;
@@ -2147,6 +2146,14 @@ figure.figure {
   .order-summary-box .fab {
     margin-left: 10px;
     font-size: 20px; }
+
+#purchased-items .flex {
+  align-items: center;
+  margin-bottom: 20px; }
+  #purchased-items .flex .col-sm-8 {
+    padding-left: 0; }
+  #purchased-items .flex .col-sm-2 {
+    text-align: right; }
 
 .conf-banner {
   text-align: center;

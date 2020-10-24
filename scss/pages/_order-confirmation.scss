@@ -9,7 +9,6 @@
 
 
 .order-summary-box {
-    display: flex;
     justify-content: center;
     min-width: 320px;
     padding: 24px;
@@ -41,6 +40,24 @@
     }
 
 }
+
+#purchased-items {
+    .flex {
+        align-items: center;
+        margin-bottom: 20px;
+
+        .col-sm-8 {
+            padding-left: 0;
+        }
+
+        .col-sm-2 {
+            text-align: right;
+        }
+    }
+
+
+}
+
 
 .conf-banner {
     text-align: center;
