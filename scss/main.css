@@ -1601,6 +1601,12 @@ a.button.plusminus {
 .icon-pencil-container-editmode {
   background-color: #6F6C6C; }
 
+.icon-pencil-container-locked {
+  background-color: #474343; }
+  .icon-pencil-container-locked:hover {
+    cursor: default;
+    background-color: #474343; }
+
 #icon-pencil {
   display: inline-block;
   fill: #121212; }
@@ -1658,6 +1664,9 @@ a.button.plusminus {
   background: #6F6C6C !important;
   color: #1B1A1A !important;
   pointer-events: none; }
+
+.summary-form-cc-grey {
+  color: #6F6C6C; }
 
 .carousel {
   position: relative;

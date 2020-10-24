@@ -126,6 +126,15 @@ a.button.plusminus {
     background-color: $grey;
 }
 
+.icon-pencil-container-locked {
+    background-color: $dark-grey;
+
+    &:hover {
+        cursor: default;
+        background-color: $dark-grey;
+    }
+}
+
 #icon-pencil {
     display: inline-block;
     fill: $dark-black;
@@ -196,4 +205,8 @@ a.button.plusminus {
     background: $grey !important;
     color: $light-black !important;
     pointer-events: none;
+}
+
+.summary-form-cc-grey {
+    color: $grey;
 }
