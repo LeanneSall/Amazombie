@@ -1,0 +1,446 @@
+// WHOLE PAGE
+
+body {
+  background-color: #121212;
+}
+.text-wrap {
+  padding: 50px;
+}
+
+// Title Heading
+.title-section {
+  height: 400px;
+  width: 100%;
+  background: url("/images/shop/darkforest.jpg");
+}
+
+.head-text {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  padding-top: 15px;
+  max-width: 1800px;
+  margin: auto;
+  h4 {
+    color: $light-green;
+  }
+
+  @media screen and (min-width: 767px) {
+    padding: 50px 0 50px 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 100px 0 100px 100px;
+  }
+}
+
+//Subscription Box A Section
+
+.sub-box {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .text {
+    padding-top: 3%;
+    h4 {
+      color: $light-green;
+    }
+    h5 {
+      color: $light-green;
+      font-size: 1.5em;
+      .price-head {
+        color: white;
+        @include body-light;
+      }
+    }
+  }
+  h3 {
+    color: white;
+  }
+  .button-sub-box {
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    .shop {
+      margin-left: 10px;
+    }
+  }
+  .box-img {
+    .crate {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+//Last Crate Contents
+
+.last-crate {
+  height: 25%;
+  width: 100%;
+  display: inline-block;
+  h3 {
+    padding: 20px;
+    color: white;
+  }
+
+  .sub-card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card-1 {
+      width: 250px;
+      height: 350px;
+      background-color: #1e1e26;
+      border-radius: 10px;
+      box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      margin: 20px 20px;
+
+      .last-img {
+        height: 200px;
+        width: 153px;
+        margin-left: 10%;
+        margin-top: 10%;
+
+        .vert {
+          padding-left: 35px;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 210px;
+        padding: 10% 4%;
+      }
+      .details p {
+        font-weight: bold;
+        color: #6a6a74;
+        text-align: center;
+      }
+      .vert-text {
+        padding-top: 0;
+      }
+    }
+    .card-1:hover {
+      background-color: #17171d;
+      transform-style: preserve-3d;
+      transform: scale(1.02);
+      transition: all ease 0.3s;
+      border: 1px solid #3b5249;
+    }
+  }
+  .sing-button {
+    display: inline-block;
+    margin-left: 45%;
+    margin-top: 50px;
+  }
+}
+
+//Benefits
+
+.benefits {
+  margin-top: 50px;
+  width: 100%;
+  display: inline-block;
+  h3 {
+    width: 100%;
+    position: relative;
+    float: left;
+    color: white;
+    padding-bottom: 20px;
+  }
+  h4 {
+    color: $light-green;
+  }
+
+  .cards {
+    display: flex;
+    width: 60%;
+    background-color: #1e1e26;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 20px;
+
+    height: 800px;
+    float: left;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .bene-card {
+      width: 300px;
+      height: 300px;
+
+      .bene-heading {
+        padding-bottom: 20px;
+      }
+
+      .bene-img {
+        float: left;
+        padding-right: 20px;
+        width: 103px;
+        height: 96px;
+      }
+    }
+  }
+
+  .review-forum {
+    display: flex;
+    width: 35%;
+    background-color: #1e1e26;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 0 20px 0;
+    height: 800px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    float: right;
+    padding: 30px;
+
+    align-items: center;
+
+    h4 {
+      padding-bottom: 10px;
+      color: $light-green;
+    }
+    .review {
+      margin-bottom: 0;
+    }
+    .forum {
+      .form {
+        #fname {
+          width: 150px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+          background-color: #c4c4c4;
+          border-radius: 4px;
+          box-sizing: border-box;
+          padding: 10px;
+        }
+        #review {
+          height: 200px;
+          width: 300px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+          background-color: #c4c4c4;
+          border-radius: 4px;
+
+          box-sizing: border-box;
+          padding: 10px;
+        }
+
+        .rating {
+          margin-bottom: 0;
+          font-size: 25px;
+          overflow: hidden;
+          margin-left: 0;
+        }
+        .rating input {
+          float: right;
+          opacity: 0;
+          position: absolute;
+        }
+        .rating a,
+        .rating label {
+          float: right;
+          color: #aaa;
+          text-decoration: none;
+          -webkit-transition: color 0.4s;
+          -moz-transition: color 0.4s;
+          -o-transition: color 0.4s;
+          transition: color 0.4s;
+        }
+        .rating label:hover ~ label,
+        .rating input:focus ~ label,
+        .rating label:hover,
+        .rating a:hover,
+        .rating a:hover ~ a,
+        .rating a:focus,
+        .rating a:focus ~ a {
+          color: orange;
+          cursor: pointer;
+        }
+        .rating2 {
+          direction: rtl;
+        }
+        .rating2 a {
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries for Mobile and Tablet
+
+/* Extra Small Devices, Phones */
+
+// /* Medium Devices, Desktops */
+// @media only screen and (min-width: 992px) {
+// }
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1300px) {
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    .cards {
+      height: 800px;
+      width: 100%;
+      .bene-card {
+        width: 50%;
+        padding: 50px;
+      }
+    }
+
+    .review-forum {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .sub-box {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    .cards {
+      height: 60vh;
+      width: 100%;
+      .bene-card {
+        flex-wrap: wrap;
+        padding: 0;
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .forum {
+      .form {
+        .review-forum {
+          width: 100%;
+          height: 60vh;
+          display: inline-block;
+          text-align: center;
+          .rating {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 961px) {
+  .sub-box {
+    width: 100%;
+    height: 100vh;
+    .box-img {
+      left: 0;
+      width: 500px;
+    }
+  }
+  .last-crate {
+    height: 100vh;
+
+    .card-1 {
+      margin: 2%;
+    }
+  }
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    .cards {
+      height: 115vh;
+      width: 100%;
+      flex-wrap: wrap;
+      .bene-card {
+        width: 400px;
+
+        width: 500px;
+        margin-left: 0;
+      }
+    }
+
+    .review-forum {
+      width: 100%;
+      height: 60vh;
+      display: inline-block;
+      text-align: center;
+      .rating {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .sub-box {
+    .add {
+      margin-bottom: 10px;
+    }
+  }
+
+  .benefits {
+    .cards {
+      .bene-card {
+        padding: 20px;
+        p {
+          width: 200px;
+        }
+      }
+    }
+    .review-forum {
+      .forum {
+        .form {
+          #review {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 767px) {
+//   .last-crate-contents {
+//     h3 {
+//       margin-top: 400px;
+//     }
+//   }
+//   .sub-box {
+//     .box-img {
+//       width: 500px;
+//       height: 500px;
+//       margin-top: 0;
+//     }
+//   }
+// }
