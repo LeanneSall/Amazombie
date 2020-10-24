@@ -3320,7 +3320,7 @@ body {
 
 .last-crate .sub-card-content .card-1 {
   width: 250px;
-  height: 350px;
+  height: 400px;
   background-color: #1e1e26;
   border-radius: 10px;
   -webkit-box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
@@ -3347,11 +3347,7 @@ body {
   height: 200px;
   width: 153px;
   margin-left: 10%;
-  margin-top: 10%;
-}
-
-.last-crate .sub-card-content .card-1 .last-img .vert {
-  padding-left: 35px;
+  padding-top: 30px;
 }
 
 .last-crate .sub-card-content .card-1 .details {
@@ -3373,10 +3369,6 @@ body {
   font-weight: bold;
   color: #6a6a74;
   text-align: center;
-}
-
-.last-crate .sub-card-content .card-1 .vert-text {
-  padding-top: 0;
 }
 
 .last-crate .sub-card-content .card-1:hover {
@@ -3629,6 +3621,14 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 961px) {
+  .sub-box {
+    width: 100%;
+    height: 100vh;
+  }
+  .sub-box .box-img {
+    left: 0;
+    width: 500px;
+  }
   .last-crate {
     height: 100vh;
   }

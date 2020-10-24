@@ -93,7 +93,7 @@ body {
 
     .card-1 {
       width: 250px;
-      height: 350px;
+      height: 400px;
       background-color: #1e1e26;
       border-radius: 10px;
       box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
@@ -108,11 +108,7 @@ body {
         height: 200px;
         width: 153px;
         margin-left: 10%;
-        margin-top: 10%;
-
-        .vert {
-          padding-left: 35px;
-        }
+        padding-top: 30px;
       }
       .details {
         display: flex;
@@ -125,9 +121,6 @@ body {
         font-weight: bold;
         color: #6a6a74;
         text-align: center;
-      }
-      .vert-text {
-        padding-top: 0;
       }
     }
     .card-1:hover {
@@ -359,6 +352,14 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 961px) {
+  .sub-box {
+    width: 100%;
+    height: 100vh;
+    .box-img {
+      left: 0;
+      width: 500px;
+    }
+  }
   .last-crate {
     height: 100vh;
 
@@ -421,3 +422,18 @@ body {
     }
   }
 }
+
+// @media only screen and (max-width: 767px) {
+//   .last-crate-contents {
+//     h3 {
+//       margin-top: 400px;
+//     }
+//   }
+//   .sub-box {
+//     .box-img {
+//       width: 500px;
+//       height: 500px;
+//       margin-top: 0;
+//     }
+//   }
+// }
