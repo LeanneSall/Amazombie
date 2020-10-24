@@ -1511,6 +1511,9 @@ a.button {
   background-color: #121212;
   padding: 1rem; }
 
+.cent-header {
+  justify-content: center; }
+
 .cart-table {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -1567,7 +1570,7 @@ a.button {
       max-height: 200px; } }
 
 .cart-table-qty {
-  justify-content: space-around; }
+  justify-content: space-between; }
 
 a.button.plusminus {
   padding: 5px 8px; }

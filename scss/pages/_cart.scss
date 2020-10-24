@@ -16,6 +16,10 @@
     padding: 1rem;
 }
 
+.cent-header {
+    justify-content: center;
+}
+
 .cart-table {
     @include body-regular;
     padding: 1rem;
@@ -80,7 +84,7 @@
 }
 
 .cart-table-qty {
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 a.button.plusminus {
