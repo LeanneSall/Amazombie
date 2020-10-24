@@ -2164,15 +2164,16 @@ figure.figure {
 body {
   background-color: #191919; }
 
+#subheader {
+  color: #832d2d;
+  font-weight: bold; }
+
 #banner-img {
   position: relative;
   text-align: center;
   color: #ffffff;
   display: flex;
   justify-content: center; }
-
-#banner-text {
-  position: absolute; }
 
 #banner-img img {
   max-width: 100%;
@@ -2192,7 +2193,11 @@ body {
   align-items: center; }
 
 .more {
-  margin: 4%; }
+  margin: 4%;
+  cursor: pointer; }
+
+.button {
+  cursor: pointer; }
 
 .item-title, .item-showcase-title {
   text-align: center; }
@@ -2201,8 +2206,9 @@ body {
 
 .item-title h2 {
   padding: 2% 0; }
-.item-title h4 {
-  padding-bottom: 2%; }
+.item-title .subtitle {
+  padding-bottom: 2%;
+  color: #832d2d; }
 
 .item-showcase-title {
   padding: 2% 0; }
@@ -2228,9 +2234,6 @@ body {
   .item-block p {
     padding: 4%;
     text-align: center; }
-
-.more {
-  display: none; }
 
 .buy {
   display: flex;
@@ -2332,9 +2335,12 @@ a {
 
   #items-header-content h2 {
     font-size: 20px; } }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .more {
-    display: block; }
+    display: none !important; } }
+@media screen and (max-width: 767px) {
+  #banner-text h2 {
+    font-size: 20px; }
 
   .item-block {
     flex-direction: column; } }
