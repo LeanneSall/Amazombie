@@ -48,7 +48,7 @@
                 <div>
                   <ul>
                       <li><a href="#">Home</a></li>
-                      <li><a href="#">Shop</a></li>
+                      <li><a href="shopAll.html">Shop</a></li>
                       <li><a href="#">Login</a></li>
                       <li><a href="#">Signup</a></li>
                   </ul>
@@ -94,36 +94,16 @@
         <!-- Section Default Boilerplate -->
         <h4 class="flex cart-banner white">Shopping Cart</h4>
         <div class="cart-wrapper">
-            <!--*** tQ: @Nick when populating page, HTML should be added to cart-table div below-->
+
             <div class="cart-table col-md-8">
                 <div class="cart-table-header flex">
                     <div class="cart-table-cell col-8">Product</div>
                     <div class="cart-table-cell col-2">Quantity</div>
                     <div class="cart-table-cell col-2">Price</div>
                 </div>
-                <!--*** tQ: PRODUCT ROW TEMPLATE FOR NICK -->
-                <div class="cart-table-row flex">
-                    <div class="cart-table-cell cart-table-pdt flex col-sm-8">
-                        <img class="cart-row-img" src="images/cart/crate.png">
-                        <div class="cart-row-pdtname">Get Those Zombies Off My Lawn (Tier 1)</div>
-                    </div>
-                    <div class="cart-table-cell cart-table-qty flex col-sm-2"><!--qty-->
-                        <p class="cart-qty">1</p>
-                        <div class="flex">
-                            <a class="button plusminus" onclick="increaseQty(this)">+</a>
-                            <a class="button plusminus" onclick="decreaseQty(this)">&#8211;</a>
-                        </div>
-                    </div>
-                    <div class="cart-table-cell cart-table-prc flex col-sm-2">
-                        <span class="cart-cell-ccy">
-                            $
-                        </span>
-                        <span class="cart-cell-price">
-                            69.00
-                        </span>
-                    </div>
+                <div id="products" class="cart-table-row row">
+                    
                 </div>
-                <!--*** -->
             </div>
             <div class="order-summary col-md-4">
                 <div class="order-summary-header flex"><!--order summary header-->
