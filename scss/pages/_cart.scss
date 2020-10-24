@@ -16,6 +16,10 @@
     padding: 1rem;
 }
 
+.cent-header {
+    justify-content: center;
+}
+
 .cart-table {
     @include body-regular;
     padding: 1rem;
@@ -80,7 +84,7 @@
 }
 
 .cart-table-qty {
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 a.button.plusminus {
@@ -125,6 +129,15 @@ a.button.plusminus {
 .icon-pencil-container-editmode {
     background-color: $grey;
 }
+
+// .icon-pencil-container-locked {
+//     background-color: $dark-grey;
+
+//     &:hover {
+//         cursor: default;
+//         background-color: $dark-grey;
+//     }
+// }
 
 #icon-pencil {
     display: inline-block;
@@ -198,4 +211,6 @@ a.button.plusminus {
     pointer-events: none;
 }
 
-//  CART CONTAINER STYLES
+.summary-form-cc-grey {
+    color: $grey;
+}

@@ -1511,6 +1511,9 @@ a.button {
   background-color: #121212;
   padding: 1rem; }
 
+.cent-header {
+  justify-content: center; }
+
 .cart-table {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -1567,7 +1570,7 @@ a.button {
       max-height: 200px; } }
 
 .cart-table-qty {
-  justify-content: space-around; }
+  justify-content: space-between; }
 
 a.button.plusminus {
   padding: 5px 8px; }
@@ -1658,6 +1661,9 @@ a.button.plusminus {
   background: #6F6C6C !important;
   color: #1B1A1A !important;
   pointer-events: none; }
+
+.summary-form-cc-grey {
+  color: #6F6C6C; }
 
 .carousel {
   position: relative;
