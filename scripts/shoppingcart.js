@@ -247,13 +247,13 @@ for(let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i])
         totalCost(products[i]);
-        let productPrice = localStorage.getItem('totalCost');
-        let floatPrice = parseFloat(productPrice);
+        let productsPrice = localStorage.getItem('totalCost');
+        let floatPrice = parseFloat(productsPrice);
 
         document.querySelector('#cart-meta p').textContent = productsPrice;
         document.querySelector('#subtotal').textContent = productsPrice;
-        document.querySelector("#shipping").textContent = String((floatPrice / 10).toFixed(2));
-        document.querySelector("#total").textContent = String(floatPrice + (floatPrice / 10));
+        document.querySelector('#shipping').textContent = (floatPrice / 10).toFixed(2);
+        document.querySelector('#total').textContent = (floatPrice + (floatPrice / 10)).toFixed(2)
         
     })
 }
@@ -266,8 +266,8 @@ function onLoadCartPrice() {
     if(productPrice) {
         document.querySelector('#cart-meta p').textContent = productPrice;
         document.querySelector('#subtotal').textContent = productPrice;
-        document.querySelector("#shipping").textContent = String((floatPrice / 10).toFixed(2));
-        document.querySelector("#total").textContent = String(floatPrice + (floatPrice / 10));
+        document.querySelector('#shipping').textContent = (floatPrice / 10).toFixed(2);
+        document.querySelector('#total').textContent = (floatPrice + (floatPrice / 10)).toFixed(2)
     }
 }
 
@@ -285,17 +285,27 @@ function cartNumbers(product, action) {
     if(action == "decrease") {
         localStorage.setItem('cartNumbers', productNumbers - 1)
         localStorage.setItem('totalCost', (floatPrice - product.price).toFixed(2));
-        document.querySelector('#cart-meta p').textContent = localStorage.getItem('totalCost')
-        document.querySelector("#subtotal").textContent = localStorage.getItem('totalCost');
-        document.querySelector("#shipping").textContent = String((floatPrice / 10).toFixed(2));
-        document.querySelector("#total").textContent = String(floatPrice + (floatPrice / 10));
+
+        productsPrice = localStorage.getItem('totalCost')
+        floatPrice = parseFloat(productsPrice)
+
+        document.querySelector('#cart-meta p').textContent = productsPrice
+        document.querySelector("#subtotal").textContent = productsPrice;
+        document.querySelector('#shipping').textContent = (floatPrice / 10).toFixed(2);
+        document.querySelector('#total').textContent = (floatPrice + (floatPrice / 10)).toFixed(2)
+
     } else if(action == "increase") {
         localStorage.setItem("cartNumbers", productNumbers + 1)
         localStorage.setItem('totalCost', (floatPrice + product.price).toFixed(2));
+
+        productsPrice = localStorage.getItem('totalCost')
+        floatPrice = parseFloat(productsPrice)
+
         document.querySelector('#cart-meta p').textContent = localStorage.getItem('totalCost')
         document.querySelector("#subtotal").textContent = localStorage.getItem('totalCost');
-        document.querySelector("#shipping").textContent = String((floatPrice / 10).toFixed(2));
-        document.querySelector("#total").textContent = String(floatPrice + (floatPrice / 10));
+        document.querySelector('#shipping').textContent = (floatPrice / 10).toFixed(2);
+        document.querySelector('#total').textContent = (floatPrice + (floatPrice / 10)).toFixed(2)
+
     } else if(productNumbers){
             localStorage.setItem('cartNumbers', productNumbers + 1);
     } else {
