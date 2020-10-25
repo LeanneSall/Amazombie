@@ -247,8 +247,7 @@ function unlockButton() {
 }
 
 function lockButton() {
-    var submitButton = document.getElementById("order-submit-button");
-    submitButton.classList.add("disabled", "order-submit-button-disabled");
+    document.getElementById("order-submit-button").classList.add("disabled", "order-submit-button-disabled");
 }
 
 function saveUserData() {
@@ -259,6 +258,9 @@ function saveUserData() {
 function zombiesAreComing() {
     document.getElementById("fairWarning").classList.remove("hidden");
     lockButton();
+    var editbutton = document.getElementsByClassName("icon-pencil-container")[0];
+    editbutton.classList.add("disabled", "icon-pencil-container-locked");
+    editbutton.onclick = function() { return false; }
 }
 
 // tQ: default behaviour

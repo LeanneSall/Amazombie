@@ -1604,6 +1604,12 @@ a.button.plusminus {
 .icon-pencil-container-editmode {
   background-color: #6F6C6C; }
 
+.icon-pencil-container-locked {
+  background-color: #474343; }
+  .icon-pencil-container-locked:hover {
+    cursor: default;
+    background-color: #474343; }
+
 #icon-pencil {
   display: inline-block;
   fill: #121212; }
