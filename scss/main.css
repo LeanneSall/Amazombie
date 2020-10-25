@@ -1570,7 +1570,7 @@ a.button {
       max-height: 200px; } }
 
 .cart-table-qty {
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 a.button.plusminus {
   padding: 5px 8px; }
@@ -1603,6 +1603,12 @@ a.button.plusminus {
 
 .icon-pencil-container-editmode {
   background-color: #6F6C6C; }
+
+.icon-pencil-container-locked {
+  background-color: #474343; }
+  .icon-pencil-container-locked:hover {
+    cursor: default;
+    background-color: #474343; }
 
 #icon-pencil {
   display: inline-block;
@@ -1664,6 +1670,15 @@ a.button.plusminus {
 
 .summary-form-cc-grey {
   color: #6F6C6C; }
+
+#fairWarning {
+  padding-top: 3rem;
+  color: #832d2d;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+  #fairWarning.hidden {
+    display: none; }
 
 .carousel {
   position: relative;
