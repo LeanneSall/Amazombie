@@ -8,11 +8,10 @@
 }
 
 
-.box {
-    display: flex;
+.order-summary-box {
     justify-content: center;
     min-width: 320px;
-    padding: 24px;
+    padding: 1em;
     max-width: 700px;
     align-items: center;
     margin: auto;
@@ -22,8 +21,9 @@
         padding-bottom: 10px;
     }
 
-    .order-summary {
+    .order-details {
         margin-bottom: 20px;
+
     }
 
     hr {
@@ -35,7 +35,38 @@
         margin: auto;
     }
 
+    .fab {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
 }
+
+#purchased-items {
+    .display-items {
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid #bebebe;
+
+        p {
+            color: black;
+        }
+
+        .col-sm-8 {
+            padding-left: 0;
+            align-items: center;
+
+        }
+
+        .col-sm-2 {
+            text-align: right;
+        }
+    }
+
+
+}
+
 
 .conf-banner {
     text-align: center;

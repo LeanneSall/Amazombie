@@ -5,16 +5,18 @@ body {
 }
 
 // Banner
+
+#subheader {
+    color: $dark-ruby;
+    font-weight: bold;
+}
+
 #banner-img {
     position: relative;
     text-align: center;
     color: $white;
     display: flex;
     justify-content: center;
-}
-
-#banner-text {
-    position: absolute;
 }
 
 #banner-img img {
@@ -42,6 +44,11 @@ body {
 
 .more {
     margin: 4%;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
 }
 
 .item-title, .item-showcase-title {
@@ -55,8 +62,9 @@ body {
     h2 {
         padding: 2% 0;
     }
-    h4 {
+    .subtitle {
         padding-bottom: 2%;
+        color: $dark-ruby;
     }
 }
 
@@ -90,10 +98,6 @@ body {
         padding: 4%;
         text-align: center;
     }
-}
-
-.more {
-    display: none;
 }
 
 .buy {
@@ -207,7 +211,6 @@ a{
 }
 
 @media screen and (max-width: 400px) {
-
     .box{
         margin-right: 10px;
     }
@@ -217,10 +220,18 @@ a{
     }
 }
 
-@media screen and (max-width: 767px) {
 
+@media screen and (min-width: 767px) {
     .more {
-        display: block;
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #banner-text {
+        h2 {
+            font-size: 20px;
+        }
     }
 
     .item-block {
