@@ -92,6 +92,7 @@ function displayItems(obj) {
     })
 }
 
+
 //Remove item from localStorage
 function removeFromLocalStorage(item) {
     localStorage.removeItem(item)

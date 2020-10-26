@@ -2057,6 +2057,10 @@ a.button.plusminus {
   display: none;
 }
 
+#cart-meta p::before {
+  content: "$ ";
+}
+
 .carousel {
   position: relative;
   height: 80vh;
@@ -2711,13 +2715,10 @@ figure.figure figcaption p {
   .conf-banner {
     padding: 3em;
   }
-
-  #purchased-items {
-    border-radius: 5px;
-  }
 }
 body {
-  background-color: pink;
+  background-color: #191919;
+
 }
 
 #subheader {
@@ -3065,6 +3066,9 @@ body {
   font-weight: bold;
   color: #6a6a74;
   text-align: center;
+}
+.last-crate .sub-card-content .card-1 .vert-text {
+  padding-top: 0;
 }
 .last-crate .sub-card-content .card-1:hover {
   background-color: #17171d;
