@@ -29,6 +29,7 @@
 // Items
 .items {
     padding-top: 1%;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,11 +54,12 @@
 
 .item-title {
     h2 {
-        padding: 2% 0;
-    }
-    .subtitle {
-        padding-bottom: 2%;
-        color: $dark-ruby;
+        font-size: 1.4em;
+        text-align: left;
+        border-left: 3px solid $dark-ruby;
+        padding-left: 15px;
+        margin-bottom: 30px;
+        text-shadow: 0px 4px 15px $dark-black;
     }
 }
 
@@ -77,19 +79,55 @@
 }
 
 .item-block {
-    background-color:#1e1e26;
-	border-radius: 10px;
+    background-color: $black;
+	border-radius: 5px;
     box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
-    padding: 0 4% 2% 4%;
+    padding: 2% 4% 2% 4%;
     margin: 4%;
+    margin-top: 0;
     display:flex;
     flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
-    p {
+    .desc {
         padding: 4%;
-        text-align: center;
+        padding-top: 6px;
+        padding-left: 40px;
+
+        .rating{
+            margin-bottom: 30px;
+        }
+
+        .rating svg {
+            fill: goldenrod;
+            height: 15px;
+            width: 15px;
+        }
+        
+
+        a {
+            margin-right: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            font-style: initial;
+            padding-bottom: 2%;
+            color: $dark-ruby;
+            text-align: left;
+        }
+
+        @media screen and (max-width: 767px){
+            padding-left: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        display: block !important;
+        text-align: left;
     }
 }
 
@@ -101,7 +139,7 @@
 }
 
 .first-item, .last-item {
-    background-color: #2B2A2A;
+    background-color: $dark-black;
 }
 
 // Item Slider
@@ -154,13 +192,16 @@ a{
 	font-weight: bold;
 	letter-spacing: 2px;
     font-size: 25px;
-    padding-top: 4%;
+
+    @media screen and (max-width: 767px){
+        padding-top: 20px;
+        width: 100%;
+    }
 }
 .logo{
 	height: 60px;
 }
 .box:hover, .item-block:hover {
-	background-color: #17171d;
 	transform-style: preserve-3d;
 	transform: scale(1.02);
     transition: all ease 0.3s;

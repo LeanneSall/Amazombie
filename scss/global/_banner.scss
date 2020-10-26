@@ -1,5 +1,5 @@
 #banner {
-    border-bottom: 3px solid $dark-ruby;
+    border-bottom: 5px solid $dark-ruby;
 }
 
 #banner-img {
@@ -10,7 +10,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba($color: $dark-black, $alpha: .7);
+        background: rgba($color: $dark-black, $alpha: .5);
+        background: radial-gradient(circle, rgba(38,38,38,0) 0%, rgba(4,4,4,1) 100%);
         content: '';
         width: 100%;
         height: 100%;
@@ -46,17 +47,26 @@
             }
 
             h2 {
-                text-shadow: 0px 4px 15px #121212;
+                font-size: 2.75em;
+                text-shadow: 0px 4px 15px $dark-black;
+                margin-bottom: 5px;
+                max-width: 300px;
+                letter-spacing: 0.01em;
+    
+                @media screen and (min-width: 500px){
+                    font-size: 5em;
+                }
             }
-
+    
             h4 {
-                font-family: 'Lato', sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 1.2em;
+                @include body-light;
                 color: $dark-ruby;
                 margin-bottom: 10px;
-                text-shadow: 0px 4px 15px #121212;
+                text-shadow: 0px 4px 15px $dark-black;
+            }
+
+            p {
+                color: white;
             }
         }
 
