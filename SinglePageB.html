@@ -1,956 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tier B | Amazombie</title>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="./favicon/ms-icon-144x144.png"
-    />
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tier B | Amazombie</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
 
-    <meta name="theme-color" content="#ffffff" />
-    <!-- UIkit CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <!-- Main Stylesheet -->
+        <meta name="theme-color" content="#ffffff" />
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <!-- Main Stylesheet -->
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    
-  </head>
-  <body id="tier-b">
-    <header>
-      <section class="default v-no-padding">
-        <div class="wrap">
-          <div id="pseudo-header">
-            <!-- Logo -->
-            <a href="/" class="logo-container">
-              <?xml version="1.0" encoding="utf-8"?><svg
-                id="logo"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 1004 324"
-                style="enable-background: new 0 0 1004 324"
-                xml:space="preserve"
-              >
-                <path
-                  class="st0"
-                  d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5c-7.6,26.7-32.2,46.3-61.4,46.3c-35.2,0-63.8-28.6-63.8-63.8c0-26.4,16.1-49.1,38.9-58.8c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c21.7,7.2,38.3,25.8,42.5,48.8C193.8,104.7,194.1,108.6,194.1,112.6z"
-                />
-                <path
-                  class="st0 blood"
-                  d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5l-80.8-15l-5.4-61.3c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c-9.5,9.5-4.2,30.1,17.2,41.6c9,4.8,18,6.7,25.3,7.1C193.8,104.7,194.1,108.6,194.1,112.6z"
-                />
-                <path
-                  class="st1"
-                  d="M33,203.6c-18.2,0-32.9-14.7-32.9-32.9s14.7-32.9,32.9-32.9h174.6c18.2,0,32.9,14.7,32.9,32.9s-14.7,32.9-32.9,32.9"
-                />
-                <path
-                  class="st2"
-                  d="M207.6,180c-2.1,0-3.7-1.7-3.7-3.7c0-11.2,5.5-15.2,8.8-16.5c5.2-2.2,11.8-0.7,16.1,3.6c1.5,1.5,1.5,3.8,0,5.3s-3.8,1.5-5.3,0c-2.2-2.2-5.5-3-8-2c-2.7,1.1-4.2,4.5-4.2,9.6C211.3,178.3,209.7,180,207.6,180z"
-                />
-                <path
-                  class="st3"
-                  d="M207.6,113v82.9c0,48.3-38.9,88.1-87.3,88.1C72.1,284,33,244.9,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h21.9c0.5,41.4,34.2,74.8,75.7,74.8C196.8,114.8,202.3,114.2,207.6,113z"
-                />
-                <path
-                  class="st2"
-                  d="M33,180c-2.1,0-3.7-1.7-3.7-3.7c0-5.1-1.5-8.5-4.2-9.6c-2.4-1-5.8-0.2-8,2c-1.5,1.5-3.8,1.5-5.3,0s-1.5-3.8,0-5.3c4.3-4.3,10.9-5.8,16.1-3.6c3.3,1.4,8.8,5.3,8.8,16.5C36.7,178.3,35,180,33,180z"
-                />
-                <path
-                  class="st1"
-                  d="M119.6,284C71.7,283.6,33,244.7,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h11c-19.7,0-35.6,27.1-35.6,60.6v96.2C68.9,244.5,91.6,283.4,119.6,284z"
-                />
-                <path
-                  class="st4 eye"
-                  d="M167.2,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0s-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C175.4,143.5,170.3,143.5,167.2,146.7z"
-                />
-                <path
-                  class="st4 eye"
-                  d="M87.4,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0c-3.1,3.1-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C95.6,143.5,90.6,143.5,87.4,146.7z"
-                />
-                <path
-                  class="st4"
-                  d="M136.4,205.4h-32.3c-13.9,0-25.2,11.3-25.2,25.2v8.3h82.7v-8.3C161.6,216.7,150.4,205.4,136.4,205.4z"
-                />
-                <path
-                  class="st0 blood"
-                  d="M144.8,265.7c-5.5,0-10-4.5-10-10v-16.9h19.9v16.9C154.7,261.2,150.3,265.7,144.8,265.7z"
-                />
-                <path
-                  class="st0"
-                  d="M154.9,238.8H85.7c5.6-10.9,19-18.6,34.6-18.6c3.5,0,7,0.4,10.2,1.1C141.6,223.9,150.5,230.4,154.9,238.8z"
-                />
-                <path
-                  class="st0"
-                  d="M154.9,238.8h-48.8c4.4-8.5,13.3-15,24.4-17.5C141.6,223.9,150.5,230.4,154.9,238.8z"
-                />
-                <path
-                  class="st5"
-                  d="M302.5,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L302.5,166.8z M292,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5V126z"
-                />
-                <path
-                  class="st5"
-                  d="M439,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.5,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H439z"
-                />
-                <path
-                  class="st5"
-                  d="M504,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L504,166.8z M493.5,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5L493.5,126L493.5,126z"
-                />
-                <path
-                  class="st5"
-                  d="M583.2,162.3c-0.5,1.4-1.7,2.2-2.4,2.2h-57.3c-1,0-1.7-0.7-1.7-1.7v-12.9l39.6-52.3h-34.8c-0.9,0-1.2-1-1.2-2.2V82c0-1.7,0.5-2.4,2.4-2.4h54.5c1.4,0,2.9,0.7,2.9,1.7v13.4l-38.9,51.8h39.2c3.3,0,3.3,1.2,3.3,1.7c0,0.9-0.5,1.5-0.7,1.9L583.2,162.3z"
-                />
-                <path
-                  class="st5"
-                  d="M628,167.5c-23.2,0-37.3-17.7-37.3-45.4s14.1-45.4,37.3-45.4c23.1,0,37.3,17.7,37.3,45.4S651.2,167.5,628,167.5z M642.1,122.1c0-16-2.2-28.2-14.1-28.2s-14.1,12.2-14.1,28.2s2.1,28.2,14.1,28.2C640,150.3,642.1,138.2,642.1,122.1z"
-                />
-                <path
-                  class="st5"
-                  d="M787.8,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.6,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H787.8z"
-                />
-                <path
-                  class="st5"
-                  d="M826.5,84.2c3.4-2.6,9.6-7.6,19.1-7.6c23.4,0,30.1,20.7,30.1,43c0,29.2-12.6,47.8-35.6,47.8c-9.8,0-13.6-4.8-16.3-7.6c-0.7,1.9-2.4,7.6-5,7.6c-0.9,0-1.7-0.2-2.4-0.3l-13.8-3.4c-0.9-0.2-1.7-0.7-1.7-1.4c0-1.5,1.9-3.1,3.1-8.9c0.7-3.4,0.7-7.1,0.7-10.7V46.5c0-2.6,1.2-2.6,3.3-3.1l14.4-2.9c0.5,0,2.1-0.5,2.4-0.5c1.4,0,1.7,0.7,1.7,3.6V84.2z M826.5,146.7c1,0.9,4,3.6,8.6,3.6c15.6,0,18.7-16,18.7-29.4c0-13.8-2.4-27-15.5-27c-5.9,0-9.6,4-11.9,5.9v46.9H826.5z"
-                />
-                <path
-                  class="st5"
-                  d="M916.4,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4V95.6h-13.2c-2.1,0-2.4-0.5-2.4-2.4V82c0-1.9,0.3-2.4,2.4-2.4H914c2.1,0,2.4,0.5,2.4,2.4V162.2z M905.4,68.4c-7.9,0-14.3-6.4-14.3-14.3S897.5,40,905.4,40c7.7,0,14.1,6.2,14.1,14.1S913.1,68.4,905.4,68.4z"
-                />
-                <path
-                  class="st5"
-                  d="M998.6,155.4c0.4,0.5,0.5,1.2,0.5,1.9c0,4.5-17.2,10.1-30.8,10.1c-22.7,0-38.5-12.9-38.5-44.6c0-27.4,14.6-46.3,37.7-46.3c29.2,0,34.4,26.2,34.4,47c0,3.3-0.7,4.3-4,4.3h-46.3c0,9.6,2.7,21.5,18.9,21.5c12.4,0,19.4-5.7,21.9-5.7c0.9,0,1.5,0.7,1.9,1.4L998.6,155.4z M978.7,111.9c0-7.1-0.5-19.3-12.4-19.3c-13.4,0-14.1,14.5-14.6,19.3C951.7,111.9,978.7,111.9,978.7,111.9z"
-                />
-                <path
-                  class="st3"
-                  d="M945.8,236.3c-45.1-7.8-90.1-14.9-135.6-19.1C749.4,210.3,689.9,207,627,207c-61.2-1.5-122.3,2.3-183.3,7.6c-61,5.6-121.8,14-181.9,27.1c29.1-10.1,59.2-17.1,89.2-24c30.2-6,60.7-11.3,91.3-15.3c61.2-7.9,123-11.6,184.8-11.4c61.7,1.5,123.6,4.5,184.6,14.1c30.6,3.9,60.8,10.3,91.1,16.3c15.1,2.9,30,7.2,44.9,11.1L945.8,236.3z"
-                />
-              </svg>
-            </a>
-
-            <!-- Navigation -->
-            <nav>
-              <div id="pseudo-nav">
-                <div>
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="shopAll.html">Shop</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Signup</a></li>
-                </ul>
-                </div>
-              </div>
-              <!--end #pseudo-nav-->
-
-              <div class="promo mobile">
-                <p>50% off an annual subscription. Use code: APOCNOW50</p>
-              </div>
-            </nav>
-
-            <a id="icon" class="icon">
-              <div class="hamburger"></div>
-            </a>
-
-            <a href="shoppingcart.html" id="cart-meta">
-              <div class="cart-wrapper">
-                <div class="svg-cont">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 23.73l-3-2.122v-14.2l3 1.359v14.963zm2-14.855v15.125l13-1.954v-15.046l-13 1.875zm5.963-7.875c-2.097 0-3.958 2.005-3.962 4.266l-.001 1.683c0 .305.273.54.575.494.244-.037.425-.247.425-.494v-1.681c.003-1.71 1.416-3.268 2.963-3.268.537 0 1.016.195 1.384.564.422.423.654 1.035.653 1.727v1.747c0 .305.273.54.575.494.243-.037.423-.246.423-.492l.002-1.749c.002-1.904-1.32-3.291-3.037-3.291zm-6.39 5.995c.245-.037.427-.247.427-.495v-2.232c.002-1.71 1.416-3.268 2.963-3.268l.162.015c.366-.283.765-.513 1.188-.683-.405-.207-.858-.332-1.35-.332-2.096 0-3.958 2.005-3.962 4.266v2.235c0 .306.272.538.572.494z"
-                    />
-                  </svg>
-                </div>
-                <!--end svg-cont -->
-                <p>0</p>
-              </div>
-              <!--end cart-wrapper -->
-            </a>
-          </div>
-          <!-- end #pseudo-header -->
-        </div>
-        <!-- end .wrap -->
-      </section>
-      <section id="sub-header" class="default v-no-padding">
-        <div class="wrap">
-          <div class="message">
-            <p class="promo desktop">
-              50% off an annual subscription. Use code: APOCNOW50
-            </p>
-            <ul class="social">
-              <li>
-                <a href=""
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-                    /></svg></a>
-              </li>
-              <li>
-                <a href=""
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                    /></svg></a>
-              </li>
-              <li>
-                <a href=""
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                    /></svg></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <main>
-    <section id="banner">
-        <div id="banner-img">
-            <div class="banner-wrap">
-                <div id="banner-text">
-                    <h2>DEFEAT ZOMBIES</h2>
-                    <h4>Buy your amazombie box today</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, ex?</p>
-                </div>
-            </div>
-            <img src="images/shop/darkforest.jpg" alt="Rednecks">
-        </div>
-    </section>
-
-      <!-- Section Default Boilerplate -->
-      <section class="default">
-        <div class="wrap">
-          <div class="text-wrap">
-            <div
-              class="sub-box"
-              uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250"
-            >
-              <div class="text" uk-scrollspy-class="uk-animation-slide-bottom">
-                <h3>TIER B</h3>
-                <br />
-                <h4><em>Turret Syndrome</em></h4>
-                <br />
-                <h5>
-                  <span class="price-head">$1999.99</span> - Free Shipping
-                </h5>
-                <br />
-                <p>
-                  This ain't your mama's apocolypse survival box. This is for
-                  the beer loving, trucker hat wearing, tractor riding, true
-                  red, white and blue bleeding American. It's not the fanciest
-                  but dangnammit it gets the job done. You'll kill more zombies
-                  then 75% of the American population. How does it feel to be a
-                  winner? I ain't to sure but if you buy this crate I think
-                  you'll know <em>-Ted Cruz Approved</em>
-                </p>
-                <div
-                  class="button-sub-box"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                
-                  <a class="button add-cart add">Add to Cart</a>
-                  <a class="button shop" href="shopAll.html">See All</a>
-                  <a class="button shop" href="SinglePageA.html">Tier A</a>
-                  <a class="button shop" href="SinglePageC.html">Tier C</a>
-                
-                </div>
-              </div>
-              <div
-                class="box-img"
-                uk-scrollspy-class="uk-animation-slide-bottom"
-              >
-                <img class="crate" src="images/shop/crateB.png" alt="crate" />
-              </div>
-            </div>
-            <div class="last-crate">
-              <h3>Last Crate Contents</h3>
-              <div
-                class="sub-card-content"
-                uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250"
-              >
-                <div class="card-1">
-                  <div
-                    class="last-img"
-                    uk-scrollspy-class="uk-animation-slide-bottom"
-                  >
-                    <img src="images/shop/sniper.png" alt="sniper" />
-                  </div>
-                  <h4>Sniper Rifle</h4>
-                  <p class="details">
-                    This gun is really cool and will kill everything in it's
-                    way.
-                  </p>
-                </div>
-                <div class="card-1">
-                  <div
-                    class="last-img"
-                    uk-scrollspy-class="uk-animation-slide-bottom"
-                  >
-                    <img src="images/shop/rotty.png" alt="rotty"/>
-                  </div>
-                  <h4>Rottweiler</h4>
-                  <p class="details">
-                    This is the doggo you want during the apocolypse. Guard
-                    Doggo.
-                  </p>
-                </div>
-                <div class="card-1">
-                  <div
-                    class="last-img"
-                    uk-scrollspy-class="uk-animation-slide-bottom"
-                  >
-                    <img class="vert" src="images/shop/beer.png" alt="beer"/>
-                  </div>
-                  <h4>Beer</h4>
-                  <p class="details vert-text">
-                    It's Beer what more do you want.
-                  </p>
-                </div>
-                <div class="card-1">
-                  <div
-                    class="last-img"
-                    uk-scrollspy-class="uk-animation-slide-bottom"
-                  >
-                    <img class="vert" src="images/shop/machet.png" alt="machete"/>
-                  </div>
-                  <h4>Machete</h4>
-                  <p class="details vert-text">
-                    This Machete will slice anything in it's path
-                  </p>
-                </div>
-              </div>
-              <a href="shopAll.html" class="button sing-button">See more</a>
-            </div>
-
-            <div class="benefits">
-              <h3>Benefits</h3>
-              <div
-                class="cards"
-                uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250"
-              >
-                <div
-                  class="bene-card"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <h4 class="bene-heading">Accuracy And Power</h4>
-                  <div class="bene-img">
-                    <svg
-                      width="88"
-                      height="85"
-                      viewBox="0 0 103 96"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <ellipse
-                        cx="51.5"
-                        cy="48"
-                        rx="51.5"
-                        ry="48"
-                        fill="#C4C4C4"
-                      />
-                      <path
-                        d="M84.3534 45.8761H78.6624C77.361 33.8336 66.9417 24.2634 53.8308 23.0655V17.8407H48.2813V23.0655C35.1704 24.2634 24.7511 33.8336 23.4497 45.8761H17.7586V50.9734H23.4497C24.7511 63.0159 35.1704 72.5862 48.2813 73.7841V79.0088H53.8308V73.7841C66.9417 72.5887 77.361 63.0159 78.6624 50.9734H84.3534V45.8761ZM53.8308 68.6383V58.6195H48.2813V68.6383C38.2615 67.4812 30.3062 60.1767 29.0492 50.9734H39.9569V45.8761H29.0492C30.3062 36.6728 38.2615 29.3683 48.2813 28.2112V38.2301H53.8308V28.2112C63.8506 29.3683 71.8059 36.6703 73.0628 45.8761H62.1552V50.9734H73.0628C71.8059 60.1767 63.8506 67.4812 53.8308 68.6383ZM56.6056 48.4248C56.6056 51.2385 54.1194 53.5221 51.056 53.5221C47.9927 53.5221 45.5065 51.2385 45.5065 48.4248C45.5065 45.611 47.9927 43.3274 51.056 43.3274C54.1194 43.3274 56.6056 45.611 56.6056 48.4248Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                  <div class="bene-text">
-                    <p>
-                      With the Tier B box you will get most of the firepower you
-                      need to defeat any kind of zombie, monster and demon. You
-                      might not have all the firepower but you have enough to
-                      murder some zombies.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="bene-card"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <h4 class="bene-heading">Guns Are Awesome</h4>
-                  <div class="bene-img">
-                    <svg
-                      width="88"
-                      height="85"
-                      viewBox="0 0 103 96"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <ellipse
-                        cx="51.5"
-                        cy="48"
-                        rx="51.5"
-                        ry="48"
-                        fill="#C4C4C4"
-                      />
-                      <path
-                        d="M70.4834 40.2032C66.3683 39.7449 61.7947 36.1557 60.0345 32.3595H36.6667V47.4762C44.9441 47.4762 41.6544 58.2202 51.4465 59.7339C57.3277 60.6416 61.0848 57.6821 61.4486 54.0278C62.0344 48.1917 65.3862 43.0148 70.4834 40.2032V40.2032ZM43.4975 35.18H54.0321C54.5912 35.18 55.0468 35.6324 55.0468 36.1941C55.0468 36.7529 54.5942 37.2052 54.0321 37.2052H43.4975V35.18ZM43.4975 38.9851H54.0321C54.5912 38.9851 55.0468 39.4374 55.0468 39.9962C55.0468 40.555 54.5942 41.0073 54.0321 41.0073H43.4975V38.9851V38.9851ZM43.4975 44.8124V42.7872H54.0321C54.5912 42.7872 55.0468 43.2395 55.0468 43.8012C55.0468 44.36 54.5942 44.8124 54.0321 44.8124H43.4975ZM52.7422 57.3983C44.4175 56.5705 44.9204 46.9174 54.2747 48.3602C60.7593 49.3654 60.3245 58.1522 52.7422 57.3983ZM33.7083 32.3595V41.2172H15.9169C15.7394 39.7656 14.8815 38.243 13 37.7965V32.3595H33.7083ZM21.875 30.1894H15.0797V27.1412C15.0797 26.5854 15.6359 26.2543 16.1625 26.5381L21.875 30.1894V30.1894ZM65.6879 36.3094C64.9572 35.7802 64.2709 35.1859 63.6112 34.4823C65.1761 33.6042 66.6494 33.0218 68.5841 32.8799C69.2971 32.8266 69.6166 33.687 68.9007 33.9915C67.4629 34.6065 66.4807 35.2125 65.6879 36.3094V36.3094ZM56.7153 51.9583C55.7509 53.6435 54.1267 55.3465 52.7482 55.4588C52.3192 55.4943 52.0263 55.0952 52.192 54.7108C52.5085 53.9805 54.4936 52.5082 54.0321 50.1223C55.4876 50.3588 56.3485 51.1009 56.7153 51.9583ZM72.3649 42.6157C67.7587 44.9868 64.6821 49.5753 64.265 54.767C66.5636 55.7219 69.2083 57.4781 69.2083 63.4532V70.7411C69.2083 73.2452 70.2142 73.739 72.8057 73.739H80.1808C83.1095 73.739 84 72.8254 84 70.7854C84 66.2708 82.8285 59.4678 78.0922 52.8127C75.7788 49.5576 72.7583 47.3432 72.3649 42.6157V42.6157ZM70.5011 54.3619C69.3444 54.3619 68.4096 53.4277 68.4096 52.2687C68.4096 51.1098 69.3444 50.1755 70.5011 50.1755C71.6578 50.1755 72.5956 51.1098 72.5956 52.2687C72.5956 53.4277 71.6549 54.3619 70.5011 54.3619Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                  <div class="bene-text">
-                    <p>
-                      With this box you may not have the sheer head splitting
-                      firepower of Tier A but hey you sure get a lot in Tier B
-                      while not spending as much. There is lots of guns,
-                      machetes, knives awaiting for you in this box. You won't
-                      have any trouble showing your guns
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bene-card"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <h4 class="bene-heading">Chances Of Survival</h4>
-                  <div class="bene-img">
-                    <svg
-                      width="88"
-                      height="85"
-                      viewBox="0 0 103 96"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <ellipse
-                        cx="51.5"
-                        cy="48"
-                        rx="51.5"
-                        ry="48"
-                        fill="#C4C4C4"
-                      />
-                      <line
-                        y1="-4"
-                        x2="62.5076"
-                        y2="-4"
-                        transform="matrix(0.465881 -0.884847 0.861436 0.507866 40.4537 76.3097)"
-                        stroke="black"
-                        stroke-width="8"
-                      />
-                      <path
-                        d="M74.3017 59.3218C74.3017 64.9638 69.9862 69.4886 64.7213 69.4886C59.4565 69.4886 55.141 64.9638 55.141 59.3218C55.141 53.6798 59.4565 49.1549 64.7213 49.1549C69.9862 49.1549 74.3017 53.6798 74.3017 59.3218Z"
-                        fill="black"
-                        stroke="black"
-                      />
-                      <path
-                        d="M49.6608 33.2472C49.6608 38.8892 45.3452 43.4141 40.0804 43.4141C34.8155 43.4141 30.5 38.8892 30.5 33.2472C30.5 27.6052 34.8155 23.0803 40.0804 23.0803C45.3452 23.0803 49.6608 27.6052 49.6608 33.2472Z"
-                        fill="black"
-                        stroke="black"
-                      />
-                    </svg>
-                  </div>
-                  <div class="bene-text">
-                    <p>
-                      Well I can see that you are worried but lets be honest if
-                      you are looking at this page then you are prepping and
-                      maybe you don't want to spend your kids college fund on a
-                      wicked survival box. That's okay that's why we have Tier
-                      B. So your chances will be a survival rating of 60%.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bene-card"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <h4 class="bene-heading">Survive For Longer</h4>
-                  <div class="bene-img">
-                    <svg
-                      width="88"
-                      height="85"
-                      viewBox="0 0 103 96"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <ellipse
-                        cx="51.5"
-                        cy="48"
-                        rx="51.5"
-                        ry="48"
-                        fill="#C4C4C4"
-                      />
-                      <g clip-path="url(#clip0)">
-                        <path
-                          d="M84.3534 21.593V72.2125H19.5345V21.593H27.6369V23.8939C27.6369 26.4317 30.0595 28.4956 33.0384 28.4956C36.0174 28.4956 38.44 26.4317 38.44 23.8939V21.593H65.4479V23.8939C65.4479 26.4317 67.8705 28.4956 70.8495 28.4956C73.8285 28.4956 76.2511 26.4317 76.2511 23.8939V21.593H84.3534ZM78.9519 35.3983H24.9361V67.6107H78.9519V35.3983ZM73.5503 19.2921C73.5503 18.022 72.343 16.9912 70.8495 16.9912C69.356 16.9912 68.1487 18.022 68.1487 19.2921V23.8939C68.1487 25.164 69.356 26.1948 70.8495 26.1948C72.343 26.1948 73.5503 25.164 73.5503 23.8939V19.2921ZM35.7392 23.8939C35.7392 25.164 34.532 26.1948 33.0384 26.1948C31.5449 26.1948 30.3376 25.164 30.3376 23.8939V19.2921C30.3376 18.022 31.5449 16.9912 33.0384 16.9912C34.532 16.9912 35.7392 18.022 35.7392 19.2921V23.8939ZM38.44 50.8809L40.7492 49.0609C43.45 50.1746 45.165 51.0213 48.2034 52.8666C53.9101 47.3468 57.6858 44.5466 64.6944 40.8307L65.4479 42.3032C59.6655 46.6036 55.4307 51.3894 49.3323 60.708C45.5701 56.9346 43.0611 54.5278 38.44 50.8809V50.8809Z"
-                          fill="black"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0">
-                          <rect
-                            width="64.819"
-                            height="55.2212"
-                            fill="white"
-                            transform="translate(19.5345 16.9912)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="bene-text">
-                    <p>
-                      How long will you survive the zombie apocolypse? Well
-                      honestly we have no idea. But if you are visiting this
-                      website then you must be smart and if you are really smart
-                      you'll buy the crate and then well, you'll survive longer
-                      than the guy next to you.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="review-forum"
-                uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250"
-              >
-                <div
-                  class="review"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <img
-                    src="images/shop/kidrockrev.png"
-                    alt="kidrock loves amazombie"
-                  />
-                </div>
-
-                <div
-                  class="forum"
-                  uk-scrollspy-class="uk-animation-slide-bottom"
-                >
-                  <h4>Leave a Review!</h4>
-                  <form class="form">
-                    <input
-                      type="text"
-                      id="fname"
-                      name="fname"
-                      placeholder="Your Name"
-                    /><br /><br />
-
-                    <textarea
-                      id="review"
-                      name="review"
-                      placeholder="Type Your Review Here!"
-                    ></textarea
-                    ><br /><br />
-
-                    <div class="rating rating2">
-                      <!--
-                    --><a href="#5" title="Give 5 stars">★</a
-                      ><!--
-                    --><a href="#4" title="Give 4 stars">★</a
-                      ><!--
-                    --><a href="#3" title="Give 3 stars">★</a
-                      ><!--
-                    --><a href="#2" title="Give 2 stars">★</a
-                      ><!--
-                    --><a href="#1" title="Give 1 star">★</a><br /><br />
-                    </div>
-
-                    <a class="button submit" id="submitform">Submit</a
-                    ><br /><br />
-                    <div><p id="thankyou"></p></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <!-- Timer -->
-      <section class="default" id="timer">
-        <div class="wrap">
-          <h3 class="white">Overcome. Adapt. Survive.</h3>
-          <h4>Next shipment cut off:</h4>
-          <!-- Timer -->
-          <div class="tick" data-did-init="handleTickInit">
-            <div
-              data-repeat="true"
-              data-layout="horizontal center fit"
-              data-transform="preset(d, h, m, s) -> delay"
-            >
-              <div class="tick-group">
-                <div
-                  data-key="value"
-                  data-repeat="true"
-                  data-transform="pad(00) -> split -> delay"
-                >
-                  <span data-view="flip"></span>
-                </div>
-                <span
-                  data-key="label"
-                  data-view="text"
-                  class="tick-label"
-                ></span>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="button">See Subscriptions</a>
-        </div>
-        <!--end wrap-->
-      </section>
-      <section class="default v-no-padding">
-        <div class="wrap">
-          <div id="pseudo-footer">
-            <div class="col footer brand">
-              <!-- Logo -->
-              <a href="/" class="logo-container">
-                <?xml version="1.0" encoding="utf-8"?><svg
-                  id="logo"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 1004 324"
-                  style="enable-background: new 0 0 1004 324"
-                  xml:space="preserve"
-                >
-                  <path
-                    class="st0"
-                    d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5c-7.6,26.7-32.2,46.3-61.4,46.3c-35.2,0-63.8-28.6-63.8-63.8c0-26.4,16.1-49.1,38.9-58.8c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c21.7,7.2,38.3,25.8,42.5,48.8C193.8,104.7,194.1,108.6,194.1,112.6z"
-                  />
-                  <path
-                    class="st0 blood"
-                    d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5l-80.8-15l-5.4-61.3c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c-9.5,9.5-4.2,30.1,17.2,41.6c9,4.8,18,6.7,25.3,7.1C193.8,104.7,194.1,108.6,194.1,112.6z"
-                  />
-                  <path
-                    class="st1"
-                    d="M33,203.6c-18.2,0-32.9-14.7-32.9-32.9s14.7-32.9,32.9-32.9h174.6c18.2,0,32.9,14.7,32.9,32.9s-14.7,32.9-32.9,32.9"
-                  />
-                  <path
-                    class="st2"
-                    d="M207.6,180c-2.1,0-3.7-1.7-3.7-3.7c0-11.2,5.5-15.2,8.8-16.5c5.2-2.2,11.8-0.7,16.1,3.6c1.5,1.5,1.5,3.8,0,5.3s-3.8,1.5-5.3,0c-2.2-2.2-5.5-3-8-2c-2.7,1.1-4.2,4.5-4.2,9.6C211.3,178.3,209.7,180,207.6,180z"
-                  />
-                  <path
-                    class="st3"
-                    d="M207.6,113v82.9c0,48.3-38.9,88.1-87.3,88.1C72.1,284,33,244.9,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h21.9c0.5,41.4,34.2,74.8,75.7,74.8C196.8,114.8,202.3,114.2,207.6,113z"
-                  />
-                  <path
-                    class="st2"
-                    d="M33,180c-2.1,0-3.7-1.7-3.7-3.7c0-5.1-1.5-8.5-4.2-9.6c-2.4-1-5.8-0.2-8,2c-1.5,1.5-3.8,1.5-5.3,0s-1.5-3.8,0-5.3c4.3-4.3,10.9-5.8,16.1-3.6c3.3,1.4,8.8,5.3,8.8,16.5C36.7,178.3,35,180,33,180z"
-                  />
-                  <path
-                    class="st1"
-                    d="M119.6,284C71.7,283.6,33,244.7,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h11c-19.7,0-35.6,27.1-35.6,60.6v96.2C68.9,244.5,91.6,283.4,119.6,284z"
-                  />
-                  <path
-                    class="st4 eye"
-                    d="M167.2,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0s-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C175.4,143.5,170.3,143.5,167.2,146.7z"
-                  />
-                  <path
-                    class="st4 eye"
-                    d="M87.4,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0c-3.1,3.1-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C95.6,143.5,90.6,143.5,87.4,146.7z"
-                  />
-                  <path
-                    class="st4"
-                    d="M136.4,205.4h-32.3c-13.9,0-25.2,11.3-25.2,25.2v8.3h82.7v-8.3C161.6,216.7,150.4,205.4,136.4,205.4z"
-                  />
-                  <path
-                    class="st0 blood"
-                    d="M144.8,265.7c-5.5,0-10-4.5-10-10v-16.9h19.9v16.9C154.7,261.2,150.3,265.7,144.8,265.7z"
-                  />
-                  <path
-                    class="st0"
-                    d="M154.9,238.8H85.7c5.6-10.9,19-18.6,34.6-18.6c3.5,0,7,0.4,10.2,1.1C141.6,223.9,150.5,230.4,154.9,238.8z"
-                  />
-                  <path
-                    class="st0"
-                    d="M154.9,238.8h-48.8c4.4-8.5,13.3-15,24.4-17.5C141.6,223.9,150.5,230.4,154.9,238.8z"
-                  />
-                  <path
-                    class="st5"
-                    d="M302.5,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L302.5,166.8z M292,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5V126z"
-                  />
-                  <path
-                    class="st5"
-                    d="M439,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.5,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H439z"
-                  />
-                  <path
-                    class="st5"
-                    d="M504,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L504,166.8z M493.5,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5L493.5,126L493.5,126z"
-                  />
-                  <path
-                    class="st5"
-                    d="M583.2,162.3c-0.5,1.4-1.7,2.2-2.4,2.2h-57.3c-1,0-1.7-0.7-1.7-1.7v-12.9l39.6-52.3h-34.8c-0.9,0-1.2-1-1.2-2.2V82c0-1.7,0.5-2.4,2.4-2.4h54.5c1.4,0,2.9,0.7,2.9,1.7v13.4l-38.9,51.8h39.2c3.3,0,3.3,1.2,3.3,1.7c0,0.9-0.5,1.5-0.7,1.9L583.2,162.3z"
-                  />
-                  <path
-                    class="st5"
-                    d="M628,167.5c-23.2,0-37.3-17.7-37.3-45.4s14.1-45.4,37.3-45.4c23.1,0,37.3,17.7,37.3,45.4S651.2,167.5,628,167.5z M642.1,122.1c0-16-2.2-28.2-14.1-28.2s-14.1,12.2-14.1,28.2s2.1,28.2,14.1,28.2C640,150.3,642.1,138.2,642.1,122.1z"
-                  />
-                  <path
-                    class="st5"
-                    d="M787.8,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.6,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H787.8z"
-                  />
-                  <path
-                    class="st5"
-                    d="M826.5,84.2c3.4-2.6,9.6-7.6,19.1-7.6c23.4,0,30.1,20.7,30.1,43c0,29.2-12.6,47.8-35.6,47.8c-9.8,0-13.6-4.8-16.3-7.6c-0.7,1.9-2.4,7.6-5,7.6c-0.9,0-1.7-0.2-2.4-0.3l-13.8-3.4c-0.9-0.2-1.7-0.7-1.7-1.4c0-1.5,1.9-3.1,3.1-8.9c0.7-3.4,0.7-7.1,0.7-10.7V46.5c0-2.6,1.2-2.6,3.3-3.1l14.4-2.9c0.5,0,2.1-0.5,2.4-0.5c1.4,0,1.7,0.7,1.7,3.6V84.2z M826.5,146.7c1,0.9,4,3.6,8.6,3.6c15.6,0,18.7-16,18.7-29.4c0-13.8-2.4-27-15.5-27c-5.9,0-9.6,4-11.9,5.9v46.9H826.5z"
-                  />
-                  <path
-                    class="st5"
-                    d="M916.4,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4V95.6h-13.2c-2.1,0-2.4-0.5-2.4-2.4V82c0-1.9,0.3-2.4,2.4-2.4H914c2.1,0,2.4,0.5,2.4,2.4V162.2z M905.4,68.4c-7.9,0-14.3-6.4-14.3-14.3S897.5,40,905.4,40c7.7,0,14.1,6.2,14.1,14.1S913.1,68.4,905.4,68.4z"
-                  />
-                  <path
-                    class="st5"
-                    d="M998.6,155.4c0.4,0.5,0.5,1.2,0.5,1.9c0,4.5-17.2,10.1-30.8,10.1c-22.7,0-38.5-12.9-38.5-44.6c0-27.4,14.6-46.3,37.7-46.3c29.2,0,34.4,26.2,34.4,47c0,3.3-0.7,4.3-4,4.3h-46.3c0,9.6,2.7,21.5,18.9,21.5c12.4,0,19.4-5.7,21.9-5.7c0.9,0,1.5,0.7,1.9,1.4L998.6,155.4z M978.7,111.9c0-7.1-0.5-19.3-12.4-19.3c-13.4,0-14.1,14.5-14.6,19.3C951.7,111.9,978.7,111.9,978.7,111.9z"
-                  />
-                  <path
-                    class="st3"
-                    d="M945.8,236.3c-45.1-7.8-90.1-14.9-135.6-19.1C749.4,210.3,689.9,207,627,207c-61.2-1.5-122.3,2.3-183.3,7.6c-61,5.6-121.8,14-181.9,27.1c29.1-10.1,59.2-17.1,89.2-24c30.2-6,60.7-11.3,91.3-15.3c61.2-7.9,123-11.6,184.8-11.4c61.7,1.5,123.6,4.5,184.6,14.1c30.6,3.9,60.8,10.3,91.1,16.3c15.1,2.9,30,7.2,44.9,11.1L945.8,236.3z"
-                  />
-                </svg>
-              </a>
-              <p style="margin-top: 20px">&copy; 2020 CTRL ALT DEFEAT co.</p>
-              <p class="white">Educational purposes only.</p>
-              <br />
-
-              <p class="white">Proudly Engineered by:</p>
-              <p class="grey">
-                Gökay Abay, Leanne Sall, Nick Charvat, Patrick Fortaleza, Tilman
-                Queitsch
-              </p>
-              <br />
-
-              <p class="grey mime">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
-                dignissimos neque impedit mollitia quidem consequuntur magnam
-                esse aut saepe illum cumque adipisci provident ipsum veniam,
-                velit reiciendis. Quibusdam facere modi cupiditate eveniet,
-                dolor ullam est dicta alias obcaecati eum perspiciatis!
-              </p>
-            </div>
-            <!-- end col footer -->
-            <div class="col footer subnav">
-              <div id="footer-nav">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="shopAll.html">Shop</a></li>
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="register.html">Signup</a></li>
-                </ul>
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- end col footer -->
-            <div class="col footer socials">
-              <h4 class="white">Follow us</h4>
-              <ul class="footer-social">
-                <li>
-                  <a href="#">
-                    <div class="svg-cont">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-                        />
-                      </svg>
-                    </div>
-                    <h5>Facebook</h5>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body id="tier-b">
+        <header>
+            <section class="default v-no-padding">
+              <div class="wrap">
+      
+                <div id="pseudo-header">
+                  <!-- Logo -->
+                  <a href="/" class="logo-container">
+                     <svg class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1004 324" style="enable-background:new 0 0 1004 324;" xml:space="preserve"><path class="st0" d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5c-7.6,26.7-32.2,46.3-61.4,46.3c-35.2,0-63.8-28.6-63.8-63.8c0-26.4,16.1-49.1,38.9-58.8c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c21.7,7.2,38.3,25.8,42.5,48.8C193.8,104.7,194.1,108.6,194.1,112.6z"/><path class="st0 blood" d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5l-80.8-15l-5.4-61.3c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c-9.5,9.5-4.2,30.1,17.2,41.6c9,4.8,18,6.7,25.3,7.1C193.8,104.7,194.1,108.6,194.1,112.6z"/><path class="st1" d="M33,203.6c-18.2,0-32.9-14.7-32.9-32.9s14.7-32.9,32.9-32.9h174.6c18.2,0,32.9,14.7,32.9,32.9s-14.7,32.9-32.9,32.9"/><path class="st2" d="M207.6,180c-2.1,0-3.7-1.7-3.7-3.7c0-11.2,5.5-15.2,8.8-16.5c5.2-2.2,11.8-0.7,16.1,3.6c1.5,1.5,1.5,3.8,0,5.3s-3.8,1.5-5.3,0c-2.2-2.2-5.5-3-8-2c-2.7,1.1-4.2,4.5-4.2,9.6C211.3,178.3,209.7,180,207.6,180z"/><path class="st3" d="M207.6,113v82.9c0,48.3-38.9,88.1-87.3,88.1C72.1,284,33,244.9,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h21.9c0.5,41.4,34.2,74.8,75.7,74.8C196.8,114.8,202.3,114.2,207.6,113z"/><path class="st2" d="M33,180c-2.1,0-3.7-1.7-3.7-3.7c0-5.1-1.5-8.5-4.2-9.6c-2.4-1-5.8-0.2-8,2c-1.5,1.5-3.8,1.5-5.3,0s-1.5-3.8,0-5.3c4.3-4.3,10.9-5.8,16.1-3.6c3.3,1.4,8.8,5.3,8.8,16.5C36.7,178.3,35,180,33,180z"/><path class="st1" d="M119.6,284C71.7,283.6,33,244.7,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h11c-19.7,0-35.6,27.1-35.6,60.6v96.2C68.9,244.5,91.6,283.4,119.6,284z"/><path class="st4 eye" d="M167.2,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0s-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C175.4,143.5,170.3,143.5,167.2,146.7z"/><path class="st4 eye" d="M87.4,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0c-3.1,3.1-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C95.6,143.5,90.6,143.5,87.4,146.7z"/><path class="st4" d="M136.4,205.4h-32.3c-13.9,0-25.2,11.3-25.2,25.2v8.3h82.7v-8.3C161.6,216.7,150.4,205.4,136.4,205.4z"/><path class="st0 blood" d="M144.8,265.7c-5.5,0-10-4.5-10-10v-16.9h19.9v16.9C154.7,261.2,150.3,265.7,144.8,265.7z"/><path class="st0" d="M154.9,238.8H85.7c5.6-10.9,19-18.6,34.6-18.6c3.5,0,7,0.4,10.2,1.1C141.6,223.9,150.5,230.4,154.9,238.8z"/><path class="st0" d="M154.9,238.8h-48.8c4.4-8.5,13.3-15,24.4-17.5C141.6,223.9,150.5,230.4,154.9,238.8z"/><path class="st5" d="M302.5,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L302.5,166.8z M292,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5V126z"/><path class="st5" d="M439,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.5,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H439z"/><path class="st5" d="M504,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L504,166.8z M493.5,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5L493.5,126L493.5,126z"/><path class="st5" d="M583.2,162.3c-0.5,1.4-1.7,2.2-2.4,2.2h-57.3c-1,0-1.7-0.7-1.7-1.7v-12.9l39.6-52.3h-34.8c-0.9,0-1.2-1-1.2-2.2V82c0-1.7,0.5-2.4,2.4-2.4h54.5c1.4,0,2.9,0.7,2.9,1.7v13.4l-38.9,51.8h39.2c3.3,0,3.3,1.2,3.3,1.7c0,0.9-0.5,1.5-0.7,1.9L583.2,162.3z"/><path class="st5" d="M628,167.5c-23.2,0-37.3-17.7-37.3-45.4s14.1-45.4,37.3-45.4c23.1,0,37.3,17.7,37.3,45.4S651.2,167.5,628,167.5z M642.1,122.1c0-16-2.2-28.2-14.1-28.2s-14.1,12.2-14.1,28.2s2.1,28.2,14.1,28.2C640,150.3,642.1,138.2,642.1,122.1z"/><path class="st5" d="M787.8,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.6,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H787.8z"/><path class="st5" d="M826.5,84.2c3.4-2.6,9.6-7.6,19.1-7.6c23.4,0,30.1,20.7,30.1,43c0,29.2-12.6,47.8-35.6,47.8c-9.8,0-13.6-4.8-16.3-7.6c-0.7,1.9-2.4,7.6-5,7.6c-0.9,0-1.7-0.2-2.4-0.3l-13.8-3.4c-0.9-0.2-1.7-0.7-1.7-1.4c0-1.5,1.9-3.1,3.1-8.9c0.7-3.4,0.7-7.1,0.7-10.7V46.5c0-2.6,1.2-2.6,3.3-3.1l14.4-2.9c0.5,0,2.1-0.5,2.4-0.5c1.4,0,1.7,0.7,1.7,3.6V84.2z M826.5,146.7c1,0.9,4,3.6,8.6,3.6c15.6,0,18.7-16,18.7-29.4c0-13.8-2.4-27-15.5-27c-5.9,0-9.6,4-11.9,5.9v46.9H826.5z"/><path class="st5" d="M916.4,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4V95.6h-13.2c-2.1,0-2.4-0.5-2.4-2.4V82c0-1.9,0.3-2.4,2.4-2.4H914c2.1,0,2.4,0.5,2.4,2.4V162.2z M905.4,68.4c-7.9,0-14.3-6.4-14.3-14.3S897.5,40,905.4,40c7.7,0,14.1,6.2,14.1,14.1S913.1,68.4,905.4,68.4z"/><path class="st5" d="M998.6,155.4c0.4,0.5,0.5,1.2,0.5,1.9c0,4.5-17.2,10.1-30.8,10.1c-22.7,0-38.5-12.9-38.5-44.6c0-27.4,14.6-46.3,37.7-46.3c29.2,0,34.4,26.2,34.4,47c0,3.3-0.7,4.3-4,4.3h-46.3c0,9.6,2.7,21.5,18.9,21.5c12.4,0,19.4-5.7,21.9-5.7c0.9,0,1.5,0.7,1.9,1.4L998.6,155.4z M978.7,111.9c0-7.1-0.5-19.3-12.4-19.3c-13.4,0-14.1,14.5-14.6,19.3C951.7,111.9,978.7,111.9,978.7,111.9z"/><path class="st3" d="M945.8,236.3c-45.1-7.8-90.1-14.9-135.6-19.1C749.4,210.3,689.9,207,627,207c-61.2-1.5-122.3,2.3-183.3,7.6c-61,5.6-121.8,14-181.9,27.1c29.1-10.1,59.2-17.1,89.2-24c30.2-6,60.7-11.3,91.3-15.3c61.2-7.9,123-11.6,184.8-11.4c61.7,1.5,123.6,4.5,184.6,14.1c30.6,3.9,60.8,10.3,91.1,16.3c15.1,2.9,30,7.2,44.9,11.1L945.8,236.3z"/></svg>
                   </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="svg-cont">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                        />
-                      </svg>
+      
+                  <!-- Navigation -->
+                  <nav>
+                    <div id="pseudo-nav">
+                      <div>
+                        <ul>
+                            <li class="current"><a href="/">Home</a></li>
+                            <li><a href="shopAll.html">Shop</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Signup</a></li>
+                        </ul>
+                      </div>
+                    </div> <!--end #pseudo-nav-->
+      
+                    <div class="promo mobile">
+                        <p>50% off an annual subscription. Use code: APOCNOW50</p>
                     </div>
-                    <h5>Instagram</h5>
+                  </nav>
+                  
+                  <a id="icon" class='icon'>
+                    <div class='hamburger'></div>
                   </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="svg-cont">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                        />
-                      </svg>
+      
+                  <a href="shoppingcart.html" id="cart-meta">
+                    <div class="cart-wrapper">
+                      <div class="svg-cont">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 23.73l-3-2.122v-14.2l3 1.359v14.963zm2-14.855v15.125l13-1.954v-15.046l-13 1.875zm5.963-7.875c-2.097 0-3.958 2.005-3.962 4.266l-.001 1.683c0 .305.273.54.575.494.244-.037.425-.247.425-.494v-1.681c.003-1.71 1.416-3.268 2.963-3.268.537 0 1.016.195 1.384.564.422.423.654 1.035.653 1.727v1.747c0 .305.273.54.575.494.243-.037.423-.246.423-.492l.002-1.749c.002-1.904-1.32-3.291-3.037-3.291zm-6.39 5.995c.245-.037.427-.247.427-.495v-2.232c.002-1.71 1.416-3.268 2.963-3.268l.162.015c.366-.283.765-.513 1.188-.683-.405-.207-.858-.332-1.35-.332-2.096 0-3.958 2.005-3.962 4.266v2.235c0 .306.272.538.572.494z"/></svg>
+                      </div> <!--end svg-cont -->
+                      <p>0</p>
+                    </div> <!--end cart-wrapper -->
+                  </a> 
+                </div> <!-- end #pseudo-header -->
+      
+              </div> <!-- end .wrap -->
+            </section>
+            <section id="sub-header" class="default v-no-padding">
+                <div class="wrap">
+                  <div class="message">
+                      <p class="promo desktop">50% off an annual subscription. Use code: APOCNOW50</p>
+                      <ul class="social">
+                          <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a></li>
+                          <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a></li>
+                          <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+                      </ul>
+                  </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section id="banner">
+                <div id="banner-img">
+                    <div class="banner-wrap">
+                        <div id="banner-text">
+                            <h2>DEFEAT ZOMBIES</h2>
+                            <h4>Buy your amazombie box today</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, ex?</p>
+                        </div>
                     </div>
-                    <h5>Twitter</h5>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- end col footer -->
-            <div class="col footer subscribe">
-              <h4 class="white">Subscribe to our news</h4>
-              <p class="grey">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                obcaecati odio facere doloremque illo ipsam similique soluta
-                earum dicta sed!
-              </p>
-              <form id="newsletter">
-                <label
-                  style="
-                    opacity: 0;
-                    height: 0;
-                    position: fixed;
-                    left: -999999px;
-                  "
-                  >Email Address:</label
-                >
-                <input type="text" placeholder="Enter email address" />
-                <input type="submit" value="Submit" />
-              </form>
-            </div>
-            <!-- end col footer -->
-          </div>
-          <!-- end #pseudo-footer -->
-        </div>
-        <!-- wrap -->
-      </section>
-    </footer>
-    <!-- JQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Page-specific script -->
-    <script src="scripts/SinglePage.js"></script>
-    <script src="scripts/shopAll.js"></script>
-    <!-- Countdown -->
-    <script src="scripts/flip/flip.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
-  </body>
+                    <img src="images/shop/darkforest.jpg" alt="Rednecks" />
+                </div>
+            </section>
+
+            <!-- Section Default Boilerplate -->
+            <section class="default">
+                <div class="wrap">
+                    <div class="text-wrap">
+                        <div class="sub-box" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250">
+                            <div class="text" uk-scrollspy-class="uk-animation-slide-bottom">
+                                <h3>TIER B</h3>
+                                <br />
+                                <h4>Turret Syndrome</h4>
+                                <br />
+                                <h5><span class="price-head">$1999.99</span> - Free Shipping</h5>
+                                <br />
+                                <p>
+                                    This ain't your mama's apocolypse survival box. This is for the beer loving, trucker hat wearing, tractor riding, true red, white and blue bleeding American. It's not the fanciest but dangnammit it gets
+                                    the job done. You'll kill more zombies then 75% of the American population. How does it feel to be a winner? I ain't to sure but if you buy this crate I think you'll know <span class="dark-ruby">-Ted Cruz Approved</span>
+                                </p>
+                                <div class="button-sub-box" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <a class="button add-cart add">Add to Cart</a>
+                                    <a class="button shop dark" href="shopAll.html">See All</a>
+                                </div>
+                            </div>
+                            <div class="box-img" uk-scrollspy-class="uk-animation-slide-bottom">
+                                <div class="crate-holder">
+                                    <img class="crate" src="images/shop/crateB.png" alt="crate" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-crate">
+                            <h3>Last Crate Contents</h3>
+                            <div class="sub-card-content" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250">
+                                <div class="card-1">
+                                    <div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom">
+                                        <img src="images/shop/sniper.png" alt="sniper" />
+                                    </div>
+                                    <h4>Sniper Rifle</h4>
+                                    <p class="details">
+                                        This gun is really cool and will kill everything in it's way.
+                                    </p>
+                                </div>
+                                <div class="card-1">
+                                    <div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom">
+                                        <img src="images/shop/rotty.png" alt="rotty" />
+                                    </div>
+                                    <h4>Rottweiler</h4>
+                                    <p class="details">
+                                        This is the doggo you want during the apocolypse. Guard Doggo.
+                                    </p>
+                                </div>
+                                <div class="card-1">
+                                    <div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom">
+                                        <img class="vert" src="images/shop/beer.png" alt="beer" />
+                                    </div>
+                                    <h4>Beer</h4>
+                                    <p class="details vert-text">
+                                        It's Beer what more do you want.
+                                    </p>
+                                </div>
+                                <div class="card-1">
+                                    <div class="last-img" uk-scrollspy-class="uk-animation-slide-bottom">
+                                        <img class="vert" src="images/shop/machet.png" alt="machete" />
+                                    </div>
+                                    <h4>Machete</h4>
+                                    <p class="details vert-text">
+                                        This Machete will slice anything in it's path
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="shopAll.html" class="button sing-button">See more</a>
+                        </div>
+
+                        <div class="benefits">
+                            <h3>Benefits</h3>
+                            <div class="cards" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250">
+                                <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <h4 class="bene-heading">Accuracy And Power</h4>
+                                    <div class="bene-img">
+                                        <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="51.5" cy="48" rx="51.5" ry="48" fill="#C4C4C4" />
+                                            <path
+                                                d="M84.3534 45.8761H78.6624C77.361 33.8336 66.9417 24.2634 53.8308 23.0655V17.8407H48.2813V23.0655C35.1704 24.2634 24.7511 33.8336 23.4497 45.8761H17.7586V50.9734H23.4497C24.7511 63.0159 35.1704 72.5862 48.2813 73.7841V79.0088H53.8308V73.7841C66.9417 72.5887 77.361 63.0159 78.6624 50.9734H84.3534V45.8761ZM53.8308 68.6383V58.6195H48.2813V68.6383C38.2615 67.4812 30.3062 60.1767 29.0492 50.9734H39.9569V45.8761H29.0492C30.3062 36.6728 38.2615 29.3683 48.2813 28.2112V38.2301H53.8308V28.2112C63.8506 29.3683 71.8059 36.6703 73.0628 45.8761H62.1552V50.9734H73.0628C71.8059 60.1767 63.8506 67.4812 53.8308 68.6383ZM56.6056 48.4248C56.6056 51.2385 54.1194 53.5221 51.056 53.5221C47.9927 53.5221 45.5065 51.2385 45.5065 48.4248C45.5065 45.611 47.9927 43.3274 51.056 43.3274C54.1194 43.3274 56.6056 45.611 56.6056 48.4248Z"
+                                                fill="black"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="bene-text">
+                                        <p>
+                                            With the Tier B box you will get most of the firepower you need to defeat any kind of zombie, monster and demon. You might not have all the firepower but you have enough to murder some zombies.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <h4 class="bene-heading">Guns Are Awesome</h4>
+                                    <div class="bene-img">
+                                        <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="51.5" cy="48" rx="51.5" ry="48" fill="#C4C4C4" />
+                                            <path
+                                                d="M70.4834 40.2032C66.3683 39.7449 61.7947 36.1557 60.0345 32.3595H36.6667V47.4762C44.9441 47.4762 41.6544 58.2202 51.4465 59.7339C57.3277 60.6416 61.0848 57.6821 61.4486 54.0278C62.0344 48.1917 65.3862 43.0148 70.4834 40.2032V40.2032ZM43.4975 35.18H54.0321C54.5912 35.18 55.0468 35.6324 55.0468 36.1941C55.0468 36.7529 54.5942 37.2052 54.0321 37.2052H43.4975V35.18ZM43.4975 38.9851H54.0321C54.5912 38.9851 55.0468 39.4374 55.0468 39.9962C55.0468 40.555 54.5942 41.0073 54.0321 41.0073H43.4975V38.9851V38.9851ZM43.4975 44.8124V42.7872H54.0321C54.5912 42.7872 55.0468 43.2395 55.0468 43.8012C55.0468 44.36 54.5942 44.8124 54.0321 44.8124H43.4975ZM52.7422 57.3983C44.4175 56.5705 44.9204 46.9174 54.2747 48.3602C60.7593 49.3654 60.3245 58.1522 52.7422 57.3983ZM33.7083 32.3595V41.2172H15.9169C15.7394 39.7656 14.8815 38.243 13 37.7965V32.3595H33.7083ZM21.875 30.1894H15.0797V27.1412C15.0797 26.5854 15.6359 26.2543 16.1625 26.5381L21.875 30.1894V30.1894ZM65.6879 36.3094C64.9572 35.7802 64.2709 35.1859 63.6112 34.4823C65.1761 33.6042 66.6494 33.0218 68.5841 32.8799C69.2971 32.8266 69.6166 33.687 68.9007 33.9915C67.4629 34.6065 66.4807 35.2125 65.6879 36.3094V36.3094ZM56.7153 51.9583C55.7509 53.6435 54.1267 55.3465 52.7482 55.4588C52.3192 55.4943 52.0263 55.0952 52.192 54.7108C52.5085 53.9805 54.4936 52.5082 54.0321 50.1223C55.4876 50.3588 56.3485 51.1009 56.7153 51.9583ZM72.3649 42.6157C67.7587 44.9868 64.6821 49.5753 64.265 54.767C66.5636 55.7219 69.2083 57.4781 69.2083 63.4532V70.7411C69.2083 73.2452 70.2142 73.739 72.8057 73.739H80.1808C83.1095 73.739 84 72.8254 84 70.7854C84 66.2708 82.8285 59.4678 78.0922 52.8127C75.7788 49.5576 72.7583 47.3432 72.3649 42.6157V42.6157ZM70.5011 54.3619C69.3444 54.3619 68.4096 53.4277 68.4096 52.2687C68.4096 51.1098 69.3444 50.1755 70.5011 50.1755C71.6578 50.1755 72.5956 51.1098 72.5956 52.2687C72.5956 53.4277 71.6549 54.3619 70.5011 54.3619Z"
+                                                fill="black"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="bene-text">
+                                        <p>
+                                            With this box you may not have the sheer head splitting firepower of Tier A but hey you sure get a lot in Tier B while not spending as much. There is lots of guns, machetes, knives awaiting for
+                                            you in this box. You won't have any trouble showing your guns
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <h4 class="bene-heading">Chances Of Survival</h4>
+                                    <div class="bene-img">
+                                        <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="51.5" cy="48" rx="51.5" ry="48" fill="#C4C4C4" />
+                                            <line y1="-4" x2="62.5076" y2="-4" transform="matrix(0.465881 -0.884847 0.861436 0.507866 40.4537 76.3097)" stroke="black" stroke-width="8" />
+                                            <path
+                                                d="M74.3017 59.3218C74.3017 64.9638 69.9862 69.4886 64.7213 69.4886C59.4565 69.4886 55.141 64.9638 55.141 59.3218C55.141 53.6798 59.4565 49.1549 64.7213 49.1549C69.9862 49.1549 74.3017 53.6798 74.3017 59.3218Z"
+                                                fill="black"
+                                                stroke="black"
+                                            />
+                                            <path
+                                                d="M49.6608 33.2472C49.6608 38.8892 45.3452 43.4141 40.0804 43.4141C34.8155 43.4141 30.5 38.8892 30.5 33.2472C30.5 27.6052 34.8155 23.0803 40.0804 23.0803C45.3452 23.0803 49.6608 27.6052 49.6608 33.2472Z"
+                                                fill="black"
+                                                stroke="black"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="bene-text">
+                                        <p>
+                                            Well I can see that you are worried but lets be honest if you are looking at this page then you are prepping and maybe you don't want to spend your kids college fund on a wicked survival box.
+                                            That's okay that's why we have Tier B. So your chances will be a survival rating of 60%.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="bene-card" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <h4 class="bene-heading">Survive For Longer</h4>
+                                    <div class="bene-img">
+                                        <svg width="88" height="85" viewBox="0 0 103 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="51.5" cy="48" rx="51.5" ry="48" fill="#C4C4C4" />
+                                            <g clip-path="url(#clip0)">
+                                                <path
+                                                    d="M84.3534 21.593V72.2125H19.5345V21.593H27.6369V23.8939C27.6369 26.4317 30.0595 28.4956 33.0384 28.4956C36.0174 28.4956 38.44 26.4317 38.44 23.8939V21.593H65.4479V23.8939C65.4479 26.4317 67.8705 28.4956 70.8495 28.4956C73.8285 28.4956 76.2511 26.4317 76.2511 23.8939V21.593H84.3534ZM78.9519 35.3983H24.9361V67.6107H78.9519V35.3983ZM73.5503 19.2921C73.5503 18.022 72.343 16.9912 70.8495 16.9912C69.356 16.9912 68.1487 18.022 68.1487 19.2921V23.8939C68.1487 25.164 69.356 26.1948 70.8495 26.1948C72.343 26.1948 73.5503 25.164 73.5503 23.8939V19.2921ZM35.7392 23.8939C35.7392 25.164 34.532 26.1948 33.0384 26.1948C31.5449 26.1948 30.3376 25.164 30.3376 23.8939V19.2921C30.3376 18.022 31.5449 16.9912 33.0384 16.9912C34.532 16.9912 35.7392 18.022 35.7392 19.2921V23.8939ZM38.44 50.8809L40.7492 49.0609C43.45 50.1746 45.165 51.0213 48.2034 52.8666C53.9101 47.3468 57.6858 44.5466 64.6944 40.8307L65.4479 42.3032C59.6655 46.6036 55.4307 51.3894 49.3323 60.708C45.5701 56.9346 43.0611 54.5278 38.44 50.8809V50.8809Z"
+                                                    fill="black"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="64.819" height="55.2212" fill="white" transform="translate(19.5345 16.9912)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="bene-text">
+                                        <p>
+                                            How long will you survive the zombie apocolypse? Well honestly we have no idea. But if you are visiting this website then you must be smart and if you are really smart you'll buy the crate and
+                                            then well, you'll survive longer than the guy next to you.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="review-forum" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 250">
+                                <div class="review" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <img src="images/shop/kidrockrev.png" alt="kidrock loves amazombie" />
+                                </div>
+
+                                <div class="forum" uk-scrollspy-class="uk-animation-slide-bottom">
+                                    <h4>Leave a Review!</h4>
+                                    <form class="form">
+                                        <input type="text" id="fname" name="fname" placeholder="Your Name" /><br />
+                                        <br />
+
+                                        <textarea id="review" name="review" placeholder="Type Your Review Here!"></textarea><br />
+                                        <br />
+
+                                        <div class="rating rating2">
+                                            <!--
+                    -->
+                                            <a href="#5" title="Give 5 stars">★</a>
+                                            <!--
+                    -->
+                                            <a href="#4" title="Give 4 stars">★</a>
+                                            <!--
+                    -->
+                                            <a href="#3" title="Give 3 stars">★</a>
+                                            <!--
+                    -->
+                                            <a href="#2" title="Give 2 stars">★</a>
+                                            <!--
+                    -->
+                                            <a href="#1" title="Give 1 star">★</a><br />
+                                            <br />
+                                        </div>
+
+                                        <a class="button submit" id="submitform">Submit</a><br />
+                                        <br />
+                                        <div><p id="thankyou"></p></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Timer -->
+            <section class="default" id="timer">
+                <div class="wrap">
+                    <h3 class="white">Overcome. Adapt. Survive.</h3>
+                    <h4>Next shipment cut off:</h4>
+                    <!-- Timer -->
+                    <div class="tick" data-did-init="handleTickInit">
+                        <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay">
+                            <div class="tick-group">
+                                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                    <span data-view="flip"></span>
+                                </div>
+                                <span data-key="label" data-view="text" class="tick-label"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="button">See Subscriptions</a>
+                </div>
+                <!--end wrap-->
+            </section>
+            <section class="default v-no-padding">
+                <div class="wrap">
+                    <div id="pseudo-footer">
+                        <div class="col footer brand">
+                            <!-- Logo -->
+                            <a href="/" class="logo-container">
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg
+                                    id="logo"
+                                    version="1.1"
+                                    id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px"
+                                    y="0px"
+                                    viewBox="0 0 1004 324"
+                                    style="enable-background: new 0 0 1004 324;"
+                                    xml:space="preserve"
+                                >
+                                    <path
+                                        class="st0"
+                                        d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5c-7.6,26.7-32.2,46.3-61.4,46.3c-35.2,0-63.8-28.6-63.8-63.8c0-26.4,16.1-49.1,38.9-58.8c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c21.7,7.2,38.3,25.8,42.5,48.8C193.8,104.7,194.1,108.6,194.1,112.6z"
+                                    />
+                                    <path
+                                        class="st0 blood"
+                                        d="M194.1,112.6c0,6.1-0.8,11.9-2.4,17.5l-80.8-15l-5.4-61.3c7.6-3.2,16.1-5,24.9-5c7.1,0,13.8,1.1,20.2,3.3l0,0c-9.5,9.5-4.2,30.1,17.2,41.6c9,4.8,18,6.7,25.3,7.1C193.8,104.7,194.1,108.6,194.1,112.6z"
+                                    />
+                                    <path class="st1" d="M33,203.6c-18.2,0-32.9-14.7-32.9-32.9s14.7-32.9,32.9-32.9h174.6c18.2,0,32.9,14.7,32.9,32.9s-14.7,32.9-32.9,32.9" />
+                                    <path
+                                        class="st2"
+                                        d="M207.6,180c-2.1,0-3.7-1.7-3.7-3.7c0-11.2,5.5-15.2,8.8-16.5c5.2-2.2,11.8-0.7,16.1,3.6c1.5,1.5,1.5,3.8,0,5.3s-3.8,1.5-5.3,0c-2.2-2.2-5.5-3-8-2c-2.7,1.1-4.2,4.5-4.2,9.6C211.3,178.3,209.7,180,207.6,180z"
+                                    />
+                                    <path class="st3" d="M207.6,113v82.9c0,48.3-38.9,88.1-87.3,88.1C72.1,284,33,244.9,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h21.9c0.5,41.4,34.2,74.8,75.7,74.8C196.8,114.8,202.3,114.2,207.6,113z" />
+                                    <path
+                                        class="st2"
+                                        d="M33,180c-2.1,0-3.7-1.7-3.7-3.7c0-5.1-1.5-8.5-4.2-9.6c-2.4-1-5.8-0.2-8,2c-1.5,1.5-3.8,1.5-5.3,0s-1.5-3.8,0-5.3c4.3-4.3,10.9-5.8,16.1-3.6c3.3,1.4,8.8,5.3,8.8,16.5C36.7,178.3,35,180,33,180z"
+                                    />
+                                    <path class="st1" d="M119.6,284C71.7,283.6,33,244.7,33,196.7v-96.2C33,67.1,60.1,40,93.5,40h11c-19.7,0-35.6,27.1-35.6,60.6v96.2C68.9,244.5,91.6,283.4,119.6,284z" />
+                                    <path
+                                        class="st4 eye"
+                                        d="M167.2,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0s-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C175.4,143.5,170.3,143.5,167.2,146.7z"
+                                    />
+                                    <path
+                                        class="st4 eye"
+                                        d="M87.4,146.7l-7.1,7.1l-7.1-7.1c-3.1-3.1-8.2-3.1-11.3,0c-3.1,3.1-3.1,8.2,0,11.3l7.1,7.1l-7.1,7.1c-3.1,3.1-3.1,8.2,0,11.3s8.2,3.1,11.3,0l7.1-7.1l7.1,7.1c3.1,3.1,8.2,3.1,11.3,0s3.1-8.2,0-11.3l-7.1-7.1l7.1-7.1c3.1-3.1,3.1-8.2,0-11.3C95.6,143.5,90.6,143.5,87.4,146.7z"
+                                    />
+                                    <path class="st4" d="M136.4,205.4h-32.3c-13.9,0-25.2,11.3-25.2,25.2v8.3h82.7v-8.3C161.6,216.7,150.4,205.4,136.4,205.4z" />
+                                    <path class="st0 blood" d="M144.8,265.7c-5.5,0-10-4.5-10-10v-16.9h19.9v16.9C154.7,261.2,150.3,265.7,144.8,265.7z" />
+                                    <path class="st0" d="M154.9,238.8H85.7c5.6-10.9,19-18.6,34.6-18.6c3.5,0,7,0.4,10.2,1.1C141.6,223.9,150.5,230.4,154.9,238.8z" />
+                                    <path class="st0" d="M154.9,238.8h-48.8c4.4-8.5,13.3-15,24.4-17.5C141.6,223.9,150.5,230.4,154.9,238.8z" />
+                                    <path
+                                        class="st5"
+                                        d="M302.5,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L302.5,166.8z M292,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5V126z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M439,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.5,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H439z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M504,166.8c-0.7,0.2-1.5,0.7-2.2,0.7c-1.5,0-4.1-6-5-10.3c-3.4,3.4-9.5,10.3-22.4,10.3c-15.8,0-25.8-10.3-25.8-26.5c0-29.1,31.3-29.1,44.9-29.1v-5.3c0-7.7-1.4-12.7-12.2-12.7c-9.6,0-19.1,5.2-21.3,5.2c-0.9,0-1.5-1-1.7-1.7l-3.4-10.5c-0.3-0.7-0.5-1.4-0.5-2.1c0-4,17-8.1,30.3-8.1c21.5,0,29.6,9.8,29.6,27.7v33.2c0,16.7,4.5,18.9,4.5,22.4c0,0.7-0.7,1.2-1.5,1.5L504,166.8z M493.5,126c-4.3,0-24.3-1.4-24.3,13.8c0,6.7,4.8,11.7,11.4,11.7c6.4,0,10.8-4.5,12.9-6.5L493.5,126L493.5,126z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M583.2,162.3c-0.5,1.4-1.7,2.2-2.4,2.2h-57.3c-1,0-1.7-0.7-1.7-1.7v-12.9l39.6-52.3h-34.8c-0.9,0-1.2-1-1.2-2.2V82c0-1.7,0.5-2.4,2.4-2.4h54.5c1.4,0,2.9,0.7,2.9,1.7v13.4l-38.9,51.8h39.2c3.3,0,3.3,1.2,3.3,1.7c0,0.9-0.5,1.5-0.7,1.9L583.2,162.3z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M628,167.5c-23.2,0-37.3-17.7-37.3-45.4s14.1-45.4,37.3-45.4c23.1,0,37.3,17.7,37.3,45.4S651.2,167.5,628,167.5z M642.1,122.1c0-16-2.2-28.2-14.1-28.2s-14.1,12.2-14.1,28.2s2.1,28.2,14.1,28.2C640,150.3,642.1,138.2,642.1,122.1z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M787.8,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-53c0-6.5-0.7-14.5-7.2-14.5c-7.2,0-12.9,5-15.1,7.1v60.4c0,1.9-0.4,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4v-52c0-24.3-3.3-22.9-3.3-26.8c0-0.9,0.7-1.5,1.9-1.9l13.1-4.3c1-0.3,1.9-0.5,2.6-0.5c2.2,0,3.6,3.8,5.5,11.9c5.2-4.5,12.7-11.9,26.3-11.9c7.4,0,15.5,4.6,17.6,11.9c5.2-4.5,12.6-11.9,26.7-11.9c16.2,0,20,12.2,20,27.2v58.3H787.8z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M826.5,84.2c3.4-2.6,9.6-7.6,19.1-7.6c23.4,0,30.1,20.7,30.1,43c0,29.2-12.6,47.8-35.6,47.8c-9.8,0-13.6-4.8-16.3-7.6c-0.7,1.9-2.4,7.6-5,7.6c-0.9,0-1.7-0.2-2.4-0.3l-13.8-3.4c-0.9-0.2-1.7-0.7-1.7-1.4c0-1.5,1.9-3.1,3.1-8.9c0.7-3.4,0.7-7.1,0.7-10.7V46.5c0-2.6,1.2-2.6,3.3-3.1l14.4-2.9c0.5,0,2.1-0.5,2.4-0.5c1.4,0,1.7,0.7,1.7,3.6V84.2z M826.5,146.7c1,0.9,4,3.6,8.6,3.6c15.6,0,18.7-16,18.7-29.4c0-13.8-2.4-27-15.5-27c-5.9,0-9.6,4-11.9,5.9v46.9H826.5z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M916.4,162.2c0,1.9-0.3,2.4-2.4,2.4h-17c-2.1,0-2.4-0.5-2.4-2.4V95.6h-13.2c-2.1,0-2.4-0.5-2.4-2.4V82c0-1.9,0.3-2.4,2.4-2.4H914c2.1,0,2.4,0.5,2.4,2.4V162.2z M905.4,68.4c-7.9,0-14.3-6.4-14.3-14.3S897.5,40,905.4,40c7.7,0,14.1,6.2,14.1,14.1S913.1,68.4,905.4,68.4z"
+                                    />
+                                    <path
+                                        class="st5"
+                                        d="M998.6,155.4c0.4,0.5,0.5,1.2,0.5,1.9c0,4.5-17.2,10.1-30.8,10.1c-22.7,0-38.5-12.9-38.5-44.6c0-27.4,14.6-46.3,37.7-46.3c29.2,0,34.4,26.2,34.4,47c0,3.3-0.7,4.3-4,4.3h-46.3c0,9.6,2.7,21.5,18.9,21.5c12.4,0,19.4-5.7,21.9-5.7c0.9,0,1.5,0.7,1.9,1.4L998.6,155.4z M978.7,111.9c0-7.1-0.5-19.3-12.4-19.3c-13.4,0-14.1,14.5-14.6,19.3C951.7,111.9,978.7,111.9,978.7,111.9z"
+                                    />
+                                    <path
+                                        class="st3"
+                                        d="M945.8,236.3c-45.1-7.8-90.1-14.9-135.6-19.1C749.4,210.3,689.9,207,627,207c-61.2-1.5-122.3,2.3-183.3,7.6c-61,5.6-121.8,14-181.9,27.1c29.1-10.1,59.2-17.1,89.2-24c30.2-6,60.7-11.3,91.3-15.3c61.2-7.9,123-11.6,184.8-11.4c61.7,1.5,123.6,4.5,184.6,14.1c30.6,3.9,60.8,10.3,91.1,16.3c15.1,2.9,30,7.2,44.9,11.1L945.8,236.3z"
+                                    />
+                                </svg>
+                            </a>
+                            <p style="margin-top: 20px;">&copy; 2020 CTRL ALT DEFEAT co.</p>
+                            <p class="white">Educational purposes only.</p>
+                            <br />
+
+                            <p class="white">Proudly Engineered by:</p>
+                            <p class="grey">
+                                Gökay Abay, Leanne Sall, Nick Charvat, Patrick Fortaleza, Tilman Queitsch
+                            </p>
+                            <br />
+
+                            <p class="grey mime">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dignissimos neque impedit mollitia quidem consequuntur magnam esse aut saepe illum cumque adipisci provident ipsum veniam, velit reiciendis.
+                                Quibusdam facere modi cupiditate eveniet, dolor ullam est dicta alias obcaecati eum perspiciatis!
+                            </p>
+                        </div>
+                        <!-- end col footer -->
+                        <div class="col footer subnav">
+                            <div id="footer-nav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shopAll.html">Shop</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Signup</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end col footer -->
+                        <div class="col footer socials">
+                            <h4 class="white">Follow us</h4>
+                            <ul class="footer-social">
+                                <li>
+                                    <a href="#">
+                                        <div class="svg-cont">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                            </svg>
+                                        </div>
+                                        <h5>Facebook</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="svg-cont">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <h5>Instagram</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="svg-cont">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <h5>Twitter</h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end col footer -->
+                        <div class="col footer subscribe">
+                            <h4 class="white">Subscribe to our news</h4>
+                            <p class="grey">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab obcaecati odio facere doloremque illo ipsam similique soluta earum dicta sed!
+                            </p>
+                            <form id="newsletter">
+                                <label style="opacity: 0; height: 0; position: fixed; left: -999999px;">Email Address:</label>
+                                <input type="text" placeholder="Enter email address" />
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </div>
+                        <!-- end col footer -->
+                    </div>
+                    <!-- end #pseudo-footer -->
+                </div>
+                <!-- wrap -->
+            </section>
+        </footer>
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!-- Page-specific script -->
+        <script src="scripts/SinglePage.js"></script>
+        <script src="scripts/shopAll.js"></script>
+        <!-- Countdown -->
+        <script src="scripts/flip/flip.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    </body>
 </html>
