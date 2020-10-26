@@ -16,6 +16,10 @@
     padding: 1rem;
 }
 
+.cent-header {
+    justify-content: center;
+}
+
 .cart-table {
     @include body-regular;
     padding: 1rem;
@@ -126,6 +130,15 @@ a.button.plusminus {
     background-color: $grey;
 }
 
+.icon-pencil-container-locked {
+    background-color: $dark-grey;
+
+    &:hover {
+        cursor: default;
+        background-color: $dark-grey;
+    }
+}
+
 #icon-pencil {
     display: inline-block;
     fill: $dark-black;
@@ -198,4 +211,16 @@ a.button.plusminus {
     pointer-events: none;
 }
 
-//  CART CONTAINER STYLES
+.summary-form-cc-grey {
+    color: $grey;
+}
+
+#fairWarning {
+    padding-top: 3rem;
+    color: $dark-ruby;
+    @include heading-regular;
+
+    &.hidden {
+        display: none;
+    }
+}
