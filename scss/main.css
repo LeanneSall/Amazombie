@@ -3648,7 +3648,12 @@ body {
   height: 200px;
   width: 153px;
   margin-left: 10%;
-  padding-top: 30px;
+  padding-top: 50px;
+}
+
+.last-crate .sub-card-content .card-1 h4 {
+  color: #519872;
+  padding-top: 15px;
 }
 
 .last-crate .sub-card-content .card-1 .details {
@@ -3663,7 +3668,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 210px;
-  padding: 10% 4%;
+  padding: 15% 4%;
 }
 
 .last-crate .sub-card-content .card-1 .details p {
