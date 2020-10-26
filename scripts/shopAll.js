@@ -82,7 +82,6 @@ $(document).ready(function () {
                 inCart: 0
             }
         ];
-
     }
 });
 
