@@ -179,7 +179,7 @@ function displayCart() {
             <div id="product" class="cart-table-cell cart-table-pdt flex col-sm-8">
                 <ion-icon style="cursor:pointer;color:#832d2d;" size="large" name="close-circle"></ion-icon>
                 <img class="cart-row-img" src="images/cart/${item.tag}.png">
-                <span style="font-weight:bold;">${item.name}: ${item.title}</span>
+                <span style="font-weight:bold;">${item.name}</span><p>:&nbsp;${item.title}</p>
             </div>
             <div class="cart-table-cell cart-table-qty flex col-sm-2">              
                 <a style="cursor:pointer;" class="button plusminus increase">+</a>              

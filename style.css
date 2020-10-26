@@ -2052,6 +2052,10 @@ a.button.plusminus {
   display: none;
 }
 
+#cart-meta p::before {
+  content: "$ ";
+}
+
 .carousel {
   position: relative;
   height: 80vh;
