@@ -193,17 +193,6 @@ function displayCart() {
             </div>
             `
         });
-
-        // productContainer.innerHTML += `
-        //     <div class="basketTotalContainer">
-        //         <h4 class="basketTotalTitle">
-        //             Basket Total
-        //         </h4>
-        //         <h4 class="basket">
-        //             ${cartCost}
-        //         </h4>
-        //     </div>
-        // `
     }
 
     deleteButtons();
