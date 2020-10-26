@@ -32,26 +32,58 @@ $(document).ready(function() {
 
 // ----------------------------------- SHOPPING CART FUNCTIONALITY ---------------------------------------------------
 let carts = document.querySelectorAll('.add-cart');
-let products = [
-    {
-        name: 'Tier A',
-        tag: 'tiera',
-        price: 4999.99,
-        inCart: 0
-    },
-    {
-        name: 'Tier B',
-        tag: 'tierb',
-        price: 1999.99,
-        inCart: 0
-    },
-    {
-        name: 'Tier C',
-        tag: 'tierc',
-        price: 499.99,
-        inCart: 0
+let products;
+$( document ).ready(function() {
+    if(document.getElementById("tier-c")){
+        products = [
+            {
+                name: 'Tier C',
+                tag: 'tierc',
+                price: 499.99,
+                inCart: 0
+            }
+        ];
+    } else if(document.getElementById("tier-b")){
+        products = [
+            {
+                name: 'Tier B',
+                tag: 'tierb',
+                price: 1999.99,
+                inCart: 0
+            }
+        ];
+    } else if(document.getElementById("tier-a")){
+        products = [
+            {
+                name: 'Tier A',
+                tag: 'tiera',
+                price: 4999.99,
+                inCart: 0
+            }
+        ];
+    } else {
+        products = [
+                {
+                    name: 'Tier A',
+                    tag: 'tiera',
+                    price: 4999.99,
+                    inCart: 0
+                },
+                {
+                    name: 'Tier B',
+                    tag: 'tierb',
+                    price: 1999.99,
+                    inCart: 0
+                },
+                {
+                    name: 'Tier C',
+                    tag: 'tierc',
+                    price: 499.99,
+                    inCart: 0
+                }
+            ];
     }
-];
+});
 
 // Add click listener to "add to cart" buttons
 for(let i = 0; i < carts.length; i++){
