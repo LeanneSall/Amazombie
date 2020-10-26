@@ -1986,6 +1986,11 @@ a.button.plusminus {
   text-decoration: line-through;
 }
 
+#useThisAddress-cc {
+  display: block;
+  padding-top: 0.5rem;
+}
+
 .useThisAddress-cc-hidden {
   display: none !important;
 }
@@ -2673,12 +2678,23 @@ figure.figure figcaption p {
 #purchased-items .display-items p {
   color: black;
 }
-#purchased-items .display-items .col-sm-8 {
+#purchased-items .display-items .item-image-con {
   padding-left: 0;
   align-items: center;
 }
-#purchased-items .display-items .col-sm-2 {
+#purchased-items .display-items .item-detail-con {
   text-align: right;
+  padding-right: 0;
+}
+#purchased-items .display-items .item-quantity {
+  text-align: center;
+}
+#purchased-items > .display-items:last-child {
+  border-bottom: unset;
+}
+
+#continue-btn {
+  margin: 30px 0;
 }
 
 .conf-banner {
@@ -2702,6 +2718,7 @@ figure.figure figcaption p {
 }
 body {
   background-color: #191919;
+
 }
 
 #subheader {
@@ -3017,7 +3034,7 @@ body {
 }
 .last-crate .sub-card-content .card-1 {
   width: 250px;
-  height: 350px;
+  height: 400px;
   background-color: #1e1e26;
   border-radius: 10px;
   box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
@@ -3032,17 +3049,18 @@ body {
   height: 200px;
   width: 153px;
   margin-left: 10%;
-  margin-top: 10%;
+  padding-top: 50px;
 }
-.last-crate .sub-card-content .card-1 .last-img .vert {
-  padding-left: 35px;
+.last-crate .sub-card-content .card-1 h4 {
+  color: #519872;
+  padding-top: 15px;
 }
 .last-crate .sub-card-content .card-1 .details {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 210px;
-  padding: 10% 4%;
+  padding: 15% 4%;
 }
 .last-crate .sub-card-content .card-1 .details p {
   font-weight: bold;

@@ -1,14 +1,7 @@
 @charset "utf-8";
-// Base Styles
-body {
-    background-color: $black;
-}
-
 // Banner
-
 #subheader {
     color: $dark-ruby;
-    font-weight: bold;
 }
 
 #banner-img {
@@ -17,6 +10,10 @@ body {
     color: $white;
     display: flex;
     justify-content: center;
+}
+
+#banner-text {
+    position: absolute;
 }
 
 #banner-img img {
@@ -31,7 +28,6 @@ body {
     align-items: center;
     padding: 50px 0;
 }
-
 
 // Items
 .items {
