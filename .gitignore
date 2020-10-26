@@ -3,6 +3,10 @@
 style.css.map
 .sass-cache
 node_modules
+<<<<<<< HEAD
+style.css
+=======
 style.css
 css/main.css
 
+>>>>>>> 21f727d5026761f35c6ed594d81c3e1bdaf67bfc
