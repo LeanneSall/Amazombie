@@ -32,29 +32,6 @@ $(document).ready(function() {
 
 // ----------------------------------- SHOPPING CART FUNCTIONALITY ---------------------------------------------------
 let carts = document.querySelectorAll('.add-cart');
-<<<<<<< HEAD
-let products = [
-    {
-        name: 'Tier A',
-        tag: 'tiera',
-        price: 4999.99,
-        inCart: 0,
-        title: 'Get Those Zombies Off My Lawn'
-    },
-    {
-        name: 'Tier B',
-        tag: 'tierb',
-        price: 1999.99,
-        inCart: 0,
-        title: 'Turret Syndrome'
-    },
-    {
-        name: 'Tier C',
-        tag: 'tierc',
-        price: 499.99,
-        inCart: 0,
-        title: 'The Last Tier Of Us'
-=======
 let products;
 $( document ).ready(function() {
     if(document.getElementById("tier-c")){
@@ -105,7 +82,6 @@ $( document ).ready(function() {
                     inCart: 0
                 }
             ];
->>>>>>> 3b27e95817a2b422c55bb4b213874b77e490c2e4
     }
 });
 
