@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 // ----------------------------------- SHOPPING CART FUNCTIONALITY ---------------------------------------------------
 let carts = document.querySelectorAll('.add-cart');
-products;
+let products;
 $(document).ready(function () {
     if (document.getElementById("tier-c")) {
         products = [
