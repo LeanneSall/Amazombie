@@ -38,7 +38,7 @@ function displayOrder() {
     address1Div.innerHTML = customerInfoJson.addressLine1
     address2Div.innerHTML = customerInfoJson.addressLine2
     address3Div.innerHTML = customerInfoJson.addressLine3
-    emailDiv.innerHTML = customerInfoJson.email
+    //emailDiv.innerHTML = customerInfoJson.email
     paymentMethodDiv.innerHTML = maskCardNo(customerInfoJson.creditCardNo) + '<i class="fab fa-cc-visa"></i>'
     subtotalDiv.innerHTML = strSubtotal
     taxesDiv.innerHTML = 'Over My Cold Undead Body'
@@ -85,7 +85,7 @@ function displayItems(obj) {
                             <p class="cart-qty">${item.inCart}</p>
                         </div>
                         <div class="col-sm-2">
-                            <p>$${item.price * item.inCart}</p>                            
+                            <p>$${(item.price * item.inCart).toFixed(2)}</p>                            
                         </div>`
         
         itemsDiv.appendChild(node);
