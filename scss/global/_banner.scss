@@ -1,0 +1,71 @@
+#banner {
+    border-bottom: 3px solid $dark-ruby;
+}
+
+#banner-img {
+    height: 350px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($color: $dark-black, $alpha: .7);
+        content: '';
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .banner-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        #banner-text{
+            width: 100%;
+            padding: 0 15px;
+            max-width: 1800px;
+            margin: auto;
+            text-align: left;
+            padding-bottom: 30px !important;
+            margin-bottom: 0;
+    
+            @media screen and (min-width: 767px){
+                padding: 0 50px;
+            }
+    
+            @media screen and (min-width: 1200px){
+                padding: 0 100px;
+            }
+
+            h2 {
+                text-shadow: 0px 4px 15px #121212;
+            }
+
+            h4 {
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1.2em;
+                color: $dark-ruby;
+                margin-bottom: 10px;
+                text-shadow: 0px 4px 15px #121212;
+            }
+        }
+
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
