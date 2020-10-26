@@ -221,7 +221,7 @@ function deleteButtons() {
 
     for(let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
-            productName = deleteButtons[i].parentElement.textContent.trim().toLowerCase().replace(/ /g, '');
+            productName = deleteButtons[i].parentElement.textContent.trim().toLowerCase().replace(/ /g, '').substring(0,5);
             
             localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart);
 
@@ -229,6 +229,11 @@ function deleteButtons() {
 
             delete cartItems[productName];
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+            // tQ: display message when qty is 0
+            if (localStorage.getItem('cartNumbers')==0) {
+              zombiesAreComing();
+            }
 
             displayCart();
             onLoadCartPrice();
@@ -246,8 +251,8 @@ function manageQuantity() {
 
     for(let i = 0; i < decreaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', () => {
-            currentQuantity = decreaseButtons[i].parentElement.parentElement.textContent;
-            currentProduct = decreaseButtons[i].parentElement.parentElement.parentElement.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim();
+            currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim();
 
             if(cartItems[currentProduct].inCart > 1){
                 cartItems[currentProduct].inCart -= 1;
@@ -261,7 +266,7 @@ function manageQuantity() {
     for(let i = 0; i < increaseButtons.length; i++) {
         increaseButtons[i].addEventListener('click', () => {
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
-            currentProduct = increaseButtons[i].parentElement.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim();
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim().substring(0,5);
 
             cartItems[currentProduct].inCart += 1;
             cartNumbers(cartItems[currentProduct], "increase");

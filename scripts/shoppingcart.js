@@ -247,13 +247,20 @@ function unlockButton() {
 }
 
 function lockButton() {
-    var submitButton = document.getElementById("order-submit-button");
-    submitButton.classList.add("disabled", "order-submit-button-disabled");
+    document.getElementById("order-submit-button").classList.add("disabled", "order-submit-button-disabled");
 }
 
 function saveUserData() {
     var cust = new customer();
     window.localStorage.setItem('customer', JSON.stringify(cust));
+}
+
+function zombiesAreComing() {
+    document.getElementById("fairWarning").classList.remove("hidden");
+    lockButton();
+    var editbutton = document.getElementsByClassName("icon-pencil-container")[0];
+    editbutton.classList.add("disabled", "icon-pencil-container-locked");
+    editbutton.onclick = function() { return false; }
 }
 
 // tQ: default behaviour
@@ -262,3 +269,9 @@ document.getElementById("useshipping").checked = true;
 document.getElementById("useshipping").disabled = true;
 // document.getElementById("useshipping").checked = true;
 
+// tQ: display message when cart is empty
+window.addEventListener('load', function() {
+    if (document.getElementsByClassName("cart-row-img").length==0) {
+        zombiesAreComing();
+    }
+});
