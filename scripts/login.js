@@ -1,6 +1,6 @@
 
-
 var totalCostJson = JSON.parse(localStorage.getItem('totalCost'))
+
 if(totalCostJson) {
 
   document.querySelector('#cart-meta p').textContent = totalCostJson;
