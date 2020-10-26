@@ -362,17 +362,17 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div id="product" class="cart-table-cell cart-table-pdt flex col-sm-8">
+            <div id="product" class="cart-table-cell cart-table-pdt flex col-md-8">
                 <ion-icon style="cursor:pointer;color:#832d2d;" size="large" name="close-circle"></ion-icon>
                 <img class="cart-row-img" src="images/cart/${item.tag}.png">
                 <span style="font-weight:bold;">${item.name}</span>
             </div>
-            <div class="cart-table-cell cart-table-qty flex col-sm-2">              
+            <div class="cart-table-cell cart-table-qty flex col-md-2">              
                 <a style="cursor:pointer;" class="button plusminus increase">+</a>              
-                <span>${item.inCart}<span>               
+                <span>${item.inCart}</span>               
                 <a style="cursor:pointer;" class="button plusminus decrease">&#8211;</a>
             </div>
-            <div class="cart-table-cell cart-table-prc flex col-sm-2">
+            <div class="cart-table-cell cart-table-prc flex col-md-2">
                 <span class="cart-cell-price">
                     $${(item.inCart * item.price).toFixed(2)}
                 </span>
