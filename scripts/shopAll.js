@@ -37,19 +37,22 @@ let products = [
         name: 'Tier A',
         tag: 'tiera',
         price: 4999.99,
-        inCart: 0
+        inCart: 0,
+        title: 'Get Those Zombies Off My Lawn'
     },
     {
         name: 'Tier B',
         tag: 'tierb',
         price: 1999.99,
-        inCart: 0
+        inCart: 0,
+        title: 'Turret Syndrome'
     },
     {
         name: 'Tier C',
         tag: 'tierc',
         price: 499.99,
-        inCart: 0
+        inCart: 0,
+        title: 'The Last Tier Of Us'
     }
 ];
 
@@ -176,7 +179,7 @@ function displayCart() {
             <div id="product" class="cart-table-cell cart-table-pdt flex col-sm-8">
                 <ion-icon style="cursor:pointer;color:#832d2d;" size="large" name="close-circle"></ion-icon>
                 <img class="cart-row-img" src="images/cart/${item.tag}.png">
-                <span style="font-weight:bold;">${item.name}</span>
+                <span style="font-weight:bold;">${item.name}: ${item.title}</span>
             </div>
             <div class="cart-table-cell cart-table-qty flex col-sm-2">              
                 <a style="cursor:pointer;" class="button plusminus increase">+</a>              

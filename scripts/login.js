@@ -1,3 +1,12 @@
+
+
+var totalCostJson = JSON.parse(localStorage.getItem('totalCost'))
+if(totalCostJson) {
+
+  document.querySelector('#cart-meta p').textContent = totalCostJson;
+}
+
+
 function myFunction() {
   var x = document.getElementById("my-password");
   var y = document.getElementById("hide-1");

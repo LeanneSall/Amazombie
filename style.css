@@ -1986,11 +1986,6 @@ a.button.plusminus {
   text-decoration: line-through;
 }
 
-#useThisAddress-cc {
-  display: block;
-  padding-top: 0.5rem;
-}
-
 .useThisAddress-cc-hidden {
   display: none !important;
 }
@@ -2638,28 +2633,48 @@ figure.figure figcaption p {
   color: white;
 }
 
-.box {
-  display: flex;
+.order-summary-box {
   justify-content: center;
   min-width: 320px;
-  padding: 24px;
+  padding: 1em;
   max-width: 700px;
   align-items: center;
   margin: auto;
   color: white;
 }
-.box .order-subtitle {
+.order-summary-box .order-subtitle {
   padding-bottom: 10px;
 }
-.box .order-summary {
+.order-summary-box .order-details {
   margin-bottom: 20px;
 }
-.box hr {
+.order-summary-box hr {
   background-color: #474343;
 }
-.box #order-submit-button {
+.order-summary-box #order-submit-button {
   margin: 20px 0;
   margin: auto;
+}
+.order-summary-box .fab {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#purchased-items .display-items {
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #bebebe;
+}
+#purchased-items .display-items p {
+  color: black;
+}
+#purchased-items .display-items .col-sm-8 {
+  padding-left: 0;
+  align-items: center;
+}
+#purchased-items .display-items .col-sm-2 {
+  text-align: right;
 }
 
 .conf-banner {

@@ -1,11 +1,3 @@
-// tQ: for populating page based on previous page, and to pass on to Gokay
-// class product {
-//     id
-//     quantity
-//     price
-// }
-
-
 // tQ: for form validation
 class infofield {
     constructor(id, label = "") {
@@ -22,7 +14,7 @@ class customer {
     constructor() {
     let inputs = getInputs();
 
-    var fullName = inputs.get("full-name").txt;
+    var fullName = inputs.get("first-name").txt + " " + inputs.get("last-name").txt;
     this.firstName = fullName.split(" ")[0];
     this.lastName = fullName.split(" ")[1];
 
@@ -36,7 +28,8 @@ class customer {
 
 function getInputs() {
     var fields = [
-    "full-name",
+    "first-name",
+    "last-name",
     "email-address" ,     
     "address-line-1", // Mr. Chris Redfield
     "address-line-2", // 300 Unicorn Way
@@ -53,7 +46,8 @@ function getInputs() {
     ];
 
     var labels = [
-        "full name",
+        "first name",
+        "last name",
         "email address" ,     
         "address: full name", // Mr. Chris Redfield
         "address: street no. and name", // 300 Unicorn Way
@@ -88,22 +82,7 @@ function toggleSummaryFields(fields){
         document.getElementById("useshipping").disabled = true;
         toggleCCaddress()
         validateInputs(fields);
-        // if (document.getElementById("useshipping")) {
-        //     var fromArray = [
-        //     "address-line-1", // Mr. Chris Redfield
-        //     "address-line-2", // 300 Unicorn Way
-        //     "address-line-3", // Raccoon City, YK
-        //     "address-line-4" // H0H0H0
-        //     ];
-
-        //     var toArray = [
-        //     "address-line-cc-1",  // Mr. Chris Redfield
-        //     "address-line-cc-2",  // 300 Unicorn Way
-        //     "address-line-cc-3",  // Raccoon City, YK
-        //     "address-line-cc-4"  // H0H0H0
-        //     ];
-        //     transferAddress(fromArray, toArray);
-        // }
+        
     } else {
         pencilIcon.classList.add("icon-pencil-container-editmode");
         document.getElementById("useshipping").disabled = false;
@@ -114,8 +93,22 @@ function toggleSummaryFields(fields){
 }
 
 function toggleCCaddress() {
-    var cbox = document.getElementById("useshipping");
 
+    var useShipping = document.getElementsByClassName("useShippingAddress-cc")[0];
+    var useThis = document.getElementsByClassName("useThisAddress-cc")[0];
+
+    // <div>Use <span class="useShippingAddress-cc">shipping</span>
+    // <span class="useThisAddress-cc useThisAddress-cc-hidden"> this</span> address for billing:</div>
+    if (useThis.classList.contains("useThisAddress-cc-hidden")) {
+        useShipping.classList.add("useShippingAddress-cc-invalid")
+        useThis.classList.remove("useThisAddress-cc-hidden")
+    } else {
+        useShipping.classList.remove("useShippingAddress-cc-invalid")
+        useThis.classList.add("useThisAddress-cc-hidden")
+    }
+    
+    var cbox = document.getElementById("useshipping");
+    
     if (cbox.checked) {
         var fromArray = [
         "address-line-1", // Mr. Chris Redfield
@@ -131,22 +124,8 @@ function toggleCCaddress() {
         "address-line-cc-4"  // H0H0H0
         ];
 
-        document.getElementsByClassName("useShippingAddress-cc")[0].classList.remove("useShippingAddress-cc-invalid")
-        //document.getElementById("useThisAddress-cc").classList.add("useThisAddress-cc-hidden")
         transferAddress(fromArray, toArray);
     }
-    // } else {
-    //     document.getElementsByClassName("useShippingAddress-cc")[0].classList.add("useShippingAddress-cc-invalid")
-    //     document.getElementById("useThisAddress-cc").classList.remove("useThisAddress-cc-hidden")
-    //     document.getElementsByClassName("icon-pencil-container")[0].classList.add("disabled", "icon-pencil-container-locked");
-    // }
-
-    // let passToEditable = new Map(); 
-    // for (i = 0; i < toArray.length; ++i) {
-    //     passToEditable.set(toArray[i]);
-    // }
-
-    // toggleEditable(passToEditable);
 }
 
 function toggleEditable(fields) {
@@ -181,12 +160,6 @@ function validateInputs(obj_map) {
         if (value.txt.length <= 1 || value.txt=="Please enter your " + value.label) {
             value.valid = false;
         }
-    }
-
-    // tQ: full name must be two words
-    const regexp_fname = new RegExp(/^[a-z,',-]+(\s)[a-z,',-]+$/);
-    if (!(regexp_fname.test(obj_map.get("full-name").txt.toLowerCase()))) {
-        obj_map.get("full-name").valid = false;
     }
     
     // tQ: email must be valid
@@ -267,7 +240,6 @@ function zombiesAreComing() {
 //     checkbox should be checked
 document.getElementById("useshipping").checked = true;
 document.getElementById("useshipping").disabled = true;
-// document.getElementById("useshipping").checked = true;
 
 // tQ: display message when cart is empty
 window.addEventListener('load', function() {
