@@ -219,3 +219,7 @@ a.button.plusminus {
         display: none;
     }
 }
+
+#cart-meta p::before {
+    content: "$ ";
+}

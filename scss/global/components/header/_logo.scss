@@ -1,12 +1,12 @@
-#logo .st0{fill:#832D2D; transition: .2s ease-in-out;}
-#logo .st1{fill:#3C7755;}
-#logo .st2{fill:#3B5249;}
-#logo .st3{fill:#519872;}
-#logo .st4{fill:#191919; transition: .5s ease-in-out;}
-#logo .st5{fill:#FFFFFF;}
+#logo .st0, .logo .st0{fill:#832D2D; transition: .2s ease-in-out;}
+#logo .st1, .logo .st1{fill:#3C7755;}
+#logo .st2, .logo .st2{fill:#3B5249;}
+#logo .st3, .logo .st3{fill:#519872;}
+#logo .st4, .logo .st4{fill:#191919; transition: .5s ease-in-out;}
+#logo .st5, .logo .st5{fill:#FFFFFF;}
 
 
-#logo {
+.logo, #logo {
     max-height: 50px;
     max-width: 125px;
     justify-self: start;
