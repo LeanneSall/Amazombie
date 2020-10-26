@@ -157,11 +157,6 @@ a.button.plusminus {
     text-decoration: line-through;
 }
 
-#useThisAddress-cc {
-    display: block;
-    padding-top: 0.5rem;
-}
-
 .useThisAddress-cc-hidden {
     display: none !important;
 }
@@ -223,4 +218,8 @@ a.button.plusminus {
     &.hidden {
         display: none;
     }
+}
+
+#cart-meta p::before {
+    content: "$ ";
 }

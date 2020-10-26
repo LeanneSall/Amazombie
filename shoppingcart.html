@@ -31,7 +31,7 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!-- Main Stylesheet -->
-  <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+  <link href="style.css" rel="stylesheet" type="text/css">
   <link href="/scss/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -50,10 +50,10 @@
               <div id="pseudo-nav">
                 <div>
                   <ul>
-                      <li><a href="#">Home</a></li>
+                      <li><a href="index.html">Home</a></li>
                       <li><a href="shopAll.html">Shop</a></li>
-                      <li><a href="#">Login</a></li>
-                      <li><a href="#">Signup</a></li>
+                      <li><a href="login.html">Login</a></li>
+                      <li><a href="register.html">Signup</a></li>
                   </ul>
                 </div>
               </div> <!--end #pseudo-nav-->
@@ -104,7 +104,7 @@
                     <div class="cart-table-cell col-2">Quantity</div>
                     <div class="cart-table-cell col-2">Price</div>
                 </div>
-                <div id="fairWarning" class="hidden">Your cart is emtpy, partner. Fight off the hordes with our high-quality gear.</div>
+                <div id="fairWarning" class="hidden">Your cart is empty, partner. Fight off the hordes with our high-quality gear.</div>
                 <div id="products" class="cart-table-row row">
                     
                 </div>
@@ -124,8 +124,13 @@
                             <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                         </svg>
                     </div>
-                    <div class="summary-form" id="full-name">
-                        Chris Redfield
+                    <div>
+                        <div class="summary-form" id="first-name">
+                            Chris
+                        </div>
+                        <div class="summary-form" id="last-name">
+                            Redfield
+                        </div>
                     </div>
                 </div>
                 <div class="order-summary-row row"><!--email address-->
@@ -169,8 +174,7 @@
                         <input id="useshipping" type="checkbox" onclick="toggleCCaddress()">
                     </div>
                     <div class="summary-form" id="order-summary-address-cc">
-                        <div class="useShippingAddress-cc">Use shipping address for billing:</div>
-                        <div id="useThisAddress-cc" class="useThisAddress-cc-hidden">Your billing address:</div>
+                        <div>Use <span class="useShippingAddress-cc">shipping</span><span class="useThisAddress-cc useThisAddress-cc-hidden"> this</span> address for billing:</div>
                         <div class="summary-form summary-form-cc-grey" id="address-line-cc-1">Mr. Chris Redfield</div>
                         <div class="summary-form summary-form-cc-grey" id="address-line-cc-2">300 Unicorn Way</div>
                         <div class="summary-form summary-form-cc-grey" id="address-line-cc-3">Raccoon City, YK</div>
