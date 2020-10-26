@@ -46,7 +46,6 @@ function displayOrder() {
     totalDiv.innerHTML = strTotal
     itemsDiv = displayItems(actuallyInCart)
     document.querySelector('#cart-meta p').textContent = '$'+ 0;
-
     removeFromLocalStorage('productsInCart')
     removeFromLocalStorage('customer')
     removeFromLocalStorage('totalCost') 
