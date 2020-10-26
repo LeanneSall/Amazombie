@@ -47,9 +47,9 @@ function displayOrder() {
     itemsDiv = displayItems(actuallyInCart)
     document.querySelector('#cart-meta p').textContent = '$'+ 0;
 
-    localStorage.removeItem('productsInCart')
-    localStorage.removeItem('customer')
-    localStorage.removeItem('totalCost')
+    removeFromLocalStorage('productsInCart')
+    removeFromLocalStorage('customer')
+    removeFromLocalStorage('totalCost') 
 }
 
 // Get current date
@@ -75,19 +75,25 @@ function displayItems(obj) {
         
         var node = document.createElement('div')
         node.setAttribute('class', 'display-items flex col-sm-12')
-        node.innerHTML = `<div class="flex col-sm-8">
-                            <img class="cart-row-img" src="../images/cart/${item.tag}.png">
-                            <div class="">
-                                <p>${item.name}</p>    
-                            </div>
+        node.innerHTML = `
+                        <div class="col-sm-3 item-image-con">
+                            <img class="cart-row-img" src="../images/cart/${item.tag}.png" style="width: 100%;">
                         </div>
-                        <div class="col-sm-2"><!--qty-->
+                        <div class="col-sm-3">
+                            <p>${item.name}</p>    
+                        </div>
+                        <div class="col-sm-3 item-quantity">
                             <p class="cart-qty">${item.inCart}</p>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-3 item-detail-con">
                             <p>$${(item.price * item.inCart).toFixed(2)}</p>                            
                         </div>`
         
         itemsDiv.appendChild(node);
     })
+}
+
+//Remove item from localStorage
+function removeFromLocalStorage(item) {
+    localStorage.removeItem(item)
 }

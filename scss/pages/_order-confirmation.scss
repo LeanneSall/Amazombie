@@ -53,14 +53,19 @@
             color: black;
         }
 
-        .col-sm-8 {
+        .item-image-con {
             padding-left: 0;
             align-items: center;
 
         }
 
-        .col-sm-2 {
+        .item-detail-con {
             text-align: right;
+            padding-right: 0;
+        }
+
+        .item-quantity {
+            text-align: center;
         }
     }
 
@@ -68,6 +73,10 @@
         border-bottom: unset;
     }
 
+}
+
+#continue-btn {
+    margin: 30px 0;
 }
 
 
@@ -91,5 +100,9 @@
 @media screen and (min-width: 767px) {
     .conf-banner {
         padding: 3em;
+    }
+
+    #purchased-items {
+        border-radius: 5px;
     }
 }
