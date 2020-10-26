@@ -2674,12 +2674,23 @@ figure.figure figcaption p {
 #purchased-items .display-items p {
   color: black;
 }
-#purchased-items .display-items .col-sm-8 {
+#purchased-items .display-items .item-image-con {
   padding-left: 0;
   align-items: center;
 }
-#purchased-items .display-items .col-sm-2 {
+#purchased-items .display-items .item-detail-con {
   text-align: right;
+  padding-right: 0;
+}
+#purchased-items .display-items .item-quantity {
+  text-align: center;
+}
+#purchased-items > .display-items:last-child {
+  border-bottom: unset;
+}
+
+#continue-btn {
+  margin: 30px 0;
 }
 
 .conf-banner {
@@ -2699,6 +2710,10 @@ figure.figure figcaption p {
 @media screen and (min-width: 767px) {
   .conf-banner {
     padding: 3em;
+  }
+
+  #purchased-items {
+    border-radius: 5px;
   }
 }
 body {
