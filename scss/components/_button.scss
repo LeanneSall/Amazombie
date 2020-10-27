@@ -11,7 +11,16 @@ a.button {
     transition: all .2s ease-in-out;
     display: inline-block;
 
+    &.dark {
+        background: $dark-green;
+
+        &:hover {
+            background: $light-green;
+        }
+    }
+
     &:hover{
         background: $dark-green;
+        color: white !important;
     }
 }

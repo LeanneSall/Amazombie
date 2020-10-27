@@ -1,0 +1,81 @@
+#banner {
+    border-bottom: 5px solid $dark-ruby;
+}
+
+#banner-img {
+    height: 350px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($color: $dark-black, $alpha: .5);
+        background: radial-gradient(circle, rgba(38,38,38,0) 0%, rgba(4,4,4,1) 100%);
+        content: '';
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .banner-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        #banner-text{
+            width: 100%;
+            padding: 0 15px;
+            max-width: 1800px;
+            margin: auto;
+            text-align: left;
+            padding-bottom: 30px !important;
+            margin-bottom: 0;
+    
+            @media screen and (min-width: 767px){
+                padding: 0 50px;
+            }
+    
+            @media screen and (min-width: 1200px){
+                padding: 0 100px;
+            }
+
+            h2 {
+                font-size: 2.75em;
+                text-shadow: 0px 4px 15px $dark-black;
+                margin-bottom: 5px;
+                max-width: 300px;
+                letter-spacing: 0.01em;
+    
+                @media screen and (min-width: 500px){
+                    font-size: 5em;
+                }
+            }
+    
+            h4 {
+                @include body-light;
+                color: $dark-ruby;
+                margin-bottom: 10px;
+                text-shadow: 0px 4px 15px $dark-black;
+            }
+
+            p {
+                color: white;
+            }
+        }
+
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}

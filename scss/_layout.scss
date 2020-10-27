@@ -7,7 +7,7 @@ section.default{
     &.v-no-padding {
         padding-top: 0;
         padding-bottom: 0;
-    }
+    } 
 
     .wrap {
         width: 100%;
@@ -49,4 +49,11 @@ section.full{
     .col{
         flex: 1;
     }
+}
+
+// -----------------------------------------//
+// Main
+// -----------------------------------------//
+main {
+    padding-top: 92px;
 }
