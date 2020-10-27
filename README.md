@@ -61,4 +61,9 @@ Once (trigger) happy with his cart contents, Rick move on to the Shopping Cart p
 
  ### Present in:
   - [Shopping Cart](https://pfteza-dev.com/amazombie/shoppingcart.html)
- - [Order Confirmation Page](https://pfteza-dev.com/amazombie/order-confirmation.html) 
+ - [Order Confirmation Page](https://pfteza-dev.com/amazombie/order-confirmation.html)
+
+
+ ### Attributions:
+ Attributions are specified in an attributions page linked below:
+ [Attributions](https://pfteza-dev.com/amazombie/attributions.html
