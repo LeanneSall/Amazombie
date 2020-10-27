@@ -23,9 +23,17 @@ We decided on a dark and gloomy but not too gory or explicit look. Dark black an
 
 We used [Figma](https://www.figma.com/file/pI2MN5wUnZgQRiL5BoRtGJ/amazombie?node-id=0%3A1) for our prototype.
 
-## Technology & Components
+### Link to figma
+<a href="https://www.figma.com/file/pI2MN5wUnZgQRiL5BoRtGJ/amazombie?node-id=0%3A1">https://www.figma.com/file/pI2MN5wUnZgQRiL5BoRtGJ/amazombie?node-id=0%3A1</a>
 
+<img src="https://pfteza-etc.s3-us-west-2.amazonaws.com/figma_prototypes.jpeg" alt="prototypes" />
+
+## Technology & Components
 HTML, SASS, jQuery, Vanilla JS, Bootstrap.
+
+### Plugins:
+ - <a href="http://sachinchoolur.github.io/lightslider/">Light Slider</a>
+ - <a href="https://pqina.nl/flip/">Flipclock</a>
 
 ## Contents
  - [Home Page](https://pfteza-dev.com/amazombie/index.html)
@@ -41,9 +49,16 @@ HTML, SASS, jQuery, Vanilla JS, Bootstrap.
 
  This feature allows Rick to add boxes to his cart. He can do so from the Shopping Page or each of the individual Tier Box pages. The items are saved in local storage, the dollar amount in the header and the pages that should display cart contents are populated based on local storage objects. 
 
+ ### Present in:
+  - [Shop Page](https://pfteza-dev.com/amazombie/shopAll.html)
+ - [Tier A Box Page](https://pfteza-dev.com/amazombie/SinglePageA.html)
+ - [Tier B Box Page](https://pfteza-dev.com/amazombie/SinglePageB.html)
+ - [Tier C Box Page](https://pfteza-dev.com/amazombie/SinglePageC.html)
+
  ## Spotlight: Shopping Cart Form Validation
 
 Once (trigger) happy with his cart contents, Rick move on to the Shopping Cart page through the header. The contents here are prepopulated using a dummy user (not Rick), but he can edit using the pencil icon.  Here can either sync up his shipping address with the billing address with a checkbox on the summary form or enter a different address. A couple regex validations ensure that his name, credit card info and address run through some checks before he can proceed to the Order Confirmation page.
 
-Link Picture Single Page
-https://unsplash.com/photos/_OQ8Jc7kBmA
+ ### Present in:
+  - [Shopping Cart](https://pfteza-dev.com/amazombie/shoppingcart.html)
+ - [Order Confirmation Page](https://pfteza-dev.com/amazombie/order-confirmation.html) 
