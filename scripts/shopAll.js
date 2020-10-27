@@ -1,3 +1,26 @@
+// ICON + HAMBURGER
+const nav = document.querySelector('nav');
+
+document.getElementById('icon').addEventListener('click', (e) => {
+    (e.target.classList);
+
+    if(e.target.classList.contains('active')){
+        e.target.classList.remove('active');
+        nav.classList.remove('active');
+    }else{
+        e.target.classList.add('active');
+        nav.classList.add('active');
+    }
+});
+
+// INIT COUNTDOWN
+function handleTickInit(tick) {
+    Tick.count.down('2020' + '-12-1').onupdate = function(value) {
+        tick.value = value;
+    };
+}
+
+
 // Hides cards as soon as screen width hits 767px
 function myFunction(x) {
     if (x.matches) { // If media query matches
@@ -18,17 +41,6 @@ $(".more").on("click", function () {
 
     hidden.slideToggle();
 })
-
-// JavaScript Document
-$(document).ready(function () {
-    $('.autoWidth').lightSlider({
-        autoWidth: true,
-        loop: true,
-        onSliderLoad: function () {
-            $('.autoWidth').removeClass('cS-hidden');
-        }
-    });
-});
 
 // ----------------------------------- SHOPPING CART FUNCTIONALITY ---------------------------------------------------
 let carts = document.querySelectorAll('.add-cart');

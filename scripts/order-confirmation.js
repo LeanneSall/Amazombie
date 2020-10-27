@@ -2,6 +2,13 @@ $('document').ready(function(){
     displayOrder()
 })
 
+// INIT COUNTDOWN
+function handleTickInit(tick) {
+    Tick.count.down('2020' + '-12-1').onupdate = function(value) {
+        tick.value = value;
+    };
+}
+
 // Get the divs
 var orderNoDiv = document.querySelector('#order-no')
 var nameDiv = document.querySelector('#customer-name')

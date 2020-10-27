@@ -1,3 +1,11 @@
+// INIT COUNTDOWN
+function handleTickInit(tick) {
+    Tick.count.down('2020' + '-12-1').onupdate = function(value) {
+        tick.value = value;
+    };
+}
+
+
 // tQ: for form validation
 class infofield {
     constructor(id, label = "") {
