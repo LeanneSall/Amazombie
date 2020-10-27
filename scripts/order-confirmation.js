@@ -84,7 +84,7 @@ function displayItems(obj) {
         node.setAttribute('class', 'display-items flex col-sm-12')
         node.innerHTML = `
                         <div class="col-sm-3 item-image-con">
-                            <img class="cart-row-img" src="../images/cart/${item.tag}.png" style="width: 100%;">
+                            <img class="cart-row-img" src="./images/cart/${item.tag}.png" style="width: 100%;">
                         </div>
                         <div class="col-sm-3">
                             <p>${item.name}</p>    
