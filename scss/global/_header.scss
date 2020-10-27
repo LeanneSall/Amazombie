@@ -24,6 +24,9 @@ header {
     background: $dark-black;
     background: linear-gradient(201deg, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
     transition: .2s ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 50000;
     
 
 

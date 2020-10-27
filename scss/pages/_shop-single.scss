@@ -39,12 +39,13 @@ body {
   display: flex;
   flex-direction: row;
 
-  @media screen and (max-width: 1340px){
+  @media screen and (max-width: 1200px){
     flex-direction: column-reverse;
   }
 
   .text {
     padding-top: 3%;
+    max-width: 600px;
 
     @media screen and (min-width: 767px){
       margin-right: 200px;
@@ -108,27 +109,27 @@ body {
   width: 100%;
   display: inline-block;
   h3 {
-    padding: 20px;
+    padding: 20px 0;
     color: white;
   }
 
   .sub-card-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     .card-1 {
       width: 250px;
       height: 400px;
-      background-color: #1e1e26;
-      border-radius: 10px;
+      background-color: $black;
+      border-radius: 5px;
       box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
-      margin: 20px 20px;
+      margin: 20px 0;
 
       .last-img {
         height: 200px;
@@ -154,7 +155,6 @@ body {
       }
     }
     .card-1:hover {
-      background-color: #17171d;
       transform-style: preserve-3d;
       transform: scale(1.02);
       transition: all ease 0.3s;
@@ -173,7 +173,7 @@ body {
 .benefits {
   margin-top: 50px;
   width: 100%;
-  display: inline-block;
+  display: flex;
   h3 {
     width: 100%;
     position: relative;
@@ -188,24 +188,32 @@ body {
   .cards {
     display: flex;
     width: 60%;
-    background-color: #1e1e26;
+    background-color: $black;
     border-radius: 10px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 20px 20px;
-
-    height: 800px;
-    float: left;
+    padding: 40px;
+    margin: 20px 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
+    @media screen and (max-width: 600px){
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1300px){
+      margin-right: 20px;
+    }
+
     .bene-card {
-      width: 300px;
-      height: 300px;
+      width: 45%;
+
+      @media screen and (max-width: 600px){
+        width: 100% !important;
+      }
 
       .bene-heading {
         padding-bottom: 20px;
@@ -223,7 +231,7 @@ body {
   .review-forum {
     display: flex;
     width: 35%;
-    background-color: #1e1e26;
+    background-color: $black;
     border-radius: 10px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -328,7 +336,6 @@ body {
     flex-wrap: wrap;
 
     .cards {
-      height: 800px;
       width: 100%;
       .bene-card {
         width: 50%;
@@ -339,7 +346,6 @@ body {
     .review-forum {
       flex-wrap: wrap;
       width: 100%;
-      height: 500px;
     }
   }
 }
@@ -355,13 +361,10 @@ body {
     flex-wrap: wrap;
 
     .cards {
-      height: 60vh;
       width: 100%;
       .bene-card {
         flex-wrap: wrap;
         padding: 0;
-        width: 300px;
-        height: 300px;
       }
     }
     .forum {
@@ -408,21 +411,18 @@ body {
     flex-wrap: wrap;
 
     .cards {
-      height: 115vh;
       width: 100%;
       flex-wrap: wrap;
       .bene-card {
-        width: 400px;
-
-        width: 500px;
         margin-left: 0;
       }
     }
 
     .review-forum {
       width: 100%;
-      height: 60vh;
-      display: inline-block;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
       text-align: center;
       .rating {
         text-align: center;
@@ -442,10 +442,6 @@ body {
     .cards {
       .bene-card {
         padding: 20px;
-
-        p {
-          width: 200px;
-        }
       }
     }
     .review-forum {
