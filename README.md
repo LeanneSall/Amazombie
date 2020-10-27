@@ -19,13 +19,9 @@ On our site, Rick (our typical user) is greeted by a landing page that explains 
 
 We decided on a dark and gloomy but not too gory or explicit look. Dark black and grey colours combined with uniform-inspired greens make for a layout that is apocalyptic yet professional. White and dark ruby are often used throughout the page to easily create contrast and highlight page elements. 
 
-<img style="width:600px;" src="colour_palette.png">
-
 ## Prototype
 
 We used [Figma](https://www.figma.com/file/pI2MN5wUnZgQRiL5BoRtGJ/amazombie?node-id=0%3A1) for our prototype.
-
-<img style="width:600px;" src="figma_prototypes.JPG">
 
 ## Technology & Components
 
